@@ -13,8 +13,6 @@
   <link rel="icon" href="ipdcec-logo.png" />
   <link rel="alternate" hreflang="en" href="https://ipdcec.online/?lang=en" />
   <link rel="alternate" hreflang="id" href="https://ipdcec.online/?lang=id" />
-  <link rel="alternate" hreflang="ar" href="https://ipdcec.online/?lang=ar" />
-  <link rel="alternate" hreflang="zh" href="https://ipdcec.online/?lang=zh" />
   <title>IPDCEC 2026 | International Plant Design Chemical Engineering Competition</title>
 
   <style>
@@ -49,14 +47,6 @@
     .lang-switch { display: flex; gap: 6px; align-items: center; }
     .lang-switch button { border: 1px solid rgba(255,255,255,.35); background: transparent; color: white; padding: 7px 11px; border-radius: 999px; cursor: pointer; font-weight: 900; }
     .lang-switch button.active { background: white; color: var(--navy); }
-    body.rtl { direction: rtl; }
-    body.rtl .topbar-inner,
-    body.rtl .nav-inner,
-    body.rtl .hero-inner,
-    body.rtl .footer-inner { direction: rtl; }
-    body.rtl .nav-links { justify-content: flex-start; }
-    body.rtl .hero h1 { letter-spacing: 0; }
-    body.rtl .timeline-item { direction: rtl; }
 
     nav { background: white; box-shadow: 0 8px 25px rgba(3,27,52,.08); position: sticky; top: 0; z-index: 50; }
     .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 20px; }
@@ -156,8 +146,6 @@
       <div class="lang-switch">
         <button id="lang-en" class="active" onclick="setLanguage('en')">EN</button>
         <button id="lang-id" onclick="setLanguage('id')">ID</button>
-        <button id="lang-ar" onclick="setLanguage('ar')">AR</button>
-        <button id="lang-zh" onclick="setLanguage('zh')">中文</button>
       </div>
     </div>
   </div>
@@ -259,53 +247,12 @@
         contact_eyebrow: "Narahubung", contact_title: "Butuh Bantuan Registrasi?", contact_desc: "Untuk pertanyaan terkait registrasi dan kompetisi, silakan hubungi perwakilan panitia resmi berikut.", contact_person: "Narahubung",
         social_eyebrow: "Ikuti Kami", social_title: "Media Sosial Resmi IPDCEC", open_linkedin: "Buka LinkedIn", open_youtube: "Buka YouTube", open_instagram: "Buka Instagram", open_tiktok: "Buka TikTok",
         cta_title: "Siap Mendaftar IPDCEC 2026?", cta_desc: "Siapkan data tim, kartu identitas mahasiswa, bukti pembayaran, surat pernyataan orisinalitas, dan bukti media sosial sebelum mengisi formulir registrasi.", footer_competition: "Kompetisi Perancangan Pabrik Kimia Internasional", footer_org: "Diselenggarakan oleh Jurusan Teknik Kimia", footer_faculty: "Fakultas Teknik, Universitas Malikussaleh", footer_social: "Instagram, TikTok & YouTube: @ipdcec2026"
-      },
-      ar: {
-        pageTitle: "IPDCEC 2026 | المسابقة الدولية لتصميم المصانع الكيميائية",
-        metaDesc: "الموقع الرسمي لمسابقة IPDCEC 2026 الدولية لتصميم المصانع الكيميائية.",
-        topbar_title: "المسابقة الدولية لتصميم المصانع الكيميائية",
-        topbar_location: "جامعة مالك الصالح، آتشيه، إندونيسيا",
-        brand_subtitle: "المسابقة الدولية لتصميم المصانع الكيميائية",
-        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_payment: "الدفع", nav_contact: "التواصل",
-        btn_register: "سجّل الآن ←", btn_register_plain: "سجّل الآن", btn_guidebook: "تحميل الدليل", btn_contact: "تواصل مع اللجنة",
-        countdown_title: "ينتهي التسجيل خلال", cd_days: "أيام", cd_hours: "ساعات", cd_minutes: "دقائق", cd_seconds: "ثوانٍ",
-        hero_kicker: "دولية", hero_title: "مسابقة تصميم المصانع الكيميائية <span>2026</span>", hero_desc: "تصميم مصانع كيميائية مستدامة من أجل مستقبل عالمي أفضل.",
-        info1_title: "مسابقة حضورية", info1_desc: "جامعة مالك الصالح، آتشيه، إندونيسيا", info2_title: "فعالية دولية", info2_desc: "مفتوحة لطلاب الهندسة الكيميائية من جميع أنحاء العالم", info3_title: "فريق حتى 3 أعضاء", info3_desc: "+ مشرف أكاديمي واحد من المؤسسة نفسها", info4_title: "المحاكاة", info4_desc: "استخدام برنامج محاكاة عمليات كيميائية",
-        about_eyebrow: "حول IPDCEC", about_title: "منصة عالمية لمهندسي الكيمياء المستقبليين", about_desc: "IPDCEC هي مسابقة دولية لتصميم المصانع الكيميائية ينظمها قسم الهندسة الكيميائية، كلية الهندسة، جامعة مالك الصالح. تتحدى المسابقة الطلاب لتصميم مصانع كيميائية شاملة وآمنة وفعالة ومستدامة.", about_card1_title: "مشاركة عالمية", about_card1_desc: "مفتوحة لطلاب الهندسة الكيميائية النشطين من جامعات حول العالم.", about_card2_title: "حلول مبتكرة", about_card2_desc: "تعزز الابتكار في العمليات والإبداع الهندسي والتصميم الصناعي التطبيقي.", about_card3_title: "مستقبل مستدام", about_card3_desc: "تركز على كفاءة العمليات وتحسين الطاقة والسلامة والاقتصاد والمسؤولية البيئية.",
-        theme_eyebrow: "الموضوع والمحاور", theme_title: "موضوع المسابقة", theme_quote: "تصميم مصنع كيميائي قائم على الصناعة من أجل مستقبل عالمي مستدام", sub1_title: "01. طاقة أنظف من الغاز الطبيعي", sub1_desc: "استخدام الغاز الطبيعي كمصدر طاقة أنظف من خلال تحسين العمليات وتقليل الانبعاثات.", sub2_title: "02. منتجات كيميائية ذات قيمة مضافة", sub2_desc: "تحويل الغاز الطبيعي إلى منتجات كيميائية ذات قيمة مضافة لدعم صناعة مستدامة وصديقة للبيئة.",
-        timeline_eyebrow: "الجدول الزمني", timeline_title: "جدول المسابقة", timeline_desc: "يرجى إرسال جميع المستندات قبل الموعد النهائي ومتابعة الإعلانات الرسمية بانتظام.", t1_title: "التسجيل وإرسال الملخص الموسع", t1_desc: "فترة تسجيل الفرق وإرسال الملخص الموسع.", t2_title: "إعلان المتأهلين لنصف النهائي", t2_desc: "سيتم إعلان أفضل 20 فريقًا من مرحلة الملخص الموسع.", t3_title: "إرسال البحث الكامل", t3_desc: "تقدم الفرق المختارة تقرير تصميم المصنع الكامل.", t4_title: "إعلان المتأهلين للنهائي", t4_desc: "سيتأهل أفضل 6 فرق إلى مرحلة العرض النهائي.", t5_title: "العرض النهائي", t5_desc: "يقدم المتأهلون للنهائي تصميماتهم حضوريًا في جامعة مالك الصالح.", t6_title: "زيارة ميدانية وحفل توزيع الجوائز", t6_desc: "زيارة ميدانية وحفل تكريم للمشاركين في IPDCEC 2026.",
-        guide_title: "تحميل الدليل الرسمي", guide_desc: "اقرأ الدليل الكامل قبل التسجيل. يحتوي الدليل على القواعد الرسمية والجدول الزمني ومتطلبات التسجيل ومعلومات الدفع ومراحل المسابقة.", guide_card_title: "ملف الدليل", guide_card_desc: "الدليل الرسمي متاح عبر Google Drive. يرجى قراءة جميع المتطلبات بعناية قبل التسجيل.",
-        payment_eyebrow: "معلومات الدفع", payment_title: "دفع رسوم التسجيل", payment_desc: "يرجى إتمام الدفع وفقًا لمرحلة المسابقة ورفع إثبات الدفع عبر نموذج التسجيل.", account_number: "رقم الحساب", paypal_account: "حساب PayPal", fee_title: "رسوم التسجيل", fee_desc: "الملخص الموسع: إندونيسيا Rp50.000 / دولي 5 USD.<br>البحث الكامل: إندونيسيا Rp250.000 / دولي 18 USD.", qris_desc: "سيتم توفير رمز QRIS للدفع قريبًا.",
-        contact_eyebrow: "جهات الاتصال", contact_title: "هل تحتاج إلى مساعدة في التسجيل؟", contact_desc: "للاستفسارات المتعلقة بالتسجيل والمسابقة، يرجى التواصل مع ممثلي اللجنة الرسميين أدناه.", contact_person: "جهة اتصال",
-        social_eyebrow: "تابعونا", social_title: "وسائل التواصل الرسمية لـ IPDCEC", open_linkedin: "افتح LinkedIn", open_youtube: "افتح YouTube", open_instagram: "افتح Instagram", open_tiktok: "افتح TikTok",
-        cta_title: "هل أنت مستعد للتسجيل في IPDCEC 2026؟", cta_desc: "جهّز بيانات الفريق وبطاقة الطالب وإثبات الدفع وبيان الأصالة وإثباتات وسائل التواصل قبل تعبئة نموذج التسجيل.", footer_competition: "المسابقة الدولية لتصميم المصانع الكيميائية", footer_org: "ينظمها قسم الهندسة الكيميائية", footer_faculty: "كلية الهندسة، جامعة مالك الصالح", footer_social: "Instagram وTikTok وYouTube: @ipdcec2026"
-      },
-      zh: {
-        pageTitle: "IPDCEC 2026 | 国际化工厂设计竞赛",
-        metaDesc: "IPDCEC 2026 国际化工厂设计竞赛官方网站。",
-        topbar_title: "国际化工厂设计竞赛",
-        topbar_location: "马利库萨利赫大学，亚齐，印度尼西亚",
-        brand_subtitle: "国际化工厂设计竞赛",
-        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "手册", nav_payment: "付款", nav_contact: "联系",
-        btn_register: "立即报名 →", btn_register_plain: "立即报名", btn_guidebook: "下载竞赛手册", btn_contact: "联系组委会",
-        countdown_title: "报名截止倒计时", cd_days: "天", cd_hours: "小时", cd_minutes: "分钟", cd_seconds: "秒",
-        hero_kicker: "国际赛事", hero_title: "化工厂设计竞赛 <span>2026</span>", hero_desc: "为更美好的全球未来设计可持续化工厂。",
-        info1_title: "线下竞赛", info1_desc: "马利库萨利赫大学，亚齐，印度尼西亚", info2_title: "国际赛事", info2_desc: "面向全球化学工程专业学生开放", info3_title: "每队最多3名成员", info3_desc: "+ 同一院校1名指导教师", info4_title: "过程模拟", info4_desc: "使用化工过程模拟软件",
-        about_eyebrow: "关于 IPDCEC", about_title: "面向未来化学工程师的全球平台", about_desc: "IPDCEC 是由马利库萨利赫大学工程学院化学工程系主办的国际化工厂设计竞赛。本竞赛鼓励学生设计全面、安全、高效且可持续的化工厂。", about_card1_title: "全球参与", about_card1_desc: "面向世界各地高校的化学工程专业在校学生开放。", about_card2_title: "创新方案", about_card2_desc: "鼓励过程创新、工程创造力和实际工业设计能力。", about_card3_title: "可持续未来", about_card3_desc: "关注过程效率、能源优化、安全、经济性和环境责任。",
-        theme_eyebrow: "主题与分主题", theme_title: "竞赛主题", theme_quote: "基于工业的化工厂设计，面向可持续发展的全球未来", sub1_title: "01. 来自天然气的清洁能源", sub1_desc: "通过过程优化和减排，将天然气作为更清洁的能源来源。", sub2_title: "02. 高附加值化工产品", sub2_desc: "将天然气下游加工为高附加值化工产品，支持可持续、环保的工业发展。",
-        timeline_eyebrow: "时间表", timeline_title: "竞赛日程", timeline_desc: "请在官方截止日期前提交所有文件，并定期关注官方公告。", t1_title: "报名与扩展摘要提交", t1_desc: "团队报名与扩展摘要提交阶段。", t2_title: "半决赛名单公布", t2_desc: "将公布扩展摘要阶段的前20支优秀团队。", t3_title: "完整论文提交", t3_desc: "入选团队提交完整的工厂设计报告。", t4_title: "决赛名单公布", t4_desc: "前6支团队将进入最终展示阶段。", t5_title: "最终展示", t5_desc: "决赛团队将在马利库萨利赫大学进行线下展示。", t6_title: "参观与颁奖", t6_desc: "IPDCEC 2026 参观活动与颁奖典礼。",
-        guide_title: "下载官方竞赛手册", guide_desc: "报名之前请阅读完整竞赛手册，其中包含官方规则、时间安排、报名要求、付款信息和竞赛流程。", guide_card_title: "竞赛手册文件", guide_card_desc: "官方竞赛手册可通过 Google Drive 查看。报名前请仔细阅读所有要求。",
-        payment_eyebrow: "付款信息", payment_title: "报名付款", payment_desc: "请根据竞赛阶段完成付款，并通过报名表上传付款凭证。", account_number: "账号", paypal_account: "PayPal 账号", fee_title: "报名费", fee_desc: "扩展摘要：印度尼西亚 Rp50.000 / 国际 5 USD.<br>完整论文：印度尼西亚 Rp250.000 / 国际 18 USD.", qris_desc: "QRIS 付款码将很快提供。",
-        contact_eyebrow: "联系人", contact_title: "报名需要帮助？", contact_desc: "如有报名或竞赛相关问题，请联系以下官方组委会代表。", contact_person: "联系人",
-        social_eyebrow: "关注我们", social_title: "IPDCEC 官方社交媒体", open_linkedin: "打开 LinkedIn", open_youtube: "打开 YouTube", open_instagram: "打开 Instagram", open_tiktok: "打开 TikTok",
-        cta_title: "准备报名 IPDCEC 2026 吗？", cta_desc: "填写报名表前，请准备团队资料、学生证、付款凭证、原创性声明以及所需的社交媒体证明。", footer_competition: "国际化工厂设计竞赛", footer_org: "由化学工程系主办", footer_faculty: "工程学院，马利库萨利赫大学", footer_social: "Instagram、TikTok 与 YouTube：@ipdcec2026"
       }
     };
 
     function setLanguage(lang){
       const dict = translations[lang] || translations.en;
       document.documentElement.lang = lang;
-      document.body.classList.toggle('rtl', lang === 'ar');
       document.title = dict.pageTitle;
       const metaDesc = document.querySelector('meta[name="description"]');
       if(metaDesc) metaDesc.setAttribute('content', dict.metaDesc);
@@ -313,8 +260,6 @@
       document.querySelectorAll('[data-i18n-html]').forEach(el => { const key = el.getAttribute('data-i18n-html'); if(dict[key]) el.innerHTML = dict[key]; });
       document.getElementById('lang-en').classList.toggle('active', lang === 'en');
       document.getElementById('lang-id').classList.toggle('active', lang === 'id');
-      document.getElementById('lang-ar').classList.toggle('active', lang === 'ar');
-      document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
       localStorage.setItem('ipdcec_lang', lang);
     }
 
@@ -337,8 +282,7 @@
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
     const savedLang = localStorage.getItem('ipdcec_lang');
-    const allowedLangs = ['en','id','ar','zh'];
-    setLanguage(allowedLangs.includes(urlLang) ? urlLang : (allowedLangs.includes(savedLang) ? savedLang : 'en'));
+    setLanguage(urlLang === 'id' || urlLang === 'en' ? urlLang : (savedLang || 'en'));
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
