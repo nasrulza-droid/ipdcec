@@ -1,43 +1,56 @@
-# ipdcec
-International Plant Design Chemical Engineering
 # IPDCEC Online
 
-**International Plant Design Chemical Engineering Competition**
+### International Plant Design Chemical Engineering Competition 2026
 
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-active-success)
-![Website](https://img.shields.io/badge/website-ipdcec.online-blue)
-![Made with](https://img.shields.io/badge/made%20with-HTML%20%7C%20CSS%20%7C%20JS-orange)
+<p align="center">
+  <img src="ipdcec-logo.png" alt="IPDCEC Logo" width="160"/>
+</p>
+
+<p align="center">
+  <strong>Official Website for the International Plant Design Chemical Engineering Competition</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/status-active-success" />
+  <img src="https://img.shields.io/badge/website-ipdcec.online-blue" />
+  <img src="https://img.shields.io/badge/made%20with-HTML%20%7C%20CSS%20%7C%20JavaScript-orange" />
+  <img src="https://img.shields.io/badge/event-IPDCEC%202026-green" />
+</p>
 
 ---
 
 ## 🌐 Overview
 
-**IPDCEC Online** is the official web platform for the **International Plant Design Chemical Engineering Competition (IPDCEC)**.
-This platform serves as a centralized system for delivering competition information, managing participant registration, and publishing official announcements.
+**IPDCEC Online** is the official web platform for the **International Plant Design Chemical Engineering Competition 2026**.
 
-The competition aims to challenge students to design innovative, efficient, and sustainable chemical plants based on real-world industrial problems.
+This website provides centralized access to competition information, registration, guidebook, timeline, payment details, official announcements, and contact information.
+
+The competition aims to encourage chemical engineering students to design innovative, efficient, safe, and sustainable chemical plants based on real-world industrial challenges.
 
 ---
 
 ## 🎯 Objectives
 
-* To provide a centralized and accessible source of competition information
-* To facilitate a streamlined and efficient registration process
-* To ensure transparency and professionalism in competition management
-* To promote innovation and practical skills in chemical plant design
-* To foster collaboration among students in the field of chemical engineering
+* Provide official and centralized competition information
+* Support an efficient participant registration process
+* Promote innovation in chemical plant design
+* Encourage sustainable and industry-based engineering solutions
+* Foster international collaboration among chemical engineering students
 
 ---
 
-## 📌 Features
+## ✨ Website Features
 
-* Competition Information
-* Timeline
-* Guidelines
-* Registration System
-* Announcements
-* Documentation
+* Competition overview
+* Bilingual interface: English and Indonesian
+* Registration link
+* Official guidebook download
+* Countdown timer
+* Competition timeline
+* Payment information
+* Contact person section
+* Official social media links
+* Responsive web design
 
 ---
 
@@ -53,26 +66,48 @@ ipdcec/
 
 ---
 
-## 🌍 Deployment
+## 🛠️ Built With
 
-https://ipdcec.online
+* HTML5
+* CSS3
+* JavaScript
+* Responsive Web Design
 
 ---
 
-## 🤝 Contribution
+## 🚀 Deployment
 
-Contributions are welcome:
+The website is planned to be accessible at:
 
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Submit a Pull Request
+```text
+https://ipdcec.online
+```
+
+This project can also be deployed using:
+
+* GitHub Pages
+* Netlify
+* Vercel
+* Cloudflare Pages
+
+---
+
+## 📅 Competition
+
+**Event:** International Plant Design Chemical Engineering Competition 2026
+**Organizer:** Chemical Engineering Department, Faculty of Engineering, Universitas Malikussaleh
+**Location:** Aceh, Indonesia
+**Format:** Offline Competition
 
 ---
 
 ## 📧 Contact
 
-Email: [nasrulza@unimal.ac.id](mailto:nasrulza@unimal.ac.id)
+For official inquiries, please contact:
+
+```text
+teknik-kimia@unimal.ac.id
+```
 
 ---
 
@@ -80,9 +115,16 @@ Email: [nasrulza@unimal.ac.id](mailto:nasrulza@unimal.ac.id)
 
 **Nasrul ZA**
 Universitas Malikussaleh
+Email: [nasrulza@unimal.ac.id](mailto:nasrulza@unimal.ac.id)
 
 ---
 
 ## 📄 License
 
-This project is intended for the official IPDCEC competition platform.
+This project is developed for the official IPDCEC 2026 competition platform.
+
+---
+
+<p align="center">
+  <strong>IPDCEC 2026 — Designing Sustainable Chemical Plants for a Better Global Future</strong>
+</p>
