@@ -479,7 +479,7 @@
 
   <section id="payment"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="payment_eyebrow">Payment Information</div><h2 class="section-title" data-i18n="payment_title">Registration Payment</h2><p data-i18n="payment_desc">Please complete payment according to the competition stage and upload proof of payment through the registration form.</p></div><div class="grid"><div class="card payment-card"><strong>BSI Bank Transfer</strong><p data-i18n="account_number">Account Number</p><div class="payment-number">7283866631</div><p style="margin-top:8px;font-weight:700;">JURUSAN TEKNIK KIMIA UNIMAL</p></div><div class="card payment-card"><strong>PayPal</strong><p data-i18n="paypal_account">PayPal Account</p><div class="payment-number">xxx</div></div><div class="card"><h3 data-i18n="fee_title">Registration Fee</h3><p data-i18n-html="fee_desc">Extended Abstract: Indonesia Rp50.000 / International 5 USD.<br>Full Paper: Indonesia Rp250.000 / International 18 USD.</p></div><div class="card payment-card"><strong>QRIS</strong><p data-i18n="qris_desc">QRIS payment code will be available soon.</p><div class="qris-placeholder">QRIS</div></div></div></div></section>
 
-  <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="https://wa.me/6283168532383" target="_blank">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="https://wa.me/6282274680923" target="_blank">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="https://wa.me/6281267055711" target="_blank">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
+  <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6283168532383'); return false;">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6282274680923'); return false;">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6281267055711'); return false;">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
 
   <section id="social"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="social_eyebrow">Follow Us</div><h2 class="section-title" data-i18n="social_title">Official IPDCEC Social Media</h2></div><div class="social-grid"><div class="social-card"><div class="icon-link linkedin">in</div><h3>LinkedIn</h3><p>International Plant Design Chemical Engineering Competition IPDCEC</p><a class="social-link" href="https://www.linkedin.com/in/international-plant-design-chemical-engineering-competition-ipdcec-a4b814405" target="_blank" data-i18n="open_linkedin">Open LinkedIn</a></div><div class="social-card"><div class="icon-link youtube">▶</div><h3>YouTube</h3><p>@ipdcec2026</p><a class="social-link" href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" target="_blank" data-i18n="open_youtube">Open YouTube</a></div><div class="social-card"><div class="icon-link instagram">◎</div><h3>Instagram</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.instagram.com/ipdcec2026" target="_blank" data-i18n="open_instagram">Open Instagram</a></div><div class="social-card"><div class="icon-link tiktok">♪</div><h3>TikTok</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.tiktok.com/@ipdcec2026?_r=1&_t=ZS-95pw8U9oQQU" target="_blank" data-i18n="open_tiktok">Open TikTok</a></div></div></div></section>
 
@@ -598,6 +598,21 @@
     const urlLang = params.get('lang');
     const savedLang = localStorage.getItem('ipdcec_lang');
     setLanguage(['en','id','zh','ar'].includes(urlLang) ? urlLang : (['en','id','zh','ar'].includes(savedLang) ? savedLang : 'en'));
+
+    function openWhatsApp(number){
+      const lang = localStorage.getItem("ipdcec_lang") || document.documentElement.lang || "en";
+
+      const messages = {
+        en: "Hello, I would like to get more information about IPDCEC 2026.",
+        id: "Halo, saya ingin mendapatkan informasi lebih lanjut tentang IPDCEC 2026.",
+        zh: "您好，我想了解更多关于 IPDCEC 2026 的信息。",
+        ar: "مرحبًا، أود الحصول على مزيد من المعلومات حول IPDCEC 2026."
+      };
+
+      const text = encodeURIComponent(messages[lang] || messages.en);
+      window.open(`https://wa.me/${number}?text=${text}`, "_blank");
+    }
+
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
