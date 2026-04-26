@@ -13,6 +13,8 @@
   <link rel="icon" href="ipdcec-logo.png" />
   <link rel="alternate" hreflang="en" href="https://ipdcec.online/?lang=en" />
   <link rel="alternate" hreflang="id" href="https://ipdcec.online/?lang=id" />
+  <link rel="alternate" hreflang="zh" href="https://ipdcec.online/?lang=zh" />
+  <link rel="alternate" hreflang="ar" href="https://ipdcec.online/?lang=ar" />
   <title>IPDCEC 2026 | International Plant Design Chemical Engineering Competition</title>
 
   <style>
@@ -61,7 +63,7 @@
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; border-radius: 12px; font-weight: 900; transition: .2s ease; border: none; }
     .btn:hover { transform: translateY(-3px) scale(1.02); }
     .btn-green { background: linear-gradient(135deg,var(--green),var(--green-dark)); color: white !important; box-shadow: 0 12px 24px rgba(80,175,50,.3); }
-    .btn-outline { color: white; border: 2px solid rgba(255,255,255,.7); }
+    .btn-guide { color: white; border: 2px solid rgba(255,255,255,.7); }
 
     .hero { position: relative; overflow: hidden; background: linear-gradient(90deg,rgba(3,27,52,.98) 0%,rgba(3,27,52,.88) 52%,rgba(3,27,52,.68) 100%), radial-gradient(circle at 80% 50%,rgba(102,187,53,.25),transparent 28%), linear-gradient(135deg,#0b2442,#062b4f); color: white; min-height: 650px; }
     .hero::after { content: ""; position: absolute; right: -120px; top: 40px; width: 520px; height: 520px; border: 26px solid rgba(102,187,53,.75); border-left-color: rgba(12,79,145,.85); border-bottom-color: rgba(12,79,145,.65); border-radius: 50%; opacity: .8; }
@@ -116,7 +118,7 @@
     .contact-grid, .social-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(245px,1fr)); gap: 18px; }
     .contact-card, .social-card { background: white; border: 1px solid var(--border); border-radius: 22px; padding: 24px; box-shadow: 0 12px 32px rgba(3,27,52,.08); }
     .contact-card h3, .social-card h3 { color: var(--navy); margin-bottom: 8px; }
-    .wa-link, .social-link { display: inline-block; margin-top: 10px; color: var(--green-dark); font-weight: 900; }
+    .btn btn-contact, .social-link { display: inline-block; margin-top: 10px; color: var(--green-dark); font-weight: 900; }
     .payment-card strong { display: block; font-size: 22px; color: var(--navy); margin-bottom: 6px; }
     .payment-number { font-size: 24px; font-weight: 900; color: var(--green-dark); letter-spacing: .5px; }
     .qris-placeholder { margin-top: 12px; width: 180px; height: 180px; border: 2px dashed var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-weight: 900; background: #f8fbff; }
@@ -129,8 +131,177 @@
 
     @media (max-width:980px) { .hero-inner{grid-template-columns:1fr; padding-bottom:135px;} .mascot-wrap{min-height:auto;} .mascot-wrap img{width:min(340px,78%);} .info-grid{grid-template-columns:1fr 1fr;} .guidebook-box{grid-template-columns:1fr;} }
     @media (max-width:760px) { .topbar-inner,.nav-inner{align-items:flex-start; flex-direction:column;} .nav-links{justify-content:flex-start; gap:14px;} .brand-logo{width:58px;height:58px;} .brand-title strong{font-size:22px;} .info-grid{grid-template-columns:1fr;} .info-item{border-right:none; border-bottom:1px solid rgba(255,255,255,.16);} .timeline-item{grid-template-columns:1fr; gap:6px;} .countdown-grid{grid-template-columns:repeat(2,1fr);} }
+  
+/* PREMIUM GUIDEBOOK BUTTON */
+.premium-guidebook-btn {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(102,187,53,0.4);
+  animation: pulseGuidebook 1.8s infinite;
+  font-weight: 900;
+}
+
+.premium-guidebook-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.45),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shineGuidebook 2.8s infinite;
+}
+
+/* Glow pulse */
+@keyframes pulseGuidebook {
+  0% { box-shadow: 0 0 0 0 rgba(102,187,53,0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(102,187,53,0); }
+  100% { box-shadow: 0 0 0 0 rgba(102,187,53,0); }
+}
+
+/* Shine animation */
+@keyframes shineGuidebook {
+  0% { left: -75%; }
+  55% { left: 125%; }
+  100% { left: 125%; }
+}
+
+/* GLOBAL PREMIUM BUTTON */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+/* Hover naik */
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Shine effect */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  left: 125%;
+}
+
+/* REGISTER BUTTON (SUPER POWER) */
+.btn-register {
+  background: linear-gradient(135deg, #66bb35, #4caf50);
+  color: white;
+  box-shadow: 0 0 0 rgba(102,187,53,0.4);
+  animation: pulseRegister 1.5s infinite;
+}
+
+@keyframes pulseRegister {
+  0% { box-shadow: 0 0 0 0 rgba(102,187,53,0.5); }
+  70% { box-shadow: 0 0 0 18px rgba(102,187,53,0); }
+  100% { box-shadow: 0 0 0 0 rgba(102,187,53,0); }
+}
+
+/* GUIDEBOOK BUTTON */
+.btn-guide {
+  background: linear-gradient(135deg, #031b34, #0b3d6e);
+  color: white;
+}
+
+/* CONTACT BUTTON */
+.btn-contact {
+  background: linear-gradient(135deg, #ff9800, #ff6f00);
+  color: white;
+}
+
+/* FLOATING BUTTON */
+.floating-register {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #66bb35;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* REGISTER */
+.btn-register {
+  background: linear-gradient(135deg, #66bb35, #4caf50);
+  color: white;
+  animation: pulseRegister 1.5s infinite;
+}
+
+@keyframes pulseRegister {
+  0% { box-shadow: 0 0 0 0 rgba(102,187,53,0.5); }
+  70% { box-shadow: 0 0 0 18px rgba(102,187,53,0); }
+  100% { box-shadow: 0 0 0 0 rgba(102,187,53,0); }
+}
+
+/* GUIDEBOOK */
+.btn-guide {
+  background: linear-gradient(135deg, #031b34, #0b3d6e);
+  color: white;
+}
+
+/* CONTACT */
+.btn-contact {
+  background: linear-gradient(135deg, #ff9800, #ff6f00);
+  color: white;
+}
+
+
+
+    html[dir="rtl"] body { direction: rtl; text-align: right; }
+    html[dir="rtl"] .topbar-inner,
+    html[dir="rtl"] .nav-inner,
+    html[dir="rtl"] .hero-actions,
+    html[dir="rtl"] .footer-inner,
+    html[dir="rtl"] .social-icons,
+    html[dir="rtl"] .lang-switch { flex-direction: row-reverse; }
+    html[dir="rtl"] .nav-links { justify-content: flex-start; }
+    html[dir="rtl"] .card ul { padding-left: 0; padding-right: 18px; }
+    html[dir="rtl"] .timeline-item { grid-template-columns: 1fr 200px; }
+    html[dir="rtl"] .info-item { border-right: none; border-left: 1px solid rgba(255,255,255,.16); }
+    html[dir="rtl"] .info-item:last-child { border-left: none; }
+    html[dir="rtl"] .floating-register { right: auto; left: 20px; }
+
   </style>
 </head>
+
+<a class="floating-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform"
+   target="_blank" data-i18n="floating_register">
+   🚀 Register Now
+</a>
 
 <body>
   <div class="topbar">
@@ -146,6 +317,8 @@
       <div class="lang-switch">
         <button id="lang-en" class="active" onclick="setLanguage('en')">EN</button>
         <button id="lang-id" onclick="setLanguage('id')">ID</button>
+        <button id="lang-zh" onclick="setLanguage('zh')">中文</button>
+        <button id="lang-ar" onclick="setLanguage('ar')">العربية</button>
       </div>
     </div>
   </div>
@@ -158,7 +331,7 @@
       </div>
       <div class="nav-links">
         <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#payment" data-i18n="nav_payment">Payment</a><a href="#contact" data-i18n="nav_contact">Contact</a>
-        <a class="btn btn-green" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a>
+        <a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a>
       </div>
     </div>
   </nav>
@@ -170,8 +343,12 @@
         <h1 data-i18n-html="hero_title">Plant Design Chemical Engineering <span>Competition 2026</span></h1>
         <p data-i18n="hero_desc">Designing sustainable chemical plants for a better global future.</p>
         <div class="hero-actions">
-          <a class="btn btn-green" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a>
-          <a class="btn btn-outline" href="https://drive.google.com/file/d/1hbAAebrIHGOceAb5zoJW6p10Npcm20Qv/view?usp=sharing" target="_blank" data-i18n="btn_guidebook">Download Guidebook</a>
+          <a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a>
+          <a class="btn btn-green premium-guidebook-btn"
+   href="https://drive.google.com/file/d/1ivCfs98m2DbbwtsWiJSZK4aqcg8QxS3K/view?usp=sharing"
+   target="_blank" data-i18n="btn_guidebook_official">
+   📘 Download Official Guidebook
+</a>
         </div>
         <div class="countdown-box">
           <div class="countdown-title" data-i18n="countdown_title">Registration closes in</div>
@@ -200,15 +377,15 @@
 
   <section id="timeline"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="timeline_eyebrow">Timeline</div><h2 class="section-title" data-i18n="timeline_title">Competition Schedule</h2><p data-i18n="timeline_desc">Please submit all documents before the official deadline and regularly check official announcements.</p></div><div class="timeline"><div class="timeline-item"><div class="date">1 – 14 May 2026</div><div><h3 data-i18n="t1_title">Registration & Extended Abstract Submission</h3><p data-i18n="t1_desc">Team registration and extended abstract submission period.</p></div></div><div class="timeline-item"><div class="date">21 May 2026</div><div><h3 data-i18n="t2_title">Semifinalist Announcement</h3><p data-i18n="t2_desc">The best 20 teams from the Extended Abstract stage will be announced.</p></div></div><div class="timeline-item"><div class="date">22 May – 15 June 2026</div><div><h3 data-i18n="t3_title">Full Paper Submission</h3><p data-i18n="t3_desc">Selected teams submit their complete plant design report.</p></div></div><div class="timeline-item"><div class="date">25 June 2026</div><div><h3 data-i18n="t4_title">Finalist Announcement</h3><p data-i18n="t4_desc">The top 6 teams will proceed to the final presentation stage.</p></div></div><div class="timeline-item"><div class="date">5 July 2026</div><div><h3 data-i18n="t5_title">Final Presentation</h3><p data-i18n="t5_desc">Finalists present their plant design offline at Universitas Malikussaleh.</p></div></div><div class="timeline-item"><div class="date">6 – 7 July 2026</div><div><h3 data-i18n="t6_title">Field Trip & Awarding</h3><p data-i18n="t6_desc">Field trip and awarding ceremony for IPDCEC 2026 participants.</p></div></div></div></div></section>
 
-  <section id="guidebook" class="highlight"><div class="container"><div class="guidebook-box"><div><h2 data-i18n="guide_title">Download the Official Guidebook</h2><p data-i18n="guide_desc">Read the complete guidebook before registering. It contains the official rules, timeline, registration requirements, payment information, and competition stages.</p><div class="hero-actions"><a class="btn btn-green" href="https://drive.google.com/file/d/1hbAAebrIHGOceAb5zoJW6p10Npcm20Qv/view?usp=sharing" target="_blank" data-i18n="btn_guidebook">Download Guidebook</a><a class="btn btn-outline" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register_plain">Register Now</a></div></div><div class="guide-card"><h3 data-i18n="guide_card_title">Guidebook File</h3><p data-i18n="guide_card_desc">The official guidebook is available through Google Drive. Please read all requirements carefully before registration.</p></div></div></div></section>
+  <section id="guidebook" class="highlight"><div class="container"><div class="guidebook-box"><div><h2 data-i18n="guide_title">Download the Official Guidebook</h2><p data-i18n="guide_desc">Read the complete guidebook before registering. It contains the official rules, timeline, registration requirements, payment information, and competition stages.</p><div class="hero-actions"><a class="btn btn-green btn-register" href="https://drive.google.com/file/d/1hbAAebrIHGOceAb5zoJW6p10Npcm20Qv/view?usp=sharing" target="_blank" data-i18n="btn_guidebook">Download Guidebook</a><a class="btn btn-guide" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register_plain">Register Now</a></div></div><div class="guide-card"><h3 data-i18n="guide_card_title">Guidebook File</h3><p data-i18n="guide_card_desc">The official guidebook is available through Google Drive. Please read all requirements carefully before registration.</p></div></div></div></section>
 
   <section id="payment"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="payment_eyebrow">Payment Information</div><h2 class="section-title" data-i18n="payment_title">Registration Payment</h2><p data-i18n="payment_desc">Please complete payment according to the competition stage and upload proof of payment through the registration form.</p></div><div class="grid"><div class="card payment-card"><strong>BSI Bank Transfer</strong><p data-i18n="account_number">Account Number</p><div class="payment-number">7283866631</div><p style="margin-top:8px;font-weight:700;">JURUSAN TEKNIK KIMIA UNIMAL</p></div><div class="card payment-card"><strong>PayPal</strong><p data-i18n="paypal_account">PayPal Account</p><div class="payment-number">xxx</div></div><div class="card"><h3 data-i18n="fee_title">Registration Fee</h3><p data-i18n-html="fee_desc">Extended Abstract: Indonesia Rp50.000 / International 5 USD.<br>Full Paper: Indonesia Rp250.000 / International 18 USD.</p></div><div class="card payment-card"><strong>QRIS</strong><p data-i18n="qris_desc">QRIS payment code will be available soon.</p><div class="qris-placeholder">QRIS</div></div></div></div></section>
 
-  <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="wa-link" href="https://wa.me/6283168532383" target="_blank">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="wa-link" href="https://wa.me/6282274680923" target="_blank">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="wa-link" href="https://wa.me/6281267055711" target="_blank">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
+  <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="https://wa.me/6283168532383" target="_blank">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="https://wa.me/6282274680923" target="_blank">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="https://wa.me/6281267055711" target="_blank">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
 
   <section id="social"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="social_eyebrow">Follow Us</div><h2 class="section-title" data-i18n="social_title">Official IPDCEC Social Media</h2></div><div class="social-grid"><div class="social-card"><div class="icon-link linkedin">in</div><h3>LinkedIn</h3><p>International Plant Design Chemical Engineering Competition IPDCEC</p><a class="social-link" href="https://www.linkedin.com/in/international-plant-design-chemical-engineering-competition-ipdcec-a4b814405" target="_blank" data-i18n="open_linkedin">Open LinkedIn</a></div><div class="social-card"><div class="icon-link youtube">▶</div><h3>YouTube</h3><p>@ipdcec2026</p><a class="social-link" href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" target="_blank" data-i18n="open_youtube">Open YouTube</a></div><div class="social-card"><div class="icon-link instagram">◎</div><h3>Instagram</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.instagram.com/ipdcec2026" target="_blank" data-i18n="open_instagram">Open Instagram</a></div><div class="social-card"><div class="icon-link tiktok">♪</div><h3>TikTok</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.tiktok.com/@ipdcec2026?_r=1&_t=ZS-95pw8U9oQQU" target="_blank" data-i18n="open_tiktok">Open TikTok</a></div></div></div></section>
 
-  <div class="container"><div class="cta"><h2 data-i18n="cta_title">Ready to Register for IPDCEC 2026?</h2><p data-i18n="cta_desc">Prepare your team data, student ID, registration proof, originality statement, and required social media proof before completing the registration form.</p><div class="hero-actions" style="justify-content:center;margin-bottom:0;"><a class="btn btn-green" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a><a class="btn btn-outline" href="#contact" data-i18n="btn_contact">Contact Committee</a></div></div></div>
+  <div class="container"><div class="cta"><h2 data-i18n="cta_title">Ready to Register for IPDCEC 2026?</h2><p data-i18n="cta_desc">Prepare your team data, student ID, registration proof, originality statement, and required social media proof before completing the registration form.</p><div class="hero-actions" style="justify-content:center;margin-bottom:0;"><a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a><a class="btn btn-guide" href="#contact" data-i18n="btn_contact">Contact Committee</a></div></div></div>
 
   <footer><div class="container footer-inner"><div><strong>IPDCEC 2026</strong><br /><span data-i18n="footer_competition">International Plant Design Chemical Engineering Competition</span></div><div><span data-i18n="footer_org">Organized by Chemical Engineering Department</span><br /><span data-i18n="footer_faculty">Faculty of Engineering, Universitas Malikussaleh</span></div><div>Website: ipdcec.online<br />Department: <a href="https://teknik-kimia.unimal.ac.id" target="_blank" style="color:#d7e9f8;">teknik-kimia.unimal.ac.id</a><br />Email: <a href="mailto:teknik-kimia@unimal.ac.id" style="color:#d7e9f8;">teknik-kimia@unimal.ac.id</a><br /><span data-i18n="footer_social">Instagram, TikTok & YouTube: @ipdcec2026</span></div></div></footer>
 
@@ -218,7 +395,7 @@
         pageTitle: "IPDCEC 2026 | International Plant Design Chemical Engineering Competition", metaDesc: "Official website for IPDCEC 2026 - International Plant Design Chemical Engineering Competition.",
         topbar_title: "International Plant Design Chemical Engineering Competition", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "International Plant Design Chemical Engineering Competition",
         nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_payment: "Payment", nav_contact: "Contact",
-        btn_register: "Register Now →", btn_register_plain: "Register Now", btn_guidebook: "Download Guidebook", btn_contact: "Contact Committee",
+        btn_register: "Register Now →", btn_register_plain: "Register Now", btn_guidebook: "Download Guidebook", btn_contact: "Contact Committee", btn_guidebook_official: "📘 Download Official Guidebook", floating_register: "🚀 Register Now",
         countdown_title: "Registration closes in", cd_days: "Days", cd_hours: "Hours", cd_minutes: "Minutes", cd_seconds: "Seconds",
         hero_kicker: "International", hero_title: "Plant Design Chemical Engineering <span>Competition 2026</span>", hero_desc: "Designing sustainable chemical plants for a better global future.",
         info1_title: "Offline Competition", info1_desc: "Universitas Malikussaleh, Aceh, Indonesia", info2_title: "International Event", info2_desc: "Open for Chemical Engineering students worldwide", info3_title: "Team up to 3 Members", info3_desc: "+ 1 lecturer supervisor from the same institution", info4_title: "Simulation", info4_desc: "Process simulation software required",
@@ -235,7 +412,7 @@
         pageTitle: "IPDCEC 2026 | Kompetisi Perancangan Pabrik Kimia Internasional", metaDesc: "Website resmi IPDCEC 2026 - Kompetisi Perancangan Pabrik Kimia Internasional.",
         topbar_title: "Kompetisi Perancangan Pabrik Kimia Internasional", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "Kompetisi Perancangan Pabrik Kimia Internasional",
         nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_payment: "Pembayaran", nav_contact: "Kontak",
-        btn_register: "Daftar Sekarang →", btn_register_plain: "Daftar Sekarang", btn_guidebook: "Unduh Guidebook", btn_contact: "Hubungi Panitia",
+        btn_register: "Daftar Sekarang →", btn_register_plain: "Daftar Sekarang", btn_guidebook: "Unduh Guidebook", btn_contact: "Hubungi Panitia", btn_guidebook_official: "📘 Unduh Guidebook Resmi", floating_register: "🚀 Daftar Sekarang",
         countdown_title: "Pendaftaran ditutup dalam", cd_days: "Hari", cd_hours: "Jam", cd_minutes: "Menit", cd_seconds: "Detik",
         hero_kicker: "Internasional", hero_title: "Kompetisi Perancangan Pabrik Kimia <span>2026</span>", hero_desc: "Merancang pabrik kimia berkelanjutan untuk masa depan global yang lebih baik.",
         info1_title: "Kompetisi Luring", info1_desc: "Universitas Malikussaleh, Aceh, Indonesia", info2_title: "Ajang Internasional", info2_desc: "Terbuka untuk mahasiswa Teknik Kimia dari seluruh dunia", info3_title: "Maksimal 3 Anggota Tim", info3_desc: "+ 1 dosen pembimbing dari institusi yang sama", info4_title: "Simulasi", info4_desc: "Menggunakan software simulasi proses",
@@ -247,19 +424,59 @@
         contact_eyebrow: "Narahubung", contact_title: "Butuh Bantuan Registrasi?", contact_desc: "Untuk pertanyaan terkait registrasi dan kompetisi, silakan hubungi perwakilan panitia resmi berikut.", contact_person: "Narahubung",
         social_eyebrow: "Ikuti Kami", social_title: "Media Sosial Resmi IPDCEC", open_linkedin: "Buka LinkedIn", open_youtube: "Buka YouTube", open_instagram: "Buka Instagram", open_tiktok: "Buka TikTok",
         cta_title: "Siap Mendaftar IPDCEC 2026?", cta_desc: "Siapkan data tim, kartu identitas mahasiswa, bukti pembayaran, surat pernyataan orisinalitas, dan bukti media sosial sebelum mengisi formulir registrasi.", footer_competition: "Kompetisi Perancangan Pabrik Kimia Internasional", footer_org: "Diselenggarakan oleh Jurusan Teknik Kimia", footer_faculty: "Fakultas Teknik, Universitas Malikussaleh", footer_social: "Instagram, TikTok & YouTube: @ipdcec2026"
+
+      },
+      zh: {
+        pageTitle: "IPDCEC 2026 | 国际化工厂设计化学工程竞赛", metaDesc: "IPDCEC 2026 官方网站——国际化工厂设计化学工程竞赛。",
+        topbar_title: "国际化工厂设计化学工程竞赛", topbar_location: "马利库萨莱大学，亚齐，印度尼西亚", brand_subtitle: "国际化工厂设计化学工程竞赛",
+        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_payment: "付款", nav_contact: "联系",
+        btn_register: "立即报名 →", btn_register_plain: "立即报名", btn_guidebook: "下载指南", btn_guidebook_official: "📘 下载官方指南", btn_contact: "联系组委会", floating_register: "🚀 立即报名",
+        countdown_title: "报名截止倒计时", cd_days: "天", cd_hours: "小时", cd_minutes: "分钟", cd_seconds: "秒",
+        hero_kicker: "国际", hero_title: "化工厂设计化学工程<span>竞赛 2026</span>", hero_desc: "为更美好的全球未来设计可持续化工厂。",
+        info1_title: "线下竞赛", info1_desc: "马利库萨莱大学，亚齐，印度尼西亚", info2_title: "国际赛事", info2_desc: "面向全球化学工程专业学生开放", info3_title: "每队最多 3 名成员", info3_desc: "+ 1 名来自同一院校的指导教师", info4_title: "模拟", info4_desc: "需使用过程模拟软件",
+        about_eyebrow: "关于 IPDCEC", about_title: "面向未来化学工程师的全球平台", about_desc: "IPDCEC 是由马利库萨莱大学工程学院化学工程系举办的国际化工厂设计竞赛。本竞赛挑战学生设计全面、安全、高效且可持续的化工厂。", about_card1_title: "全球参与", about_card1_desc: "面向世界各地高校在读化学工程专业学生开放。", about_card2_title: "创新解决方案", about_card2_desc: "鼓励过程创新、工程创造力和实用型工业设计。", about_card3_title: "可持续未来", about_card3_desc: "聚焦高效过程设计、能源优化、安全、经济性和环境责任。",
+        theme_eyebrow: "主题与子主题", theme_title: "竞赛主题", theme_quote: "“面向可持续全球未来的工业型化工厂设计”", sub1_title: "01. 来自天然气的清洁能源", sub1_desc: "通过过程优化和减排，将天然气作为更清洁的能源来源加以利用。", sub2_title: "02. 高附加值化学产品", sub2_desc: "将天然气下游加工为高附加值化学产品，支持可持续且环保的产业。",
+        timeline_eyebrow: "时间表", timeline_title: "竞赛安排", timeline_desc: "请在官方截止日期前提交所有文件，并定期关注官方公告。", t1_title: "报名与扩展摘要提交", t1_desc: "团队报名和扩展摘要提交阶段。", t2_title: "半决赛名单公布", t2_desc: "将公布扩展摘要阶段最佳 20 支队伍。", t3_title: "全文论文提交", t3_desc: "入选团队提交完整的工厂设计报告。", t4_title: "决赛名单公布", t4_desc: "前 6 支队伍将进入最终答辩阶段。", t5_title: "最终答辩", t5_desc: "决赛队伍将在马利库萨莱大学进行线下设计答辩。", t6_title: "实地参观与颁奖", t6_desc: "IPDCEC 2026 参赛者实地参观和颁奖典礼。",
+        guide_title: "下载官方指南", guide_desc: "请在报名之前阅读完整指南。指南包含官方规则、时间表、报名要求、付款信息和竞赛阶段。", guide_card_title: "指南文件", guide_card_desc: "官方指南可通过 Google Drive 获取。请在报名之前仔细阅读所有要求。",
+        payment_eyebrow: "付款信息", payment_title: "报名付款", payment_desc: "请根据竞赛阶段完成付款，并通过报名表上传付款凭证。", account_number: "账号", paypal_account: "PayPal 账号", fee_title: "报名费", fee_desc: "扩展摘要：印度尼西亚 Rp50.000 / 国际 5 USD。<br>全文论文：印度尼西亚 Rp250.000 / 国际 18 USD。", qris_desc: "QRIS 付款码即将开放。",
+        contact_eyebrow: "联系人", contact_title: "报名需要帮助？", contact_desc: "如有报名和竞赛相关问题，请联系以下官方组委会代表。", contact_person: "联系人",
+        social_eyebrow: "关注我们", social_title: "IPDCEC 官方社交媒体", open_linkedin: "打开 LinkedIn", open_youtube: "打开 YouTube", open_instagram: "打开 Instagram", open_tiktok: "打开 TikTok",
+        cta_title: "准备报名 IPDCEC 2026 吗？", cta_desc: "填写报名表前，请准备团队资料、学生证、付款凭证、原创性声明以及所需社交媒体证明。", footer_competition: "国际化工厂设计化学工程竞赛", footer_org: "由化学工程系主办", footer_faculty: "工程学院，马利库萨莱大学", footer_social: "Instagram、TikTok 与 YouTube：@ipdcec2026"
+
+      },
+      ar: {
+        pageTitle: "IPDCEC 2026 | المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", metaDesc: "الموقع الرسمي لـ IPDCEC 2026 - المسابقة الدولية لتصميم مصانع الهندسة الكيميائية.",
+        topbar_title: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", topbar_location: "جامعة مالك الصالح، آتشيه، إندونيسيا", brand_subtitle: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية",
+        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_payment: "الدفع", nav_contact: "اتصل بنا",
+        btn_register: "سجّل الآن →", btn_register_plain: "سجّل الآن", btn_guidebook: "تحميل الدليل", btn_guidebook_official: "📘 تحميل الدليل الرسمي", btn_contact: "التواصل مع اللجنة", floating_register: "🚀 سجّل الآن",
+        countdown_title: "ينتهي التسجيل خلال", cd_days: "أيام", cd_hours: "ساعات", cd_minutes: "دقائق", cd_seconds: "ثوانٍ",
+        hero_kicker: "دولي", hero_title: "تصميم مصانع الهندسة الكيميائية <span>مسابقة 2026</span>", hero_desc: "تصميم مصانع كيميائية مستدامة من أجل مستقبل عالمي أفضل.",
+        info1_title: "مسابقة حضورية", info1_desc: "جامعة مالك الصالح، آتشيه، إندونيسيا", info2_title: "حدث دولي", info2_desc: "مفتوح لطلاب الهندسة الكيميائية من جميع أنحاء العالم", info3_title: "فريق حتى 3 أعضاء", info3_desc: "+ مشرف أكاديمي واحد من المؤسسة نفسها", info4_title: "المحاكاة", info4_desc: "يتطلب استخدام برنامج محاكاة العمليات",
+        about_eyebrow: "حول IPDCEC", about_title: "منصة عالمية لمهندسي الكيمياء المستقبليين", about_desc: "IPDCEC هي مسابقة دولية لتصميم المصانع الكيميائية تنظمها قسم الهندسة الكيميائية، كلية الهندسة، جامعة مالك الصالح. تتحدى هذه المسابقة الطلاب لتصميم مصانع كيميائية شاملة وآمنة وفعالة ومستدامة.", about_card1_title: "مشاركة عالمية", about_card1_desc: "مفتوحة لطلاب الهندسة الكيميائية النشطين من جامعات حول العالم.", about_card2_title: "حلول مبتكرة", about_card2_desc: "تشجع الابتكار في العمليات والإبداع الهندسي والتصميم الصناعي العملي.", about_card3_title: "مستقبل مستدام", about_card3_desc: "تركز على كفاءة تصميم العمليات وتحسين الطاقة والسلامة والاقتصاد والمسؤولية البيئية.",
+        theme_eyebrow: "الموضوع والمحاور", theme_title: "موضوع المسابقة", theme_quote: "«تصميم مصانع كيميائية قائمة على الصناعة من أجل مستقبل عالمي مستدام»", sub1_title: "01. طاقة أنظف من الغاز الطبيعي", sub1_desc: "استخدام الغاز الطبيعي كمصدر طاقة أنظف من خلال تحسين العمليات وخفض الانبعاثات.", sub2_title: "02. منتجات كيميائية ذات قيمة مضافة", sub2_desc: "تحويل الغاز الطبيعي في المراحل النهائية إلى منتجات كيميائية ذات قيمة مضافة لدعم صناعة مستدامة وصديقة للبيئة.",
+        timeline_eyebrow: "الجدول الزمني", timeline_title: "جدول المسابقة", timeline_desc: "يرجى تقديم جميع الوثائق قبل الموعد النهائي الرسمي ومتابعة الإعلانات الرسمية بانتظام.", t1_title: "التسجيل وتقديم الملخص الموسع", t1_desc: "فترة تسجيل الفرق وتقديم الملخص الموسع.", t2_title: "إعلان المتأهلين لنصف النهائي", t2_desc: "سيتم الإعلان عن أفضل 20 فريقاً من مرحلة الملخص الموسع.", t3_title: "تقديم البحث الكامل", t3_desc: "تقدم الفرق المختارة تقرير تصميم المصنع الكامل.", t4_title: "إعلان المتأهلين للنهائي", t4_desc: "ستتأهل أفضل 6 فرق إلى مرحلة العرض النهائي.", t5_title: "العرض النهائي", t5_desc: "يقدم المتأهلون للنهائي تصميم مصانعهم حضورياً في جامعة مالك الصالح.", t6_title: "رحلة ميدانية وتكريم", t6_desc: "رحلة ميدانية وحفل تكريم للمشاركين في IPDCEC 2026.",
+        guide_title: "تحميل الدليل الرسمي", guide_desc: "اقرأ الدليل الكامل قبل التسجيل. يحتوي على القواعد الرسمية والجدول الزمني ومتطلبات التسجيل ومعلومات الدفع ومراحل المسابقة.", guide_card_title: "ملف الدليل", guide_card_desc: "الدليل الرسمي متاح عبر Google Drive. يرجى قراءة جميع المتطلبات بعناية قبل التسجيل.",
+        payment_eyebrow: "معلومات الدفع", payment_title: "دفع رسوم التسجيل", payment_desc: "يرجى إتمام الدفع وفقاً لمرحلة المسابقة ورفع إثبات الدفع عبر نموذج التسجيل.", account_number: "رقم الحساب", paypal_account: "حساب PayPal", fee_title: "رسوم التسجيل", fee_desc: "الملخص الموسع: إندونيسيا Rp50.000 / دولي 5 USD.<br>البحث الكامل: إندونيسيا Rp250.000 / دولي 18 USD.", qris_desc: "سيكون رمز الدفع QRIS متاحاً قريباً.",
+        contact_eyebrow: "جهة الاتصال", contact_title: "هل تحتاج مساعدة في التسجيل؟", contact_desc: "للاستفسارات المتعلقة بالتسجيل والمسابقة، يرجى التواصل مع ممثلي اللجنة الرسميين أدناه.", contact_person: "جهة الاتصال",
+        social_eyebrow: "تابعونا", social_title: "وسائل التواصل الاجتماعي الرسمية لـ IPDCEC", open_linkedin: "فتح LinkedIn", open_youtube: "فتح YouTube", open_instagram: "فتح Instagram", open_tiktok: "فتح TikTok",
+        cta_title: "هل أنت مستعد للتسجيل في IPDCEC 2026؟", cta_desc: "جهّز بيانات الفريق وبطاقة الطالب وإثبات الدفع وبيان الأصالة وإثباتات وسائل التواصل الاجتماعي المطلوبة قبل إكمال نموذج التسجيل.", footer_competition: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", footer_org: "تنظمها قسم الهندسة الكيميائية", footer_faculty: "كلية الهندسة، جامعة مالك الصالح", footer_social: "Instagram و TikTok و YouTube: @ipdcec2026"
+
       }
     };
 
     function setLanguage(lang){
       const dict = translations[lang] || translations.en;
       document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
       document.title = dict.pageTitle;
       const metaDesc = document.querySelector('meta[name="description"]');
       if(metaDesc) metaDesc.setAttribute('content', dict.metaDesc);
       document.querySelectorAll('[data-i18n]').forEach(el => { const key = el.getAttribute('data-i18n'); if(dict[key]) el.textContent = dict[key]; });
       document.querySelectorAll('[data-i18n-html]').forEach(el => { const key = el.getAttribute('data-i18n-html'); if(dict[key]) el.innerHTML = dict[key]; });
-      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-      document.getElementById('lang-id').classList.toggle('active', lang === 'id');
+      ['en','id','zh','ar'].forEach(code => {
+        const btn = document.getElementById('lang-' + code);
+        if(btn) btn.classList.toggle('active', lang === code);
+      });
       localStorage.setItem('ipdcec_lang', lang);
     }
 
@@ -282,7 +499,7 @@
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
     const savedLang = localStorage.getItem('ipdcec_lang');
-    setLanguage(urlLang === 'id' || urlLang === 'en' ? urlLang : (savedLang || 'en'));
+    setLanguage(['en','id','zh','ar'].includes(urlLang) ? urlLang : (['en','id','zh','ar'].includes(savedLang) ? savedLang : 'en'));
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
