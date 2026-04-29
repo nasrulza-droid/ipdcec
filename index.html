@@ -393,6 +393,97 @@
     html[dir="rtl"] .register-popup { right: auto; left: 24px; }
     html[dir="rtl"] .register-popup::after { right: auto; left: 28px; }
 
+
+/* PREMIUM LOCATION SECTION */
+.location-premium {
+  background: linear-gradient(180deg,#ffffff 0%,#f4f8fc 100%);
+}
+.location-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 28px;
+  align-items: stretch;
+  background: radial-gradient(circle at top right,rgba(102,187,53,.25),transparent 34%), linear-gradient(135deg,var(--navy),var(--navy-2));
+  color: white;
+  border-radius: 34px;
+  padding: 42px;
+  box-shadow: var(--shadow);
+}
+.location-hero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -120px;
+  bottom: -140px;
+  border-radius: 50%;
+  background: rgba(102,187,53,.22);
+}
+.location-hero-content, .location-map-card { position: relative; z-index: 1; }
+.location-hero h2 { font-size: clamp(30px,4vw,48px); line-height: 1.12; margin-bottom: 14px; }
+.location-hero p { color: #e7f4ff; font-size: 17px; margin-bottom: 18px; }
+.location-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.location-pill { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); color: white; border-radius: 999px; padding: 9px 13px; font-size: 13px; font-weight: 900; }
+.location-map-card { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); border-radius: 26px; padding: 14px; min-height: 360px; }
+.location-map-card iframe { width: 100%; height: 100%; min-height: 330px; border: 0; border-radius: 20px; display: block; }
+.location-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; margin-top: 24px; }
+.location-photo-card { overflow: hidden; padding: 0; }
+.location-photo-card img { width: 100%; height: 285px; object-fit: cover; display: block; transition: transform .35s ease; }
+.location-photo-card:hover img { transform: scale(1.04); }
+.location-photo-content { padding: 24px; }
+.location-photo-content h3 { color: var(--navy); margin-bottom: 8px; font-size: 21px; }
+.location-photo-content p { color: var(--muted); margin-bottom: 16px; }
+.location-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+@media (max-width:980px) { .location-hero{grid-template-columns:1fr;} .location-map-card{min-height:320px;} }
+@media (max-width:760px) { .location-hero{padding:28px;} .location-gallery{grid-template-columns:1fr;} .location-photo-card img{height:235px;} }
+
+/* PREMIUM GAYO COFFEE EXPERIENCE */
+.coffee-premium {
+  background: linear-gradient(180deg,#f4f8fc 0%,#ffffff 100%);
+}
+.coffee-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 28px;
+  align-items: stretch;
+  background: radial-gradient(circle at top right,rgba(102,187,53,.23),transparent 35%), linear-gradient(135deg,#2b1608,#5a3516 52%,#0b3d2b);
+  color: white;
+  border-radius: 34px;
+  padding: 42px;
+  box-shadow: var(--shadow);
+}
+.coffee-hero::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  right: -130px;
+  bottom: -150px;
+  border-radius: 50%;
+  background: rgba(102,187,53,.18);
+}
+.coffee-hero-content, .coffee-map-card { position: relative; z-index: 1; }
+.coffee-hero h2 { font-size: clamp(30px,4vw,48px); line-height: 1.12; margin-bottom: 14px; }
+.coffee-hero p { color: #fff5e8; font-size: 17px; margin-bottom: 18px; }
+.coffee-map-card { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.24); border-radius: 26px; padding: 14px; min-height: 360px; }
+.coffee-map-card iframe { width: 100%; height: 100%; min-height: 330px; border: 0; border-radius: 20px; display: block; }
+.coffee-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin-top: 24px; }
+.coffee-card { overflow: hidden; padding: 0; border-top: 6px solid var(--green); }
+.coffee-card img { width: 100%; height: 230px; object-fit: cover; display: block; transition: transform .35s ease; }
+.coffee-card:hover img { transform: scale(1.04); }
+.coffee-card-content { padding: 24px; }
+.coffee-card-content h3 { color: var(--navy); margin-bottom: 8px; font-size: 21px; }
+.coffee-card-content p { color: var(--muted); margin-bottom: 16px; }
+.coffee-note { margin-top: 24px; background: linear-gradient(135deg,#fff,#f8fbff); border-left: 6px solid var(--green); }
+html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--green); }
+@media (max-width:980px) { .coffee-hero{grid-template-columns:1fr;} .coffee-gallery{grid-template-columns:1fr 1fr;} .coffee-map-card{min-height:320px;} }
+@media (max-width:760px) { .coffee-hero{padding:28px;} .coffee-gallery{grid-template-columns:1fr;} .coffee-card img{height:235px;} }
+
+
   </style>
 </head>
 
@@ -428,7 +519,7 @@
         <div class="brand-title"><strong>IPDCEC 2026</strong><span data-i18n="brand_subtitle">International Plant Design Chemical Engineering Competition</span></div>
       </div>
       <div class="nav-links">
-        <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#payment" data-i18n="nav_payment">Free Registration</a><a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#location" data-i18n="nav_location">Location</a><a href="#coffee" data-i18n="nav_coffee">Gayo Coffee</a><a href="#payment" data-i18n="nav_payment">Free Registration</a><a href="#contact" data-i18n="nav_contact">Contact</a>
         <a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a>
       </div>
     </div>
@@ -489,6 +580,121 @@
 
   <section id="guidebook" class="highlight"><div class="container"><div class="guidebook-box"><div><h2 data-i18n="guide_title">Download the Official Guidebook</h2><p data-i18n="guide_desc">Read the complete guidebook before registering. It contains the official rules, timeline, registration requirements, free registration information, and competition stages.</p><div class="hero-actions"><a class="btn btn-green btn-register" href="https://drive.google.com/file/d/1ivCfs98m2DbbwtsWiJSZK4aqcg8QxS3K/view?usp=sharing" target="_blank" data-i18n="btn_guidebook">Download Guidebook</a><a class="btn btn-guide" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register_plain">Register Now</a></div></div><div class="guide-card"><h3 data-i18n="guide_card_title">Guidebook File</h3><p data-i18n="guide_card_desc">The official guidebook is available through Google Drive. Please read all requirements carefully before registration.</p></div></div></div></section>
 
+  <section id="location" class="location-premium">
+    <div class="container">
+      <div class="location-hero">
+        <div class="location-hero-content">
+          <div class="eyebrow" data-i18n="location_eyebrow">Competition Venue</div>
+          <h2 data-i18n="location_title">Discover the Host Location</h2>
+          <p data-i18n="location_desc">IPDCEC 2026 will be held at the Department of Chemical Engineering, Universitas Malikussaleh, Kampus Bukit Indah, Lhokseumawe, Aceh, Indonesia.</p>
+          <p data-i18n="location_desc2">This section helps international participants and participants from outside Aceh understand the academic atmosphere, city environment, and venue location before arriving.</p>
+          <div class="location-pills">
+            <span class="location-pill" data-i18n="location_pill1">Chemical Engineering Venue</span>
+            <span class="location-pill" data-i18n="location_pill2">Lhokseumawe, Aceh</span>
+            <span class="location-pill" data-i18n="location_pill3">Offline Final Stage</span>
+          </div>
+          <div class="location-actions">
+            <a class="btn btn-green" href="https://teknik-kimia.unimal.ac.id" target="_blank" data-i18n="location_btn_department">Visit Department Website</a>
+            <a class="btn btn-guide" href="https://www.google.com/maps/search/?api=1&query=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Jalan+Batam+Blang+Pulo+Lhokseumawe" target="_blank" data-i18n="location_btn_maps">Open in Google Maps</a>
+          </div>
+        </div>
+        <div class="location-map-card" aria-label="Google Maps location for Chemical Engineering Universitas Malikussaleh">
+          <iframe
+            src="https://www.google.com/maps?q=Program%20Studi%20Teknik%20Kimia%20Universitas%20Malikussaleh%20Jalan%20Batam%20Blang%20Pulo%20Lhokseumawe&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="location-gallery">
+        <div class="card location-photo-card">
+          <img src="https://teknik-kimia.unimal.ac.id/images/2025/09/09/gedungtekim21.png" alt="Chemical Engineering building at Universitas Malikussaleh" />
+          <div class="location-photo-content">
+            <h3 data-i18n="location_campus_title">Chemical Engineering, Universitas Malikussaleh</h3>
+            <p data-i18n="location_campus_desc">The Department of Chemical Engineering is located at Kampus Unimal Bukit Indah, Jalan Batam No. 2, Blang Pulo, Muara Satu, Lhokseumawe. It supports learning and competition activities related to process design, simulation, and sustainable chemical engineering.</p>
+            <a class="social-link" href="https://teknik-kimia.unimal.ac.id/profil-prodi/gedung-teknik-kimia" target="_blank" data-i18n="location_campus_link">See campus building</a>
+          </div>
+        </div>
+
+        <div class="card location-photo-card">
+          <img src="https://jdih.lhokseumawekota.go.id/uploads/2s8h/2021/01/islamic_centre.jpg" alt="Islamic Center Mosque and city view of Lhokseumawe" />
+          <div class="location-photo-content">
+            <h3 data-i18n="location_city_title">Lhokseumawe City, Aceh</h3>
+            <p data-i18n="location_city_desc">Lhokseumawe is a coastal city in Aceh known for its industrial character, local culture, and urban landmarks such as the Islamic Center. Its location gives visitors a clear view of Aceh's academic, industrial, and cultural environment.</p>
+            <a class="social-link" href="https://www.lhokseumawekota.go.id" target="_blank" data-i18n="location_city_link">Visit city website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coffee" class="coffee-premium">
+    <div class="container">
+      <div class="coffee-hero">
+        <div class="coffee-hero-content">
+          <div class="eyebrow" data-i18n="coffee_eyebrow">Aceh Coffee Experience</div>
+          <h2 data-i18n="coffee_title">Taste Authentic Gayo Coffee Near the Venue</h2>
+          <p data-i18n="coffee_desc">Aceh is home to Gayo Arabica coffee, one of Indonesia's best-known specialty coffees from the Gayo Highlands. During IPDCEC 2026, participants can explore local coffee culture and find ground coffee options around Lhokseumawe and Bukit Salak, Aceh.</p>
+          <p data-i18n="coffee_desc2">This mini guide is designed for international participants and visitors from outside Aceh who want to enjoy Acehnese coffee after the competition agenda.</p>
+          <div class="location-pills">
+            <span class="location-pill" data-i18n="coffee_pill1">Gayo Arabica</span>
+            <span class="location-pill" data-i18n="coffee_pill2">Ground Coffee</span>
+            <span class="location-pill" data-i18n="coffee_pill3">Bukit Salak & Lhokseumawe</span>
+          </div>
+          <div class="location-actions">
+            <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Ground+Coffee+Bukit+Salak+Aceh" target="_blank" data-i18n="coffee_btn_ground">Find Ground Coffee Bukit Salak</a>
+            <a class="btn btn-guide" href="https://www.google.com/maps/search/?api=1&query=Gayo+Coffee+Lhokseumawe" target="_blank" data-i18n="coffee_btn_lhokseumawe">Find Gayo Coffee in Lhokseumawe</a>
+          </div>
+        </div>
+        <div class="coffee-map-card" aria-label="Google Maps search for Gayo Coffee and Ground Coffee Bukit Salak Aceh">
+          <iframe
+            src="https://www.google.com/maps?q=Ground%20Coffee%20Bukit%20Salak%20Aceh&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="coffee-gallery">
+        <div class="card coffee-card">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80" alt="Roasted coffee beans representing Aceh Gayo coffee" />
+          <div class="coffee-card-content">
+            <h3 data-i18n="coffee_card1_title">Gayo Arabica Coffee</h3>
+            <p data-i18n="coffee_card1_desc">Gayo coffee is grown in the highland districts of Aceh such as Aceh Tengah, Bener Meriah, and Gayo Lues, making it a meaningful local taste for visitors.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Gayo+Coffee+Lhokseumawe" target="_blank" data-i18n="coffee_card_link_maps">Open coffee map</a>
+          </div>
+        </div>
+
+        <div class="card coffee-card">
+          <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=80" alt="Coffee cup in a cafe" />
+          <div class="coffee-card-content">
+            <h3 data-i18n="coffee_card2_title">Cafe Stops Near the Event</h3>
+            <p data-i18n="coffee_card2_desc">Participants can search nearby cafes in Lhokseumawe for Aceh-style coffee, Gayo beans, and local coffee souvenirs after official sessions.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Cafe+Kopi+Gayo+Lhokseumawe" target="_blank" data-i18n="coffee_card_link_cafe">Search nearby cafes</a>
+          </div>
+        </div>
+
+        <div class="card coffee-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Green highland landscape representing the Gayo coffee highlands" />
+          <div class="coffee-card-content">
+            <h3 data-i18n="coffee_card3_title">Bukit Salak Coffee Route</h3>
+            <p data-i18n="coffee_card3_desc">For visitors interested in ground coffee from Bukit Salak, use the map link to check the latest operating hours, route, and available coffee products.</p>
+            <a class="social-link" href="https://www.google.com/maps/dir/?api=1&origin=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe&destination=Ground+Coffee+Bukit+Salak+Aceh" target="_blank" data-i18n="coffee_card_link_route">Get route from venue</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card coffee-note">
+        <h3 data-i18n="coffee_note_title">Visitor Note</h3>
+        <p data-i18n="coffee_note_desc">Cafe availability and opening hours may change. Please confirm locations through Google Maps before visiting, especially for trips outside the main competition venue area.</p>
+      </div>
+    </div>
+  </section>
+
+
   <section id="payment"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="payment_eyebrow">Free Registration</div><h2 class="section-title" data-i18n="payment_title">Registration is Free</h2><p data-i18n="payment_desc">This competition is free of charge. Participants do not need to pay any registration fee at any stage.</p></div><div class="grid"><div class="card"><h3 data-i18n="fee_title">No Registration Fee</h3><p data-i18n-html="fee_desc">IPDCEC 2026 is free of charge.<br>No payment is required for registration, extended abstract submission, full design submission, or final stage participation.</p></div></div></div></section>
 
   <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6283168532383'); return false;">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6282274680923'); return false;">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6281267055711'); return false;">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
@@ -504,7 +710,7 @@
       en: {
         pageTitle: "IPDCEC 2026 | International Plant Design Chemical Engineering Competition", metaDesc: "Official website for IPDCEC 2026 - International Plant Design Chemical Engineering Competition.",
         topbar_title: "International Plant Design Chemical Engineering Competition", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "International Plant Design Chemical Engineering Competition",
-        nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_payment: "Free Registration", nav_contact: "Contact",
+        nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_location: "Location", nav_coffee: "Gayo Coffee", nav_payment: "Free Registration", nav_contact: "Contact",
         btn_register: "Register Now →", btn_register_plain: "Register Now", btn_guidebook: "Download Guidebook", btn_contact: "Contact Committee", btn_guidebook_official: "📘 Download Official Guidebook", floating_register: "🚀 Register Now",
         countdown_title: "Registration closes in", cd_days: "Days", cd_hours: "Hours", cd_minutes: "Minutes", cd_seconds: "Seconds",
         hero_kicker: "International", hero_title: "Plant Design Chemical Engineering <span>Competition 2026</span>", hero_desc: "Designing sustainable chemical plants for a better global future.",
@@ -513,6 +719,7 @@
         theme_eyebrow: "Theme & Subtheme", theme_title: "Competition Theme", theme_quote: "“Industrial-Based Chemical Plant Design for a Sustainable Global Future”", sub1_title: "01. Cleaner Energy from Natural Gas", sub1_desc: "Utilization of natural gas as a cleaner energy source through process optimization and emission reduction.", sub2_title: "02. Value-Added Chemical Products", sub2_desc: "Downstream processing of natural gas into value-added chemical products for sustainable and eco-friendly industry.",
         timeline_eyebrow: "Timeline", timeline_title: "Competition Schedule", timeline_desc: "Please submit all documents before the official deadline and regularly check official announcements.", t1_title: "Registration & Extended Abstract Submission", t1_desc: "Team registration and extended abstract submission period.", t2_title: "Semifinalist Announcement", t2_desc: "The best 20 teams from the Extended Abstract stage will be announced.", t3_title: "Full Paper Submission", t3_desc: "Selected teams submit their complete plant design report.", t4_title: "Finalist Announcement", t4_desc: "The top 6 teams will proceed to the final presentation stage.", t5_title: "Final Presentation", t5_desc: "Finalists present their plant design offline at Universitas Malikussaleh.", t6_title: "Field Trip & Awarding", t6_desc: "Field trip and awarding ceremony for IPDCEC 2026 participants.",
         guide_title: "Download the Official Guidebook", guide_desc: "Read the complete guidebook before registering. It contains the official rules, timeline, registration requirements, free registration information, and competition stages.", guide_card_title: "Guidebook File", guide_card_desc: "The official guidebook is available through Google Drive. Please read all requirements carefully before registration.",
+        location_eyebrow: "Competition Venue", location_title: "Discover the Host Location", location_desc: "IPDCEC 2026 will be held at the Department of Chemical Engineering, Universitas Malikussaleh, Kampus Bukit Indah, Lhokseumawe, Aceh, Indonesia.", location_desc2: "This section helps international participants and participants from outside Aceh understand the academic atmosphere, city environment, and venue location before arriving.", location_pill1: "Chemical Engineering Venue", location_pill2: "Lhokseumawe, Aceh", location_pill3: "Offline Final Stage", location_btn_department: "Visit Department Website", location_btn_maps: "Open in Google Maps", location_campus_title: "Chemical Engineering, Universitas Malikussaleh", location_campus_desc: "The Department of Chemical Engineering is located at Kampus Unimal Bukit Indah, Jalan Batam No. 2, Blang Pulo, Muara Satu, Lhokseumawe. It supports learning and competition activities related to process design, simulation, and sustainable chemical engineering.", location_campus_link: "See campus building", location_city_title: "Lhokseumawe City, Aceh", location_city_desc: "Lhokseumawe is a coastal city in Aceh known for its industrial character, local culture, and urban landmarks such as the Islamic Center. Its location gives visitors a clear view of Aceh's academic, industrial, and cultural environment.", location_city_link: "Visit city website",
         payment_eyebrow: "Free Registration", payment_title: "Registration is Free", payment_desc: "This competition is free of charge. Participants do not need to pay any registration fee at any stage.", account_number: "Not Required", paypal_account: "Not Required", fee_title: "No Registration Fee", fee_desc: "IPDCEC 2026 is free of charge.<br>No payment is required for registration, extended abstract submission, full design submission, or final stage participation.", qris_desc: "No payment code is required because registration is free.",
         contact_eyebrow: "Contact Person", contact_title: "Need Help with Registration?", contact_desc: "For registration and competition inquiries, please contact the official committee representatives below.", contact_person: "Contact Person",
         social_eyebrow: "Follow Us", social_title: "Official IPDCEC Social Media", open_linkedin: "Open LinkedIn", open_youtube: "Open YouTube", open_instagram: "Open Instagram", open_tiktok: "Open TikTok",
@@ -521,7 +728,7 @@
       id: {
         pageTitle: "IPDCEC 2026 | Kompetisi Perancangan Pabrik Kimia Internasional", metaDesc: "Website resmi IPDCEC 2026 - Kompetisi Perancangan Pabrik Kimia Internasional.",
         topbar_title: "Kompetisi Perancangan Pabrik Kimia Internasional", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "Kompetisi Perancangan Pabrik Kimia Internasional",
-        nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_payment: "Gratis", nav_contact: "Kontak",
+        nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_location: "Lokasi", nav_coffee: "Kopi Gayo", nav_payment: "Gratis", nav_contact: "Kontak",
         btn_register: "Daftar Sekarang →", btn_register_plain: "Daftar Sekarang", btn_guidebook: "Unduh Guidebook", btn_contact: "Hubungi Panitia", btn_guidebook_official: "📘 Unduh Guidebook Resmi", floating_register: "🚀 Daftar Sekarang",
         countdown_title: "Pendaftaran ditutup dalam", cd_days: "Hari", cd_hours: "Jam", cd_minutes: "Menit", cd_seconds: "Detik",
         hero_kicker: "Internasional", hero_title: "Kompetisi Perancangan Pabrik Kimia <span>2026</span>", hero_desc: "Merancang pabrik kimia berkelanjutan untuk masa depan global yang lebih baik.",
@@ -530,6 +737,7 @@
         theme_eyebrow: "Tema & Subtema", theme_title: "Tema Kompetisi", theme_quote: "“Perancangan Pabrik Kimia Berbasis Industri untuk Masa Depan Global yang Berkelanjutan”", sub1_title: "01. Energi Bersih dari Gas Alam", sub1_desc: "Pemanfaatan gas alam sebagai sumber energi yang lebih bersih melalui optimalisasi proses dan pengurangan emisi.", sub2_title: "02. Produk Kimia Bernilai Tambah", sub2_desc: "Hilirisasi gas alam menjadi produk kimia bernilai tambah untuk mendukung industri yang berkelanjutan dan ramah lingkungan.",
         timeline_eyebrow: "Linimasa", timeline_title: "Jadwal Kompetisi", timeline_desc: "Mohon mengirim seluruh dokumen sebelum batas waktu resmi dan memantau pengumuman secara berkala.", t1_title: "Pendaftaran & Pengiriman Extended Abstract", t1_desc: "Periode pendaftaran tim dan pengiriman extended abstract.", t2_title: "Pengumuman Semifinalis", t2_desc: "Sebanyak 20 tim terbaik dari tahap Extended Abstract akan diumumkan.", t3_title: "Pengiriman Full Paper", t3_desc: "Tim terpilih mengirimkan laporan rancangan pabrik lengkap.", t4_title: "Pengumuman Finalis", t4_desc: "Sebanyak 6 tim terbaik akan melanjutkan ke tahap presentasi final.", t5_title: "Presentasi Final", t5_desc: "Finalis mempresentasikan rancangan pabrik secara luring di Universitas Malikussaleh.", t6_title: "Field Trip & Awarding", t6_desc: "Kegiatan field trip dan penganugerahan IPDCEC 2026.",
         guide_title: "Unduh Guidebook Resmi", guide_desc: "Baca guidebook lengkap sebelum mendaftar. Guidebook berisi aturan resmi, jadwal, persyaratan registrasi, informasi pendaftaran gratis, dan tahapan kompetisi.", guide_card_title: "File Guidebook", guide_card_desc: "Guidebook resmi tersedia melalui Google Drive. Mohon membaca seluruh persyaratan dengan teliti sebelum melakukan pendaftaran.",
+        location_eyebrow: "Lokasi Lomba", location_title: "Kenali Lokasi Pelaksanaan", location_desc: "IPDCEC 2026 akan dilaksanakan di Jurusan Teknik Kimia, Universitas Malikussaleh, Kampus Bukit Indah, Lhokseumawe, Aceh, Indonesia.", location_desc2: "Bagian ini membantu peserta internasional dan peserta dari luar Aceh memahami suasana akademik, lingkungan kota, dan lokasi lomba sebelum datang.", location_pill1: "Venue Teknik Kimia", location_pill2: "Lhokseumawe, Aceh", location_pill3: "Tahap Final Luring", location_btn_department: "Kunjungi Website Jurusan", location_btn_maps: "Buka di Google Maps", location_campus_title: "Teknik Kimia, Universitas Malikussaleh", location_campus_desc: "Jurusan Teknik Kimia berlokasi di Kampus Unimal Bukit Indah, Jalan Batam No. 2, Blang Pulo, Muara Satu, Lhokseumawe. Lingkungan ini mendukung pembelajaran dan kegiatan kompetisi terkait desain proses, simulasi, dan teknik kimia berkelanjutan.", location_campus_link: "Lihat gedung kampus", location_city_title: "Kota Lhokseumawe, Aceh", location_city_desc: "Lhokseumawe adalah kota pesisir di Aceh yang dikenal dengan karakter industri, budaya lokal, dan ikon kota seperti Islamic Center. Lokasinya memberi gambaran kepada pengunjung tentang suasana akademik, industri, dan budaya Aceh.", location_city_link: "Kunjungi website kota",
         payment_eyebrow: "Pendaftaran Gratis", payment_title: "Registrasi Tidak Dipungut Biaya", payment_desc: "Lomba ini gratis dan tidak dipungut biaya. Peserta tidak perlu membayar biaya registrasi pada tahap apa pun.", account_number: "Tidak Diperlukan", paypal_account: "Tidak Diperlukan", fee_title: "Tanpa Biaya Registrasi", fee_desc: "IPDCEC 2026 gratis dan tidak dipungut biaya.<br>Tidak ada pembayaran untuk pendaftaran, pengiriman extended abstract, pengiriman full design, maupun tahap final.", qris_desc: "Kode pembayaran tidak diperlukan karena pendaftaran gratis.",
         contact_eyebrow: "Narahubung", contact_title: "Butuh Bantuan Registrasi?", contact_desc: "Untuk pertanyaan terkait registrasi dan kompetisi, silakan hubungi perwakilan panitia resmi berikut.", contact_person: "Narahubung",
         social_eyebrow: "Ikuti Kami", social_title: "Media Sosial Resmi IPDCEC", open_linkedin: "Buka LinkedIn", open_youtube: "Buka YouTube", open_instagram: "Buka Instagram", open_tiktok: "Buka TikTok",
@@ -539,7 +747,7 @@
       zh: {
         pageTitle: "IPDCEC 2026 | 国际化工厂设计化学工程竞赛", metaDesc: "IPDCEC 2026 官方网站——国际化工厂设计化学工程竞赛。",
         topbar_title: "国际化工厂设计化学工程竞赛", topbar_location: "马利库萨莱大学，亚齐，印度尼西亚", brand_subtitle: "国际化工厂设计化学工程竞赛",
-        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_payment: "免费报名", nav_contact: "联系",
+        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_location: "地点", nav_coffee: "Gayo 咖啡", nav_payment: "免费报名", nav_contact: "联系",
         btn_register: "立即报名 →", btn_register_plain: "立即报名", btn_guidebook: "下载指南", btn_guidebook_official: "📘 下载官方指南", btn_contact: "联系组委会", floating_register: "🚀 立即报名",
         countdown_title: "报名截止倒计时", cd_days: "天", cd_hours: "小时", cd_minutes: "分钟", cd_seconds: "秒",
         hero_kicker: "国际", hero_title: "化工厂设计化学工程<span>竞赛 2026</span>", hero_desc: "为更美好的全球未来设计可持续化工厂。",
@@ -548,6 +756,7 @@
         theme_eyebrow: "主题与子主题", theme_title: "竞赛主题", theme_quote: "“面向可持续全球未来的工业型化工厂设计”", sub1_title: "01. 来自天然气的清洁能源", sub1_desc: "通过过程优化和减排，将天然气作为更清洁的能源来源加以利用。", sub2_title: "02. 高附加值化学产品", sub2_desc: "将天然气下游加工为高附加值化学产品，支持可持续且环保的产业。",
         timeline_eyebrow: "时间表", timeline_title: "竞赛安排", timeline_desc: "请在官方截止日期前提交所有文件，并定期关注官方公告。", t1_title: "报名与扩展摘要提交", t1_desc: "团队报名和扩展摘要提交阶段。", t2_title: "半决赛名单公布", t2_desc: "将公布扩展摘要阶段最佳 20 支队伍。", t3_title: "全文论文提交", t3_desc: "入选团队提交完整的工厂设计报告。", t4_title: "决赛名单公布", t4_desc: "前 6 支队伍将进入最终答辩阶段。", t5_title: "最终答辩", t5_desc: "决赛队伍将在马利库萨莱大学进行线下设计答辩。", t6_title: "实地参观与颁奖", t6_desc: "IPDCEC 2026 参赛者实地参观和颁奖典礼。",
         guide_title: "下载官方指南", guide_desc: "请在报名之前阅读完整指南。指南包含官方规则、时间表、报名要求、免费报名信息和竞赛阶段。", guide_card_title: "指南文件", guide_card_desc: "官方指南可通过 Google Drive 获取。请在报名之前仔细阅读所有要求。",
+        location_eyebrow: "竞赛地点", location_title: "了解主办地点", location_desc: "IPDCEC 2026 将在印度尼西亚亚齐省洛克苏马韦市马利库萨莱大学武吉英达校区化学工程系举行。", location_desc2: "本部分帮助国际参赛者和亚齐以外的参赛者在抵达前了解学术环境、城市氛围和比赛地点。", location_pill1: "化学工程竞赛地点", location_pill2: "洛克苏马韦，亚齐", location_pill3: "线下决赛阶段", location_btn_department: "访问院系网站", location_btn_maps: "在 Google 地图打开", location_campus_title: "马利库萨莱大学化学工程系", location_campus_desc: "化学工程系位于洛克苏马韦市 Muara Satu 区 Blang Pulo，Jalan Batam No. 2，Unimal Bukit Indah 校区，支持过程设计、模拟和可持续化学工程相关学习与竞赛活动。", location_campus_link: "查看校园建筑", location_city_title: "亚齐洛克苏马韦市", location_city_desc: "洛克苏马韦是亚齐的一座海滨城市，以工业特色、地方文化和 Islamic Center 等城市地标闻名，为访客呈现亚齐的学术、工业和文化环境。", location_city_link: "访问城市网站",
         payment_eyebrow: "免费报名", payment_title: "报名免费", payment_desc: "本竞赛免费，不收取任何费用。参赛者在任何阶段均无需支付报名费。", account_number: "无需提供", paypal_account: "无需提供", fee_title: "无报名费", fee_desc: "IPDCEC 2026 免费，不收取任何费用。<br>报名、扩展摘要提交、完整设计提交及决赛阶段均无需付款。", qris_desc: "报名免费，因此无需付款码。",
         contact_eyebrow: "联系人", contact_title: "报名需要帮助？", contact_desc: "如有报名和竞赛相关问题，请联系以下官方组委会代表。", contact_person: "联系人",
         social_eyebrow: "关注我们", social_title: "IPDCEC 官方社交媒体", open_linkedin: "打开 LinkedIn", open_youtube: "打开 YouTube", open_instagram: "打开 Instagram", open_tiktok: "打开 TikTok",
@@ -557,7 +766,7 @@
       ar: {
         pageTitle: "IPDCEC 2026 | المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", metaDesc: "الموقع الرسمي لـ IPDCEC 2026 - المسابقة الدولية لتصميم مصانع الهندسة الكيميائية.",
         topbar_title: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", topbar_location: "جامعة مالك الصالح، آتشيه، إندونيسيا", brand_subtitle: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية",
-        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_payment: "تسجيل مجاني", nav_contact: "اتصل بنا",
+        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_location: "الموقع", nav_coffee: "قهوة جايو", nav_payment: "تسجيل مجاني", nav_contact: "اتصل بنا",
         btn_register: "سجّل الآن →", btn_register_plain: "سجّل الآن", btn_guidebook: "تحميل الدليل", btn_guidebook_official: "📘 تحميل الدليل الرسمي", btn_contact: "التواصل مع اللجنة", floating_register: "🚀 سجّل الآن",
         countdown_title: "ينتهي التسجيل خلال", cd_days: "أيام", cd_hours: "ساعات", cd_minutes: "دقائق", cd_seconds: "ثوانٍ",
         hero_kicker: "دولي", hero_title: "تصميم مصانع الهندسة الكيميائية <span>مسابقة 2026</span>", hero_desc: "تصميم مصانع كيميائية مستدامة من أجل مستقبل عالمي أفضل.",
@@ -566,6 +775,7 @@
         theme_eyebrow: "الموضوع والمحاور", theme_title: "موضوع المسابقة", theme_quote: "«تصميم مصانع كيميائية قائمة على الصناعة من أجل مستقبل عالمي مستدام»", sub1_title: "01. طاقة أنظف من الغاز الطبيعي", sub1_desc: "استخدام الغاز الطبيعي كمصدر طاقة أنظف من خلال تحسين العمليات وخفض الانبعاثات.", sub2_title: "02. منتجات كيميائية ذات قيمة مضافة", sub2_desc: "تحويل الغاز الطبيعي في المراحل النهائية إلى منتجات كيميائية ذات قيمة مضافة لدعم صناعة مستدامة وصديقة للبيئة.",
         timeline_eyebrow: "الجدول الزمني", timeline_title: "جدول المسابقة", timeline_desc: "يرجى تقديم جميع الوثائق قبل الموعد النهائي الرسمي ومتابعة الإعلانات الرسمية بانتظام.", t1_title: "التسجيل وتقديم الملخص الموسع", t1_desc: "فترة تسجيل الفرق وتقديم الملخص الموسع.", t2_title: "إعلان المتأهلين لنصف النهائي", t2_desc: "سيتم الإعلان عن أفضل 20 فريقاً من مرحلة الملخص الموسع.", t3_title: "تقديم البحث الكامل", t3_desc: "تقدم الفرق المختارة تقرير تصميم المصنع الكامل.", t4_title: "إعلان المتأهلين للنهائي", t4_desc: "ستتأهل أفضل 6 فرق إلى مرحلة العرض النهائي.", t5_title: "العرض النهائي", t5_desc: "يقدم المتأهلون للنهائي تصميم مصانعهم حضورياً في جامعة مالك الصالح.", t6_title: "رحلة ميدانية وتكريم", t6_desc: "رحلة ميدانية وحفل تكريم للمشاركين في IPDCEC 2026.",
         guide_title: "تحميل الدليل الرسمي", guide_desc: "اقرأ الدليل الكامل قبل التسجيل. يحتوي على القواعد الرسمية والجدول الزمني ومتطلبات التسجيل ومعلومات التسجيل المجاني ومراحل المسابقة.", guide_card_title: "ملف الدليل", guide_card_desc: "الدليل الرسمي متاح عبر Google Drive. يرجى قراءة جميع المتطلبات بعناية قبل التسجيل.",
+        location_eyebrow: "مكان المسابقة", location_title: "تعرّف على موقع الاستضافة", location_desc: "ستُقام IPDCEC 2026 في قسم الهندسة الكيميائية، جامعة مالك الصالح، حرم بوكيت إنداه، لوكسوماوي، آتشيه، إندونيسيا.", location_desc2: "يساعد هذا القسم المشاركين الدوليين والمشاركين من خارج آتشيه على فهم الأجواء الأكاديمية وبيئة المدينة وموقع المسابقة قبل الوصول.", location_pill1: "موقع الهندسة الكيميائية", location_pill2: "لوكسوماوي، آتشيه", location_pill3: "المرحلة النهائية حضوريًا", location_btn_department: "زيارة موقع القسم", location_btn_maps: "فتح في خرائط Google", location_campus_title: "الهندسة الكيميائية، جامعة مالك الصالح", location_campus_desc: "يقع قسم الهندسة الكيميائية في حرم Unimal Bukit Indah، Jalan Batam No. 2، Blang Pulo، Muara Satu، Lhokseumawe، ويدعم أنشطة التعلم والمنافسة المتعلقة بتصميم العمليات والمحاكاة والهندسة الكيميائية المستدامة.", location_campus_link: "عرض مبنى الحرم", location_city_title: "مدينة لوكسوماوي، آتشيه", location_city_desc: "لوكسوماوي مدينة ساحلية في آتشيه معروفة بطابعها الصناعي وثقافتها المحلية ومعالمها الحضرية مثل المركز الإسلامي، مما يمنح الزوار صورة واضحة عن البيئة الأكاديمية والصناعية والثقافية في آتشيه.", location_city_link: "زيارة موقع المدينة",
         payment_eyebrow: "تسجيل مجاني", payment_title: "التسجيل مجاني", payment_desc: "هذه المسابقة مجانية ولا تُفرض أي رسوم. لا يحتاج المشاركون إلى دفع أي رسوم تسجيل في أي مرحلة.", account_number: "غير مطلوب", paypal_account: "غير مطلوب", fee_title: "لا توجد رسوم تسجيل", fee_desc: "IPDCEC 2026 مجاني ولا تُفرض أي رسوم.<br>لا يلزم الدفع للتسجيل أو تقديم الملخص الموسع أو تقديم التصميم الكامل أو المشاركة في المرحلة النهائية.", qris_desc: "لا يلزم رمز دفع لأن التسجيل مجاني.",
         contact_eyebrow: "جهة الاتصال", contact_title: "هل تحتاج مساعدة في التسجيل؟", contact_desc: "للاستفسارات المتعلقة بالتسجيل والمسابقة، يرجى التواصل مع ممثلي اللجنة الرسميين أدناه.", contact_person: "جهة الاتصال",
         social_eyebrow: "تابعونا", social_title: "وسائل التواصل الاجتماعي الرسمية لـ IPDCEC", open_linkedin: "فتح LinkedIn", open_youtube: "فتح YouTube", open_instagram: "فتح Instagram", open_tiktok: "فتح TikTok",
