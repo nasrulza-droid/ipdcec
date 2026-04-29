@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="ipdcec-logo.png" />
-<link rel="icon" href="logo-unimal.png" />
-<meta property="og:image" content="logo-unimal.png" />
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,7 +53,14 @@
     nav { background: white; box-shadow: 0 8px 25px rgba(3,27,52,.08); position: sticky; top: 0; z-index: 50; }
     .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 20px; }
     .brand { display: flex; align-items: center; gap: 14px; min-width: 310px; }
+    .brand-logos { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
     .brand-logo { width: 72px; height: 72px; object-fit: contain; flex: 0 0 auto; }
+    .brand-divider { width: 1px; height: 46px; background: linear-gradient(180deg, transparent, rgba(3,27,52,.22), transparent); }
+    .unimal-logo-wrap { width: 54px; height: 54px; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg,#ffffff,#f4f8fc); border: 1px solid rgba(3,27,52,.10); box-shadow: 0 10px 22px rgba(3,27,52,.08); position: relative; overflow: hidden; }
+    .unimal-logo-wrap::after { content: ""; position: absolute; inset: -40%; background: linear-gradient(120deg, transparent, rgba(102,187,53,.18), transparent); transform: rotate(18deg); }
+    .unimal-logo { width: 40px; height: 40px; object-fit: contain; position: relative; z-index: 1; }
+    .hosted-badge { display: inline-flex; align-items: center; gap: 7px; width: max-content; margin-top: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(102,187,53,.10); color: var(--green-dark); border: 1px solid rgba(102,187,53,.25); font-size: 11px; font-weight: 900; letter-spacing: .2px; line-height: 1; }
+    .hosted-badge::before { content: "★"; font-size: 10px; }
     .brand-title strong { display: block; color: var(--navy); font-size: 27px; line-height: 1.05; font-weight: 900; letter-spacing: -.6px; }
     .brand-title span { display: block; color: var(--text); font-size: 13px; max-width: 310px; line-height: 1.35; }
     .nav-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
@@ -134,6 +138,7 @@
 
     @media (max-width:980px) { .hero-inner{grid-template-columns:1fr; padding-bottom:135px;} .mascot-wrap{min-height:auto;} .mascot-wrap img{width:min(340px,78%);} .info-grid{grid-template-columns:1fr 1fr;} .guidebook-box{grid-template-columns:1fr;} }
     @media (max-width:760px) { .topbar-inner,.nav-inner{align-items:flex-start; flex-direction:column;} .nav-links{justify-content:flex-start; gap:14px;} .brand-logo{width:58px;height:58px;} .brand-title strong{font-size:22px;} .info-grid{grid-template-columns:1fr;} .info-item{border-right:none; border-bottom:1px solid rgba(255,255,255,.16);} .timeline-item{grid-template-columns:1fr; gap:6px;} .countdown-grid{grid-template-columns:repeat(2,1fr);} }
+    @media (max-width:760px) { .brand{min-width:0;} .brand-logos{gap:8px;} .brand-divider{height:36px;} .unimal-logo-wrap{width:44px;height:44px;border-radius:13px;} .unimal-logo{width:32px;height:32px;} .hosted-badge{font-size:10px;padding:4px 8px;} }
   
 /* PREMIUM GUIDEBOOK BUTTON */
 .premium-guidebook-btn {
@@ -584,8 +589,14 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
   <nav>
     <div class="container nav-inner">
       <div class="brand">
-        <img class="brand-logo" src="ipdcec-logo.png" alt="IPDCEC Logo" />
-        <div class="brand-title"><strong>IPDCEC 2026</strong><span data-i18n="brand_subtitle">International Plant Design Chemical Engineering Competition</span></div>
+        <div class="brand-logos" aria-label="IPDCEC 2026 hosted by Universitas Malikussaleh">
+          <img class="brand-logo" src="ipdcec-logo.png" alt="IPDCEC Logo" />
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="unimal-logo-wrap">
+            <img class="unimal-logo" src="logo-unimal.png" alt="Universitas Malikussaleh Logo" />
+          </span>
+        </div>
+        <div class="brand-title"><strong>IPDCEC 2026</strong><span data-i18n="brand_subtitle">International Plant Design Chemical Engineering Competition</span><span class="hosted-badge" data-i18n="hosted_badge">Hosted by Universitas Malikussaleh</span></div>
       </div>
       <div class="nav-links">
         <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#location" data-i18n="nav_location">Location</a><a href="#coffee" data-i18n="nav_coffee">Gayo Coffee</a><a href="#culinary" data-i18n="nav_culinary">Mie Aceh</a><a href="#transport" data-i18n="nav_transport">Transport</a><a href="#hotels" data-i18n="nav_hotels">Hotels</a><a href="#payment" data-i18n="nav_payment">Free Registration</a><a href="#contact" data-i18n="nav_contact">Contact</a>
@@ -958,7 +969,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
     const translations = {
       en: {
         pageTitle: "IPDCEC 2026 | International Plant Design Chemical Engineering Competition", metaDesc: "Official website for IPDCEC 2026 - International Plant Design Chemical Engineering Competition.",
-        topbar_title: "International Plant Design Chemical Engineering Competition", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "International Plant Design Chemical Engineering Competition",
+        topbar_title: "International Plant Design Chemical Engineering Competition", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "International Plant Design Chemical Engineering Competition", hosted_badge: "Hosted by Universitas Malikussaleh",
         nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_location: "Location", nav_coffee: "Gayo Coffee", nav_culinary: "Mie Aceh", nav_transport: "Transport", nav_hotels: "Hotels", nav_payment: "Free Registration", nav_contact: "Contact",
         btn_register: "Register Now →", btn_register_plain: "Register Now", btn_guidebook: "Download Guidebook", btn_contact: "Contact Committee", btn_guidebook_official: "📘 Download Official Guidebook", floating_register: "🚀 Register Now",
         countdown_title: "Registration closes in", cd_days: "Days", cd_hours: "Hours", cd_minutes: "Minutes", cd_seconds: "Seconds",
@@ -976,7 +987,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
       },
       id: {
         pageTitle: "IPDCEC 2026 | Kompetisi Perancangan Pabrik Kimia Internasional", metaDesc: "Website resmi IPDCEC 2026 - Kompetisi Perancangan Pabrik Kimia Internasional.",
-        topbar_title: "Kompetisi Perancangan Pabrik Kimia Internasional", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "Kompetisi Perancangan Pabrik Kimia Internasional",
+        topbar_title: "Kompetisi Perancangan Pabrik Kimia Internasional", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "Kompetisi Perancangan Pabrik Kimia Internasional", hosted_badge: "Diselenggarakan oleh Universitas Malikussaleh",
         nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_location: "Lokasi", nav_coffee: "Kopi Gayo", nav_culinary: "Mie Aceh", nav_transport: "Transportasi", nav_hotels: "Hotel", nav_payment: "Gratis", nav_contact: "Kontak",
         btn_register: "Daftar Sekarang →", btn_register_plain: "Daftar Sekarang", btn_guidebook: "Unduh Guidebook", btn_contact: "Hubungi Panitia", btn_guidebook_official: "📘 Unduh Guidebook Resmi", floating_register: "🚀 Daftar Sekarang",
         countdown_title: "Pendaftaran ditutup dalam", cd_days: "Hari", cd_hours: "Jam", cd_minutes: "Menit", cd_seconds: "Detik",
@@ -995,7 +1006,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
       },
       zh: {
         pageTitle: "IPDCEC 2026 | 国际化工厂设计化学工程竞赛", metaDesc: "IPDCEC 2026 官方网站——国际化工厂设计化学工程竞赛。",
-        topbar_title: "国际化工厂设计化学工程竞赛", topbar_location: "马利库萨莱大学，亚齐，印度尼西亚", brand_subtitle: "国际化工厂设计化学工程竞赛",
+        topbar_title: "国际化工厂设计化学工程竞赛", topbar_location: "马利库萨莱大学，亚齐，印度尼西亚", brand_subtitle: "国际化工厂设计化学工程竞赛", hosted_badge: "Hosted by Universitas Malikussaleh",
         nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_location: "地点", nav_coffee: "Gayo 咖啡", nav_culinary: "亚齐面", nav_payment: "免费报名", nav_contact: "联系",
         btn_register: "立即报名 →", btn_register_plain: "立即报名", btn_guidebook: "下载指南", btn_guidebook_official: "📘 下载官方指南", btn_contact: "联系组委会", floating_register: "🚀 立即报名",
         countdown_title: "报名截止倒计时", cd_days: "天", cd_hours: "小时", cd_minutes: "分钟", cd_seconds: "秒",
@@ -1014,7 +1025,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
       },
       ar: {
         pageTitle: "IPDCEC 2026 | المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", metaDesc: "الموقع الرسمي لـ IPDCEC 2026 - المسابقة الدولية لتصميم مصانع الهندسة الكيميائية.",
-        topbar_title: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", topbar_location: "جامعة مالك الصالح، آتشيه، إندونيسيا", brand_subtitle: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية",
+        topbar_title: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", topbar_location: "جامعة مالك الصالح، آتشيه، إندونيسيا", brand_subtitle: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", hosted_badge: "Hosted by Universitas Malikussaleh",
         nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_location: "الموقع", nav_coffee: "قهوة جايو", nav_culinary: "نودلز آتشيه", nav_transport: "النقل", nav_hotels: "الفنادق", nav_payment: "تسجيل مجاني", nav_contact: "اتصل بنا",
         btn_register: "سجّل الآن →", btn_register_plain: "سجّل الآن", btn_guidebook: "تحميل الدليل", btn_guidebook_official: "📘 تحميل الدليل الرسمي", btn_contact: "التواصل مع اللجنة", floating_register: "🚀 سجّل الآن",
         countdown_title: "ينتهي التسجيل خلال", cd_days: "أيام", cd_hours: "ساعات", cd_minutes: "دقائق", cd_seconds: "ثوانٍ",
