@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon" href="ipdcec-logo.png" />
+<link rel="icon" href="logo-unimal.png" />
+<meta property="og:image" content="logo-unimal.png" />
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -484,6 +487,72 @@ html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--
 @media (max-width:760px) { .coffee-hero{padding:28px;} .coffee-gallery{grid-template-columns:1fr;} .coffee-card img{height:235px;} }
 
 
+  
+/* ACEH CULINARY PREMIUM SECTION */
+.culinary-premium { background: #fff; }
+.culinary-hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; align-items: center; background: radial-gradient(circle at 20% 20%, rgba(255,152,0,.28), transparent 32%), radial-gradient(circle at 92% 85%, rgba(102,187,53,.18), transparent 28%), linear-gradient(135deg, #3a1605, #8a3d0b 52%, #c96f13); color: white; border-radius: 34px; padding: 42px; box-shadow: var(--shadow); overflow: hidden; position: relative; }
+.culinary-hero::after { content: ""; position: absolute; right: -90px; top: -90px; width: 260px; height: 260px; border-radius: 50%; border: 24px solid rgba(255,255,255,.16); }
+.culinary-hero-content, .culinary-map-card { position: relative; z-index: 1; }
+.culinary-hero h2 { font-size: clamp(30px,4vw,48px); line-height: 1.12; margin-bottom: 14px; }
+.culinary-hero p { color: #fff4e8; font-size: 17px; margin-bottom: 18px; }
+.culinary-map-card { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.24); border-radius: 26px; padding: 14px; min-height: 360px; }
+.culinary-map-card iframe { width: 100%; height: 100%; min-height: 330px; border: 0; border-radius: 20px; display: block; }
+.culinary-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin-top: 24px; }
+.culinary-card { overflow: hidden; padding: 0; border-top: 6px solid #ff9800; }
+.culinary-card img { width: 100%; height: 230px; object-fit: cover; display: block; transition: transform .35s ease; }
+.culinary-card:hover img { transform: scale(1.04); }
+.culinary-card-content { padding: 24px; }
+.culinary-card-content h3 { color: var(--navy); margin-bottom: 8px; font-size: 21px; }
+.culinary-card-content p { color: var(--muted); margin-bottom: 16px; }
+.culinary-note { margin-top: 24px; background: linear-gradient(135deg,#fff,#fff8ef); border-left: 6px solid #ff9800; }
+html[dir="rtl"] .culinary-note { border-left: none; border-right: 6px solid #ff9800; }
+@media (max-width:980px) { .culinary-hero{grid-template-columns:1fr;} .culinary-gallery{grid-template-columns:1fr 1fr;} .culinary-map-card{min-height:320px;} }
+@media (max-width:760px) { .culinary-hero{padding:28px;} .culinary-gallery{grid-template-columns:1fr;} .culinary-card img{height:235px;} }
+
+/* TRANSPORT GUIDE */
+.transport-premium { background: var(--soft); }
+.transport-hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; align-items: center; background: radial-gradient(circle at 18% 22%, rgba(66,174,255,.24), transparent 32%), radial-gradient(circle at 92% 82%, rgba(102,187,53,.22), transparent 28%), linear-gradient(135deg, var(--navy), #083d6f 58%, #0f5c8f); color: white; border-radius: 34px; padding: 42px; box-shadow: var(--shadow); overflow: hidden; position: relative; }
+.transport-hero::after { content: ""; position: absolute; right: -90px; top: -90px; width: 260px; height: 260px; border-radius: 50%; border: 24px solid rgba(255,255,255,.14); }
+.transport-hero-content, .transport-map-card { position: relative; z-index: 1; }
+.transport-hero h2 { font-size: clamp(30px,4vw,48px); line-height: 1.12; margin-bottom: 14px; }
+.transport-hero p { color: #e7f4ff; font-size: 17px; margin-bottom: 18px; }
+.transport-map-card { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.24); border-radius: 26px; padding: 14px; min-height: 360px; }
+.transport-map-card iframe { width: 100%; height: 100%; min-height: 330px; border: 0; border-radius: 20px; display: block; }
+.transport-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin-top: 24px; }
+.transport-card { overflow: hidden; padding: 0; border-top: 6px solid #0f8fd1; }
+.transport-card img { width: 100%; height: 230px; object-fit: cover; display: block; transition: transform .35s ease; }
+.transport-card:hover img { transform: scale(1.04); }
+.transport-card-content { padding: 24px; }
+.transport-card-content h3 { color: var(--navy); margin-bottom: 8px; font-size: 21px; }
+.transport-card-content p { color: var(--muted); margin-bottom: 16px; }
+.transport-note { margin-top: 24px; background: linear-gradient(135deg,#fff,#f4fbff); border-left: 6px solid #0f8fd1; }
+html[dir="rtl"] .transport-note { border-left: none; border-right: 6px solid #0f8fd1; }
+@media (max-width:980px) { .transport-hero{grid-template-columns:1fr;} .transport-gallery{grid-template-columns:1fr 1fr;} .transport-map-card{min-height:320px;} }
+@media (max-width:760px) { .transport-hero{padding:28px;} .transport-gallery{grid-template-columns:1fr;} .transport-card img{height:235px;} }
+
+
+
+/* HOTELS / ACCOMMODATION SECTION */
+.hotels-premium { background: #fff; }
+.hotels-hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; align-items: center; background: radial-gradient(circle at 18% 22%, rgba(102,187,53,.20), transparent 32%), radial-gradient(circle at 92% 82%, rgba(66,174,255,.20), transparent 28%), linear-gradient(135deg, #05233f, #0c4f7a 58%, #147c9f); color: white; border-radius: 34px; padding: 42px; box-shadow: var(--shadow); overflow: hidden; position: relative; }
+.hotels-hero::after { content: ""; position: absolute; right: -90px; top: -90px; width: 260px; height: 260px; border-radius: 50%; border: 24px solid rgba(255,255,255,.14); }
+.hotels-hero-content, .hotels-map-card { position: relative; z-index: 1; }
+.hotels-hero h2 { font-size: clamp(30px,4vw,48px); line-height: 1.12; margin-bottom: 14px; }
+.hotels-hero p { color: #e7f4ff; font-size: 17px; margin-bottom: 18px; }
+.hotels-map-card { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.24); border-radius: 26px; padding: 14px; min-height: 360px; }
+.hotels-map-card iframe { width: 100%; height: 100%; min-height: 330px; border: 0; border-radius: 20px; display: block; }
+.hotels-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin-top: 24px; }
+.hotels-card { overflow: hidden; padding: 0; border-top: 6px solid #147c9f; }
+.hotels-card img { width: 100%; height: 230px; object-fit: cover; display: block; transition: transform .35s ease; }
+.hotels-card:hover img { transform: scale(1.04); }
+.hotels-card-content { padding: 24px; }
+.hotels-card-content h3 { color: var(--navy); margin-bottom: 8px; font-size: 21px; }
+.hotels-card-content p { color: var(--muted); margin-bottom: 16px; }
+.hotels-note { margin-top: 24px; background: linear-gradient(135deg,#fff,#f4fbff); border-left: 6px solid #147c9f; }
+html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9f; }
+@media (max-width:980px) { .hotels-hero{grid-template-columns:1fr;} .hotels-gallery{grid-template-columns:1fr 1fr;} .hotels-map-card{min-height:320px;} }
+@media (max-width:760px) { .hotels-hero{padding:28px;} .hotels-gallery{grid-template-columns:1fr;} .hotels-card img{height:235px;} }
+
   </style>
 </head>
 
@@ -519,7 +588,7 @@ html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--
         <div class="brand-title"><strong>IPDCEC 2026</strong><span data-i18n="brand_subtitle">International Plant Design Chemical Engineering Competition</span></div>
       </div>
       <div class="nav-links">
-        <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#location" data-i18n="nav_location">Location</a><a href="#coffee" data-i18n="nav_coffee">Gayo Coffee</a><a href="#payment" data-i18n="nav_payment">Free Registration</a><a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#location" data-i18n="nav_location">Location</a><a href="#coffee" data-i18n="nav_coffee">Gayo Coffee</a><a href="#culinary" data-i18n="nav_culinary">Mie Aceh</a><a href="#transport" data-i18n="nav_transport">Transport</a><a href="#hotels" data-i18n="nav_hotels">Hotels</a><a href="#payment" data-i18n="nav_payment">Free Registration</a><a href="#contact" data-i18n="nav_contact">Contact</a>
         <a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a>
       </div>
     </div>
@@ -695,6 +764,186 @@ html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--
   </section>
 
 
+
+  <section id="culinary" class="culinary-premium highlight">
+    <div class="container">
+      <div class="culinary-hero">
+        <div class="culinary-hero-content">
+          <div class="eyebrow">Aceh Culinary Experience</div>
+          <h2>Try Mie Aceh, the Iconic Spiced Noodle of Aceh</h2>
+          <p>Mie Aceh is one of Aceh's signature dishes, made with thick yellow noodles, bold spices, and toppings such as beef, goat meat, shrimp, crab, or other seafood. It is commonly served fried, stir-fried with a little sauce, or as a rich soupy noodle dish.</p>
+          <p>This guide helps international participants and visitors from outside Aceh enjoy local food around Lhokseumawe after the IPDCEC 2026 activities.</p>
+          <div class="location-pills">
+            <span class="location-pill">Signature Aceh Dish</span>
+            <span class="location-pill">Spicy & Aromatic</span>
+            <span class="location-pill">Lhokseumawe Food Stops</span>
+          </div>
+          <div class="location-actions">
+            <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Mie+Aceh+Lhokseumawe" target="_blank">Find Mie Aceh in Lhokseumawe</a>
+            <a class="btn btn-guide" href="https://www.google.com/maps/dir/?api=1&origin=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe&destination=Mie+Aceh+Lhokseumawe" target="_blank">Get Route from Venue</a>
+          </div>
+        </div>
+        <div class="culinary-map-card" aria-label="Google Maps search for Mie Aceh in Lhokseumawe">
+          <iframe src="https://www.google.com/maps?q=Mie%20Aceh%20Lhokseumawe&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="culinary-gallery">
+        <div class="card culinary-card">
+          <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=1200&q=80" alt="Spicy noodle dish representing Mie Aceh" />
+          <div class="culinary-card-content">
+            <h3>What Makes Mie Aceh Special?</h3>
+            <p>The dish is known for its strong spice aroma, savory taste, and thick noodles served with emping crackers, pickled shallots, and lime for a fresh finish.</p>
+            <a class="social-link" href="https://www.indonesia.travel/us/en/travel-ideas/gastronomy/mie-aceh" target="_blank">Read about Mie Aceh</a>
+          </div>
+        </div>
+
+        <div class="card culinary-card">
+          <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80" alt="Warm noodle bowl representing Acehnese noodle cuisine" />
+          <div class="culinary-card-content">
+            <h3>Choose Your Style</h3>
+            <p>Visitors can try Mie Aceh goreng, tumis, or kuah. Seafood versions are popular in coastal Aceh, while beef and goat meat versions are also widely available.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Mie+Aceh+seafood+Lhokseumawe" target="_blank">Search seafood Mie Aceh</a>
+          </div>
+        </div>
+
+        <div class="card culinary-card">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80" alt="Restaurant dining area for culinary visitors" />
+          <div class="culinary-card-content">
+            <h3>Food Stops Near the Venue</h3>
+            <p>Use the map link to check nearby Mie Aceh restaurants, current opening hours, photos, ratings, and routes from the competition venue.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Restoran+Mie+Aceh+dekat+Universitas+Malikussaleh+Lhokseumawe" target="_blank">Find nearby restaurants</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card culinary-note">
+        <h3>Visitor Note</h3>
+        <p>Mie Aceh can be spicy. International participants may ask for a milder spice level when ordering. Restaurant availability and opening hours may change, so please confirm through Google Maps before visiting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="transport" class="transport-premium">
+    <div class="container">
+      <div class="transport-hero">
+        <div class="transport-hero-content">
+          <div class="eyebrow">Travel & Transportation</div>
+          <h2>How to Get to Lhokseumawe, Aceh</h2>
+          <p>IPDCEC 2026 will be held in Lhokseumawe, Aceh. Participants can reach the city by air through Malikus Saleh Airport (LSW), or by land from Medan and Banda Aceh using intercity buses, travel cars, or private transport.</p>
+          <p>For international participants, the easiest route is usually to fly to Jakarta, Kuala Lumpur, Medan, or Banda Aceh first, then continue to Lhokseumawe by domestic flight or land transportation.</p>
+          <div class="location-pills">
+            <span class="location-pill">Nearest Airport: LSW</span>
+            <span class="location-pill">Via Medan Kualanamu</span>
+            <span class="location-pill">Bus / Travel Car Available</span>
+          </div>
+          <div class="location-actions">
+            <a class="btn btn-green" href="https://www.google.com/maps/dir/?api=1&destination=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe" target="_blank">Route to Competition Venue</a>
+            <a class="btn btn-guide" href="https://www.google.com/maps/search/?api=1&query=Malikus+Saleh+Airport+Lhokseumawe" target="_blank">Open Malikus Saleh Airport Map</a>
+          </div>
+        </div>
+        <div class="transport-map-card" aria-label="Google Maps route to Lhokseumawe and Universitas Malikussaleh">
+          <iframe src="https://www.google.com/maps?q=Program%20Studi%20Teknik%20Kimia%20Universitas%20Malikussaleh%20Lhokseumawe&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="transport-gallery">
+        <div class="card transport-card">
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80" alt="Airplane wing representing air travel to Aceh" />
+          <div class="transport-card-content">
+            <h3>By Air: Fly to Lhokseumawe</h3>
+            <p>Malikus Saleh Airport (LSW) serves the Lhokseumawe area. Flight availability may change, so participants should check the latest schedule from airline or ticketing platforms before departure.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Malikus+Saleh+Airport+Lhokseumawe" target="_blank">View LSW Airport</a>
+          </div>
+        </div>
+
+        <div class="card transport-card">
+          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80" alt="Intercity bus representing land transportation to Lhokseumawe" />
+          <div class="transport-card-content">
+            <h3>By Land from Medan</h3>
+            <p>Participants arriving at Kualanamu International Airport (Medan) can continue to Lhokseumawe by bus, travel car, or private car. This route is commonly used by visitors entering Aceh from North Sumatra.</p>
+            <a class="social-link" href="https://www.google.com/maps/dir/?api=1&origin=Kualanamu+International+Airport&destination=Lhokseumawe+Aceh" target="_blank">Route from Kualanamu</a>
+          </div>
+        </div>
+
+        <div class="card transport-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Road landscape representing overland travel in Aceh" />
+          <div class="transport-card-content">
+            <h3>By Land from Banda Aceh</h3>
+            <p>Visitors who land at Sultan Iskandar Muda International Airport in Banda Aceh can travel east to Lhokseumawe by bus, shuttle, travel car, taxi, or private transport.</p>
+            <a class="social-link" href="https://www.google.com/maps/dir/?api=1&origin=Sultan+Iskandar+Muda+International+Airport&destination=Lhokseumawe+Aceh" target="_blank">Route from Banda Aceh Airport</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card transport-note">
+        <h3>Travel Tips for Participants</h3>
+        <p>Please book flights and land transportation early, especially near the final presentation dates. For comfort and safety, international participants are encouraged to share their arrival plan with the committee so local guidance can be provided when needed. Always confirm current ticket availability, route, and travel duration before departure.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="hotels" class="hotels-premium">
+    <div class="container">
+      <div class="hotels-hero">
+        <div class="hotels-hero-content">
+          <div class="eyebrow">Accommodation</div>
+          <h2>Hotels & Stays in Lhokseumawe</h2>
+          <p>For IPDCEC 2026 participants, Lhokseumawe offers several hotel, guesthouse, and homestay options around the city center and near Universitas Malikussaleh areas.</p>
+          <p>This guide helps international participants and visitors from outside Aceh quickly explore accommodation options before booking.</p>
+          <div class="location-pills">
+            <span class="location-pill">City Center Hotels</span>
+            <span class="location-pill">Guesthouses</span>
+            <span class="location-pill">Near Lhokseumawe Venue</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Hotels+in+Lhokseumawe+Aceh" target="_blank">Find Hotels on Google Maps</a>
+            <a class="btn btn-guide" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Lhokseumawe&destination=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe" target="_blank">Route to Competition Venue</a>
+          </div>
+        </div>
+        <div class="hotels-map-card" aria-label="Google Maps search for hotels in Lhokseumawe Aceh">
+          <iframe src="https://www.google.com/maps?q=Hotels%20in%20Lhokseumawe%20Aceh&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="hotels-gallery">
+        <div class="card hotels-card">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" alt="Hotel lobby representing accommodation in Lhokseumawe" />
+          <div class="hotels-card-content">
+            <h3>City Center Hotels</h3>
+            <p>Recommended for participants who want easy access to restaurants, coffee shops, minimarkets, and local transportation in central Lhokseumawe.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Hotel+Rajawali+Lhokseumawe+Hotel+Diana+Lhokseumawe+Lido+Graha+Lhokseumawe" target="_blank">Explore central hotels</a>
+          </div>
+        </div>
+
+        <div class="card hotels-card">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Comfortable hotel room for event participants" />
+          <div class="hotels-card-content">
+            <h3>Guesthouses & Homestays</h3>
+            <p>Budget-friendly stays such as guesthouses and homestays are available around Lhokseumawe. These can be suitable for student teams traveling together.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Homestay+Lhokseumawe+Aceh" target="_blank">Find guesthouses</a>
+          </div>
+        </div>
+
+        <div class="card hotels-card">
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80" alt="Hotel exterior representing recommended stays for visitors" />
+          <div class="hotels-card-content">
+            <h3>Booking Platforms</h3>
+            <p>Participants are encouraged to compare prices, facilities, cancellation policy, and distance to the venue before confirming accommodation.</p>
+            <a class="social-link" href="https://www.google.com/search?q=hotels+in+Lhokseumawe+Aceh+booking" target="_blank">Compare hotel options</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card hotels-note">
+        <h3>Accommodation Tips for International Participants</h3>
+        <p>Please book accommodation early before the final presentation dates. Check whether the hotel provides Wi-Fi, breakfast, airport/station pickup, and easy access to online transportation. If needed, participants may contact the committee for local guidance before arrival.</p>
+      </div>
+    </div>
+  </section>
+
+
   <section id="payment"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="payment_eyebrow">Free Registration</div><h2 class="section-title" data-i18n="payment_title">Registration is Free</h2><p data-i18n="payment_desc">This competition is free of charge. Participants do not need to pay any registration fee at any stage.</p></div><div class="grid"><div class="card"><h3 data-i18n="fee_title">No Registration Fee</h3><p data-i18n-html="fee_desc">IPDCEC 2026 is free of charge.<br>No payment is required for registration, extended abstract submission, full design submission, or final stage participation.</p></div></div></div></section>
 
   <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6283168532383'); return false;">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6282274680923'); return false;">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6281267055711'); return false;">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
@@ -710,7 +959,7 @@ html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--
       en: {
         pageTitle: "IPDCEC 2026 | International Plant Design Chemical Engineering Competition", metaDesc: "Official website for IPDCEC 2026 - International Plant Design Chemical Engineering Competition.",
         topbar_title: "International Plant Design Chemical Engineering Competition", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "International Plant Design Chemical Engineering Competition",
-        nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_location: "Location", nav_coffee: "Gayo Coffee", nav_payment: "Free Registration", nav_contact: "Contact",
+        nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_location: "Location", nav_coffee: "Gayo Coffee", nav_culinary: "Mie Aceh", nav_transport: "Transport", nav_hotels: "Hotels", nav_payment: "Free Registration", nav_contact: "Contact",
         btn_register: "Register Now →", btn_register_plain: "Register Now", btn_guidebook: "Download Guidebook", btn_contact: "Contact Committee", btn_guidebook_official: "📘 Download Official Guidebook", floating_register: "🚀 Register Now",
         countdown_title: "Registration closes in", cd_days: "Days", cd_hours: "Hours", cd_minutes: "Minutes", cd_seconds: "Seconds",
         hero_kicker: "International", hero_title: "Plant Design Chemical Engineering <span>Competition 2026</span>", hero_desc: "Designing sustainable chemical plants for a better global future.",
@@ -728,7 +977,7 @@ html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--
       id: {
         pageTitle: "IPDCEC 2026 | Kompetisi Perancangan Pabrik Kimia Internasional", metaDesc: "Website resmi IPDCEC 2026 - Kompetisi Perancangan Pabrik Kimia Internasional.",
         topbar_title: "Kompetisi Perancangan Pabrik Kimia Internasional", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "Kompetisi Perancangan Pabrik Kimia Internasional",
-        nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_location: "Lokasi", nav_coffee: "Kopi Gayo", nav_payment: "Gratis", nav_contact: "Kontak",
+        nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_location: "Lokasi", nav_coffee: "Kopi Gayo", nav_culinary: "Mie Aceh", nav_transport: "Transportasi", nav_hotels: "Hotel", nav_payment: "Gratis", nav_contact: "Kontak",
         btn_register: "Daftar Sekarang →", btn_register_plain: "Daftar Sekarang", btn_guidebook: "Unduh Guidebook", btn_contact: "Hubungi Panitia", btn_guidebook_official: "📘 Unduh Guidebook Resmi", floating_register: "🚀 Daftar Sekarang",
         countdown_title: "Pendaftaran ditutup dalam", cd_days: "Hari", cd_hours: "Jam", cd_minutes: "Menit", cd_seconds: "Detik",
         hero_kicker: "Internasional", hero_title: "Kompetisi Perancangan Pabrik Kimia <span>2026</span>", hero_desc: "Merancang pabrik kimia berkelanjutan untuk masa depan global yang lebih baik.",
@@ -747,7 +996,7 @@ html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--
       zh: {
         pageTitle: "IPDCEC 2026 | 国际化工厂设计化学工程竞赛", metaDesc: "IPDCEC 2026 官方网站——国际化工厂设计化学工程竞赛。",
         topbar_title: "国际化工厂设计化学工程竞赛", topbar_location: "马利库萨莱大学，亚齐，印度尼西亚", brand_subtitle: "国际化工厂设计化学工程竞赛",
-        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_location: "地点", nav_coffee: "Gayo 咖啡", nav_payment: "免费报名", nav_contact: "联系",
+        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_location: "地点", nav_coffee: "Gayo 咖啡", nav_culinary: "亚齐面", nav_payment: "免费报名", nav_contact: "联系",
         btn_register: "立即报名 →", btn_register_plain: "立即报名", btn_guidebook: "下载指南", btn_guidebook_official: "📘 下载官方指南", btn_contact: "联系组委会", floating_register: "🚀 立即报名",
         countdown_title: "报名截止倒计时", cd_days: "天", cd_hours: "小时", cd_minutes: "分钟", cd_seconds: "秒",
         hero_kicker: "国际", hero_title: "化工厂设计化学工程<span>竞赛 2026</span>", hero_desc: "为更美好的全球未来设计可持续化工厂。",
@@ -766,7 +1015,7 @@ html[dir="rtl"] .coffee-note { border-left: none; border-right: 6px solid var(--
       ar: {
         pageTitle: "IPDCEC 2026 | المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", metaDesc: "الموقع الرسمي لـ IPDCEC 2026 - المسابقة الدولية لتصميم مصانع الهندسة الكيميائية.",
         topbar_title: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", topbar_location: "جامعة مالك الصالح، آتشيه، إندونيسيا", brand_subtitle: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية",
-        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_location: "الموقع", nav_coffee: "قهوة جايو", nav_payment: "تسجيل مجاني", nav_contact: "اتصل بنا",
+        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_location: "الموقع", nav_coffee: "قهوة جايو", nav_culinary: "نودلز آتشيه", nav_transport: "النقل", nav_hotels: "الفنادق", nav_payment: "تسجيل مجاني", nav_contact: "اتصل بنا",
         btn_register: "سجّل الآن →", btn_register_plain: "سجّل الآن", btn_guidebook: "تحميل الدليل", btn_guidebook_official: "📘 تحميل الدليل الرسمي", btn_contact: "التواصل مع اللجنة", floating_register: "🚀 سجّل الآن",
         countdown_title: "ينتهي التسجيل خلال", cd_days: "أيام", cd_hours: "ساعات", cd_minutes: "دقائق", cd_seconds: "ثوانٍ",
         hero_kicker: "دولي", hero_title: "تصميم مصانع الهندسة الكيميائية <span>مسابقة 2026</span>", hero_desc: "تصميم مصانع كيميائية مستدامة من أجل مستقبل عالمي أفضل.",
