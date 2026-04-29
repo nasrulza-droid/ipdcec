@@ -558,6 +558,126 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 @media (max-width:980px) { .hotels-hero{grid-template-columns:1fr;} .hotels-gallery{grid-template-columns:1fr 1fr;} .hotels-map-card{min-height:320px;} }
 @media (max-width:760px) { .hotels-hero{padding:28px;} .hotels-gallery{grid-template-columns:1fr;} .hotels-card img{height:235px;} }
 
+
+/* WORLD CONFERENCE POLISH - additive only */
+.conference-ribbon {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.conference-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.24);
+  color: #f3fbff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2px;
+  backdrop-filter: blur(8px);
+}
+.world-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 15%, rgba(102,187,53,.16), transparent 28%),
+    radial-gradient(circle at 90% 15%, rgba(12,79,145,.12), transparent 30%),
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+.world-section::before {
+  content: "";
+  position: absolute;
+  inset: auto -120px -160px auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 34px solid rgba(102,187,53,.12);
+  pointer-events: none;
+}
+.world-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.world-panel {
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+  color: white;
+  border-radius: 30px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.world-panel::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: -80px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: rgba(102,187,53,.24);
+}
+.world-panel h3 { font-size: clamp(24px, 3vw, 34px); line-height: 1.18; margin-bottom: 12px; position: relative; z-index: 1; }
+.world-panel p { color: #e7f4ff; position: relative; z-index: 1; }
+.world-checklist { display: grid; gap: 12px; }
+.world-check {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 10px 28px rgba(3,27,52,.08);
+}
+.world-check strong { display: block; color: var(--navy); margin-bottom: 4px; }
+.world-check span { color: var(--muted); font-size: 14px; }
+.souvenir-premium {
+  background: radial-gradient(circle at top right, rgba(102,187,53,.15), transparent 30%), #fff;
+}
+.souvenir-card {
+  overflow: hidden;
+  padding: 0;
+}
+.souvenir-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+.souvenir-card-content { padding: 24px; }
+.souvenir-meta {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(102,187,53,.12);
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+.conference-footer-strip {
+  margin-top: 28px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 18px;
+  padding: 14px 16px;
+  color: #e7f4ff;
+  font-size: 14px;
+}
+@media (max-width:980px) {
+  .world-grid { grid-template-columns: 1fr; }
+}
+@media (max-width:760px) {
+  .conference-pill { font-size: 11px; padding: 8px 10px; }
+  .world-panel { padding: 26px; }
+  .souvenir-card img { height: 165px; }
+}
+
   </style>
 </head>
 
@@ -599,7 +719,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         <div class="brand-title"><strong>IPDCEC 2026</strong><span data-i18n="brand_subtitle">International Plant Design Chemical Engineering Competition</span><span class="hosted-badge" data-i18n="hosted_badge">Hosted by Universitas Malikussaleh</span></div>
       </div>
       <div class="nav-links">
-        <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#location" data-i18n="nav_location">Location</a><a href="#coffee" data-i18n="nav_coffee">Gayo Coffee</a><a href="#culinary" data-i18n="nav_culinary">Mie Aceh</a><a href="#transport" data-i18n="nav_transport">Transport</a><a href="#hotels" data-i18n="nav_hotels">Hotels</a><a href="#payment" data-i18n="nav_payment">Free Registration</a><a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#about" data-i18n="nav_home">Home</a><a href="#about" data-i18n="nav_about">About</a><a href="#theme" data-i18n="nav_theme">Theme</a><a href="#timeline" data-i18n="nav_timeline">Timeline</a><a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a><a href="#location" data-i18n="nav_location">Location</a><a href="#coffee" data-i18n="nav_coffee">Gayo Coffee</a><a href="#culinary" data-i18n="nav_culinary">Mie Aceh</a><a href="#transport" data-i18n="nav_transport">Transport</a><a href="#hotels" data-i18n="nav_hotels">Hotels</a><a href="#souvenir">Souvenir</a><a href="#participant-guide">Participant Guide</a><a href="#payment" data-i18n="nav_payment">Free Registration</a><a href="#contact" data-i18n="nav_contact">Contact</a>
         <a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a>
       </div>
     </div>
@@ -618,6 +738,12 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
    target="_blank" data-i18n="btn_guidebook_official">
    📘 Download Official Guidebook
 </a>
+        </div>
+        <div class="conference-ribbon" aria-label="International event highlights">
+          <span class="conference-pill">🌍 International Participants</span>
+          <span class="conference-pill">🎓 Hosted by Universitas Malikussaleh</span>
+          <span class="conference-pill">📍 Lhokseumawe, Aceh</span>
+          <span class="conference-pill">✅ Free Registration</span>
         </div>
         <div class="countdown-box">
           <div class="countdown-title" data-i18n="countdown_title">Registration closes in</div>
@@ -955,6 +1081,76 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
   </section>
 
 
+
+  <section id="souvenir" class="souvenir-premium">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Souvenir & Local Gifts</div>
+        <h2 class="section-title">Bring Home Authentic Aceh Souvenirs</h2>
+        <p>Participants can explore local gifts from Lhokseumawe and Aceh, including premium Gayo coffee, traditional snacks, and Acehnese specialties. This guide helps visitors find meaningful souvenirs after the competition.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card souvenir-card">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" alt="Premium coffee beans and ground coffee as Aceh souvenirs" />
+          <div class="souvenir-card-content">
+            <span class="souvenir-meta">Recommended Gift</span>
+            <h3>Gayo Coffee: Ground & Beans</h3>
+            <p>Gayo coffee is one of Aceh’s most recognized products. Visitors can buy ground coffee or whole beans as premium souvenirs for family, lecturers, and colleagues.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=kopi+gayo+lhokseumawe" target="_blank">Find Gayo coffee stores</a>
+          </div>
+        </div>
+
+        <div class="card souvenir-card">
+          <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=1200&q=80" alt="Traditional snacks and local culinary gifts" />
+          <div class="souvenir-card-content">
+            <span class="souvenir-meta">Local Taste</span>
+            <h3>Traditional Aceh Snacks</h3>
+            <p>Look for local delicacies such as timphan, dodol Aceh, and other packaged snacks. These are easy to carry and suitable for visitors traveling back home.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=oleh+oleh+khas+Aceh+Lhokseumawe" target="_blank">Find local gift shops</a>
+          </div>
+        </div>
+
+        <div class="card souvenir-card">
+          <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=1200&q=80" alt="Souvenir shop shelves with local products" />
+          <div class="souvenir-card-content">
+            <span class="souvenir-meta">Easy Search</span>
+            <h3>Oleh-Oleh Shops in Lhokseumawe</h3>
+            <p>Participants may visit local souvenir stores around Lhokseumawe for coffee, snacks, and Acehnese products before returning to their city or country.</p>
+            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=toko+oleh+oleh+Lhokseumawe+Aceh" target="_blank">View shops on Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:30px; border-radius:20px; overflow:hidden; box-shadow:var(--shadow);">
+        <iframe src="https://www.google.com/maps?q=oleh+oleh+Lhokseumawe+Aceh&output=embed" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="participant-guide" class="world-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">International Participant Guide</div>
+        <h2 class="section-title">A Complete Visitor Experience for IPDCEC 2026</h2>
+        <p>This section summarizes what participants need after registration: arrival planning, accommodation, local mobility, food, coffee, souvenirs, and committee support.</p>
+      </div>
+
+      <div class="world-grid">
+        <div class="world-panel">
+          <h3>Designed for participants from outside Aceh and overseas</h3>
+          <p>IPDCEC 2026 is more than a competition. The website now guides participants through the host university, Lhokseumawe city, transport options, hotel planning, Acehnese culinary experience, Gayo coffee, and local souvenirs.</p>
+          <div class="conference-footer-strip">Tip: Save the registration link, venue route, hotel search, and committee WhatsApp contacts before traveling.</div>
+        </div>
+        <div class="world-checklist">
+          <div class="world-check"><strong>Before Arrival</strong><span>Read the guidebook, complete registration, check transport routes, and book accommodation early.</span></div>
+          <div class="world-check"><strong>During the Event</strong><span>Use the venue map, contact committee representatives, and explore recommended local food and coffee spots.</span></div>
+          <div class="world-check"><strong>Before Going Home</strong><span>Buy Gayo coffee, local snacks, and souvenirs from Lhokseumawe as memories from Aceh.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="payment"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="payment_eyebrow">Free Registration</div><h2 class="section-title" data-i18n="payment_title">Registration is Free</h2><p data-i18n="payment_desc">This competition is free of charge. Participants do not need to pay any registration fee at any stage.</p></div><div class="grid"><div class="card"><h3 data-i18n="fee_title">No Registration Fee</h3><p data-i18n-html="fee_desc">IPDCEC 2026 is free of charge.<br>No payment is required for registration, extended abstract submission, full design submission, or final stage participation.</p></div></div></div></section>
 
   <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6283168532383'); return false;">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6282274680923'); return false;">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6281267055711'); return false;">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
@@ -963,7 +1159,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 
   <div class="container"><div class="cta"><h2 data-i18n="cta_title">Ready to Register for IPDCEC 2026?</h2><p data-i18n="cta_desc">Prepare your team data, student ID, originality statement, and required social media proof before completing the registration form.</p><div class="hero-actions" style="justify-content:center;margin-bottom:0;"><a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" data-i18n="btn_register">Register Now →</a><a class="btn btn-guide" href="#contact" data-i18n="btn_contact">Contact Committee</a></div></div></div>
 
-  <footer><div class="container footer-inner"><div><strong>IPDCEC 2026</strong><br /><span data-i18n="footer_competition">International Plant Design Chemical Engineering Competition</span></div><div><span data-i18n="footer_org">Organized by Chemical Engineering Department</span><br /><span data-i18n="footer_faculty">Faculty of Engineering, Universitas Malikussaleh</span></div><div>Website: ipdcec.online<br />Department: <a href="https://teknik-kimia.unimal.ac.id" target="_blank" style="color:#d7e9f8;">teknik-kimia.unimal.ac.id</a><br />Email: <a href="mailto:teknik-kimia@unimal.ac.id" style="color:#d7e9f8;">teknik-kimia@unimal.ac.id</a><br /><span data-i18n="footer_social">Instagram, TikTok & YouTube: @ipdcec2026</span></div></div></footer>
+  <footer><div class="container footer-inner"><div><img src="logo-unimal.png" alt="Universitas Malikussaleh Logo" style="width:54px;height:54px;object-fit:contain;margin-bottom:8px;display:block;"><strong>IPDCEC 2026</strong><br /><span data-i18n="footer_competition">International Plant Design Chemical Engineering Competition</span></div><div><span data-i18n="footer_org">Organized by Chemical Engineering Department</span><br /><span data-i18n="footer_faculty">Faculty of Engineering, Universitas Malikussaleh</span></div><div>Website: ipdcec.online<br />Department: <a href="https://teknik-kimia.unimal.ac.id" target="_blank" style="color:#d7e9f8;">teknik-kimia.unimal.ac.id</a><br />Email: <a href="mailto:teknik-kimia@unimal.ac.id" style="color:#d7e9f8;">teknik-kimia@unimal.ac.id</a><br /><span data-i18n="footer_social">Instagram, TikTok & YouTube: @ipdcec2026</span></div></div></footer>
 
   <script>
     const translations = {
