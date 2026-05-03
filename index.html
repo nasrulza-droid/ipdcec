@@ -881,6 +881,115 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
   .souvenir-card img { height: 165px; }
 }
 
+
+/* SPONSOR / MEDIA PARTNER SLIDER */
+.sponsor-premium {
+  background: linear-gradient(180deg,#ffffff 0%,#f4f8fc 100%);
+  overflow: hidden;
+}
+
+.sponsor-slider {
+  margin-top: 28px;
+  overflow: hidden;
+  position: relative;
+  padding: 18px 0;
+}
+
+.sponsor-slider::before,
+.sponsor-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sponsor-slider::before {
+  left: 0;
+  background: linear-gradient(90deg,#ffffff,rgba(255,255,255,0));
+}
+
+.sponsor-slider::after {
+  right: 0;
+  background: linear-gradient(270deg,#f4f8fc,rgba(244,248,252,0));
+}
+
+.sponsor-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: sponsorScroll 28s linear infinite;
+}
+
+.sponsor-slider:hover .sponsor-track {
+  animation-play-state: paused;
+}
+
+.sponsor-card {
+  min-width: 280px;
+  height: 128px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(3,27,52,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(3,27,52,.14);
+}
+
+.sponsor-card img {
+  max-width: 230px;
+  max-height: 82px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: .84;
+  transition: .25s ease;
+}
+
+.sponsor-card.sponsor-wide {
+  min-width: 360px;
+}
+
+.sponsor-card.sponsor-wide img {
+  max-width: 315px;
+  max-height: 86px;
+}
+
+.sponsor-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.sponsor-note {
+  margin-top: 22px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@keyframes sponsorScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width:760px) {
+  .sponsor-slider::before, .sponsor-slider::after { width: 42px; }
+  .sponsor-card { min-width: 220px; height: 104px; padding: 18px; }
+  .sponsor-card img { max-width: 175px; max-height: 64px; }
+  .sponsor-card.sponsor-wide { min-width: 285px; }
+  .sponsor-card.sponsor-wide img { max-width: 245px; max-height: 68px; }
+}
+
   </style>
 </head>
 
@@ -928,6 +1037,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         <a href="#timeline" data-i18n="nav_timeline">Timeline</a>
         <a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a>
         <a href="#location" data-i18n="nav_location">Location</a>
+        <a href="#sponsors" data-i18n="nav_partners">Partners</a>
 
         <div class="nav-dropdown">
           <button class="nav-dropdown-toggle" type="button" aria-expanded="false" onclick="toggleExploreMenu(event)">
@@ -1383,6 +1493,44 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 
   <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6283168532383'); return false;">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6282274680923'); return false;">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6281267055711'); return false;">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
 
+
+  <section id="sponsors" class="sponsor-premium">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="sponsor_eyebrow">Media Partner & Sponsors</div>
+        <h2 class="section-title" data-i18n="sponsor_title">Our International Partners</h2>
+        <p data-i18n="sponsor_desc">IPDCEC 2026 is supported by academic, institutional, and media partners.</p>
+      </div>
+
+      <div class="sponsor-slider" aria-label="Sponsor and media partner logo slider">
+        <div class="sponsor-track">
+          <div class="sponsor-card sponsor-wide">
+            <img src="xiamen-university.png" alt="Xiamen University Malaysia" />
+          </div>
+          <div class="sponsor-card">
+            <img src="logo-unimal.png" alt="Universitas Malikussaleh" />
+          </div>
+          <div class="sponsor-card">
+            <img src="ipdcec-logo.png" alt="IPDCEC 2026" />
+          </div>
+
+          <!-- Duplicate loop for smooth infinite slider -->
+          <div class="sponsor-card sponsor-wide">
+            <img src="xiamen-university.png" alt="Xiamen University Malaysia" />
+          </div>
+          <div class="sponsor-card">
+            <img src="logo-unimal.png" alt="Universitas Malikussaleh" />
+          </div>
+          <div class="sponsor-card">
+            <img src="ipdcec-logo.png" alt="IPDCEC 2026" />
+          </div>
+        </div>
+      </div>
+
+      <p class="sponsor-note" data-i18n="sponsor_note">Hover over the slider to pause the animation.</p>
+    </div>
+  </section>
+
   <section id="social"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="social_eyebrow">Follow Us</div><h2 class="section-title" data-i18n="social_title">Official IPDCEC Social Media</h2></div><div class="social-grid"><div class="social-card"><div class="icon-link website">🌐</div><h3 data-i18n="website_title">Website Prodi</h3><p data-i18n="website_desc">Teknik Kimia Universitas Malikussaleh</p><a class="social-link" href="https://teknik-kimia.unimal.ac.id" target="_blank" rel="noopener noreferrer" data-i18n="open_website">Open Website</a></div><div class="social-card"><div class="icon-link youtube">▶</div><h3>YouTube</h3><p>@ipdcec2026</p><a class="social-link" href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" target="_blank" rel="noopener noreferrer" data-i18n="open_youtube">Open YouTube</a></div><div class="social-card"><div class="icon-link instagram">◎</div><h3>Instagram</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.instagram.com/ipdcec2026" target="_blank" rel="noopener noreferrer" data-i18n="open_instagram">Open Instagram</a></div><div class="social-card"><div class="icon-link tiktok">♪</div><h3>TikTok</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.tiktok.com/@ipdcec2026?_r=1&_t=ZS-95pw8U9oQQU" target="_blank" rel="noopener noreferrer" data-i18n="open_tiktok">Open TikTok</a></div></div></div></section>
 
   <div class="container"><div class="cta"><h2 data-i18n="cta_title">Ready to Register for IPDCEC 2026?</h2><p data-i18n="cta_desc">Prepare your team data, student ID, originality statement, and required social media proof before completing the registration form.</p><div class="hero-actions" style="justify-content:center;margin-bottom:0;"><a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" rel="noopener noreferrer" data-i18n="btn_register">Register Now →</a><a class="btn btn-guide" href="#contact" data-i18n="btn_contact">Contact Committee</a></div></div></div>
@@ -1404,7 +1552,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
       en: {
         pageTitle: "IPDCEC 2026 | International Plant Design Chemical Engineering Competition", metaDesc: "Official website for IPDCEC 2026 - International Plant Design Chemical Engineering Competition.",
         topbar_title: "International Plant Design Chemical Engineering Competition", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "International Plant Design Chemical Engineering Competition", hosted_badge: "Hosted by Universitas Malikussaleh",
-        nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_location: "Location", nav_coffee: "Gayo Coffee", nav_culinary: "Mie Aceh", nav_transport: "Transport", nav_hotels: "Hotels", nav_payment: "Free Registration", nav_contact: "Contact",
+        nav_home: "Home", nav_about: "About", nav_theme: "Theme", nav_timeline: "Timeline", nav_guidebook: "Guidebook", nav_location: "Location", nav_partners: "Partners", nav_coffee: "Gayo Coffee", nav_culinary: "Mie Aceh", nav_transport: "Transport", nav_hotels: "Hotels", nav_payment: "Free Registration", nav_contact: "Contact",
         btn_register: "Register Now →", btn_register_plain: "Register Now", btn_guidebook: "Download Guidebook", btn_contact: "Contact Committee", btn_guidebook_official: "📘 Download Official Guidebook", floating_register: "🚀 Register Now",
         countdown_title: "Registration closes in", cd_days: "Days", cd_hours: "Hours", cd_minutes: "Minutes", cd_seconds: "Seconds",
         hero_kicker: "International", hero_title: "Plant Design Chemical Engineering <span>Competition 2026</span>", hero_desc: "Designing sustainable chemical plants for a better global future.",
@@ -1417,12 +1565,12 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         payment_eyebrow: "Free Registration", payment_title: "Registration is Free", payment_desc: "This competition is free of charge. Participants do not need to pay any registration fee at any stage.", account_number: "Not Required", paypal_account: "Not Required", fee_title: "No Registration Fee", fee_desc: "IPDCEC 2026 is free of charge.<br>No payment is required for registration, extended abstract submission, full design submission, or final stage participation.", qris_desc: "No payment code is required because registration is free.",
         contact_eyebrow: "Contact Person", contact_title: "Need Help with Registration?", contact_desc: "For registration and competition inquiries, please contact the official committee representatives below.", contact_person: "Contact Person",
         social_eyebrow: "Follow Us", social_title: "Official IPDCEC Social Media", open_youtube: "Open YouTube", open_instagram: "Open Instagram", open_tiktok: "Open TikTok", website_title: "Website Prodi", website_desc: "Chemical Engineering Department, Universitas Malikussaleh", open_website: "Open Website",
-        cta_title: "Ready to Register for IPDCEC 2026?", cta_desc: "Prepare your team data, student ID, originality statement, and required social media proof before completing the registration form.", footer_competition: "International Plant Design Chemical Engineering Competition", footer_org: "Organized by Chemical Engineering Department", footer_faculty: "Faculty of Engineering, Universitas Malikussaleh", footer_social: "Website Prodi: teknik-kimia.unimal.ac.id | Instagram, TikTok & YouTube: @ipdcec2026"
+        cta_title: "Ready to Register for IPDCEC 2026?", cta_desc: "Prepare your team data, student ID, originality statement, and required social media proof before completing the registration form.", footer_competition: "International Plant Design Chemical Engineering Competition", footer_org: "Organized by Chemical Engineering Department", footer_faculty: "Faculty of Engineering, Universitas Malikussaleh", footer_social: "Website Prodi: teknik-kimia.unimal.ac.id | Instagram, TikTok & YouTube: @ipdcec2026", sponsor_eyebrow: "Media Partner & Sponsors", sponsor_title: "Our International Partners", sponsor_desc: "IPDCEC 2026 is supported by academic, institutional, and media partners.", sponsor_note: "Hover over the slider to pause the animation."
       },
       id: {
         pageTitle: "IPDCEC 2026 | Kompetisi Perancangan Pabrik Kimia Internasional", metaDesc: "Website resmi IPDCEC 2026 - Kompetisi Perancangan Pabrik Kimia Internasional.",
         topbar_title: "Kompetisi Perancangan Pabrik Kimia Internasional", topbar_location: "Universitas Malikussaleh, Aceh, Indonesia", brand_subtitle: "Kompetisi Perancangan Pabrik Kimia Internasional", hosted_badge: "Diselenggarakan oleh Universitas Malikussaleh",
-        nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_location: "Lokasi", nav_coffee: "Kopi Gayo", nav_culinary: "Mie Aceh", nav_transport: "Transportasi", nav_hotels: "Hotel", nav_payment: "Gratis", nav_contact: "Kontak",
+        nav_home: "Beranda", nav_about: "Tentang", nav_theme: "Tema", nav_timeline: "Linimasa", nav_guidebook: "Panduan", nav_location: "Lokasi", nav_partners: "Partner", nav_coffee: "Kopi Gayo", nav_culinary: "Mie Aceh", nav_transport: "Transportasi", nav_hotels: "Hotel", nav_payment: "Gratis", nav_contact: "Kontak",
         btn_register: "Daftar Sekarang →", btn_register_plain: "Daftar Sekarang", btn_guidebook: "Unduh Guidebook", btn_contact: "Hubungi Panitia", btn_guidebook_official: "📘 Unduh Guidebook Resmi", floating_register: "🚀 Daftar Sekarang",
         countdown_title: "Pendaftaran ditutup dalam", cd_days: "Hari", cd_hours: "Jam", cd_minutes: "Menit", cd_seconds: "Detik",
         hero_kicker: "Internasional", hero_title: "Kompetisi Perancangan Pabrik Kimia <span>2026</span>", hero_desc: "Merancang pabrik kimia berkelanjutan untuk masa depan global yang lebih baik.",
@@ -1435,13 +1583,13 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         payment_eyebrow: "Pendaftaran Gratis", payment_title: "Registrasi Tidak Dipungut Biaya", payment_desc: "Lomba ini gratis dan tidak dipungut biaya. Peserta tidak perlu membayar biaya registrasi pada tahap apa pun.", account_number: "Tidak Diperlukan", paypal_account: "Tidak Diperlukan", fee_title: "Tanpa Biaya Registrasi", fee_desc: "IPDCEC 2026 gratis dan tidak dipungut biaya.<br>Tidak ada pembayaran untuk pendaftaran, pengiriman extended abstract, pengiriman full design, maupun tahap final.", qris_desc: "Kode pembayaran tidak diperlukan karena pendaftaran gratis.",
         contact_eyebrow: "Narahubung", contact_title: "Butuh Bantuan Registrasi?", contact_desc: "Untuk pertanyaan terkait registrasi dan kompetisi, silakan hubungi perwakilan panitia resmi berikut.", contact_person: "Narahubung",
         social_eyebrow: "Ikuti Kami", social_title: "Media Sosial Resmi IPDCEC", open_youtube: "Buka YouTube", open_instagram: "Buka Instagram", open_tiktok: "Buka TikTok", website_title: "Website Prodi", website_desc: "Teknik Kimia Universitas Malikussaleh", open_website: "Buka Website",
-        cta_title: "Siap Mendaftar IPDCEC 2026?", cta_desc: "Siapkan data tim, kartu identitas mahasiswa, surat pernyataan orisinalitas, dan bukti media sosial sebelum mengisi formulir registrasi.", footer_competition: "Kompetisi Perancangan Pabrik Kimia Internasional", footer_org: "Diselenggarakan oleh Jurusan Teknik Kimia", footer_faculty: "Fakultas Teknik, Universitas Malikussaleh", footer_social: "Website Prodi: teknik-kimia.unimal.ac.id | Instagram, TikTok & YouTube: @ipdcec2026"
+        cta_title: "Siap Mendaftar IPDCEC 2026?", cta_desc: "Siapkan data tim, kartu identitas mahasiswa, surat pernyataan orisinalitas, dan bukti media sosial sebelum mengisi formulir registrasi.", footer_competition: "Kompetisi Perancangan Pabrik Kimia Internasional", footer_org: "Diselenggarakan oleh Jurusan Teknik Kimia", footer_faculty: "Fakultas Teknik, Universitas Malikussaleh", footer_social: "Website Prodi: teknik-kimia.unimal.ac.id | Instagram, TikTok & YouTube: @ipdcec2026", sponsor_eyebrow: "Media Partner & Sponsors", sponsor_title: "Our International Partners", sponsor_desc: "IPDCEC 2026 is supported by academic, institutional, and media partners.", sponsor_note: "Hover over the slider to pause the animation."
 
       },
       zh: {
         pageTitle: "IPDCEC 2026 | 国际化工厂设计化学工程竞赛", metaDesc: "IPDCEC 2026 官方网站——国际化工厂设计化学工程竞赛。",
         topbar_title: "国际化工厂设计化学工程竞赛", topbar_location: "马利库萨莱大学，亚齐，印度尼西亚", brand_subtitle: "国际化工厂设计化学工程竞赛", hosted_badge: "Hosted by Universitas Malikussaleh",
-        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_location: "地点", nav_coffee: "Gayo 咖啡", nav_culinary: "亚齐面", nav_payment: "免费报名", nav_contact: "联系",
+        nav_home: "首页", nav_about: "关于", nav_theme: "主题", nav_timeline: "时间表", nav_guidebook: "指南", nav_location: "地点", nav_partners: "合作伙伴", nav_coffee: "Gayo 咖啡", nav_culinary: "亚齐面", nav_payment: "免费报名", nav_contact: "联系",
         btn_register: "立即报名 →", btn_register_plain: "立即报名", btn_guidebook: "下载指南", btn_guidebook_official: "📘 下载官方指南", btn_contact: "联系组委会", floating_register: "🚀 立即报名",
         countdown_title: "报名截止倒计时", cd_days: "天", cd_hours: "小时", cd_minutes: "分钟", cd_seconds: "秒",
         hero_kicker: "国际", hero_title: "化工厂设计化学工程<span>竞赛 2026</span>", hero_desc: "为更美好的全球未来设计可持续化工厂。",
@@ -1454,13 +1602,13 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         payment_eyebrow: "免费报名", payment_title: "报名免费", payment_desc: "本竞赛免费，不收取任何费用。参赛者在任何阶段均无需支付报名费。", account_number: "无需提供", paypal_account: "无需提供", fee_title: "无报名费", fee_desc: "IPDCEC 2026 免费，不收取任何费用。<br>报名、扩展摘要提交、完整设计提交及决赛阶段均无需付款。", qris_desc: "报名免费，因此无需付款码。",
         contact_eyebrow: "联系人", contact_title: "报名需要帮助？", contact_desc: "如有报名和竞赛相关问题，请联系以下官方组委会代表。", contact_person: "联系人",
         social_eyebrow: "关注我们", social_title: "IPDCEC 官方社交媒体", open_youtube: "打开 YouTube", open_instagram: "打开 Instagram", open_tiktok: "打开 TikTok", website_title: "院系网站", website_desc: "马利库萨莱大学化学工程系", open_website: "打开网站",
-        cta_title: "准备报名 IPDCEC 2026 吗？", cta_desc: "填写报名表前，请准备团队资料、学生证、原创性声明以及所需社交媒体证明。", footer_competition: "国际化工厂设计化学工程竞赛", footer_org: "由化学工程系主办", footer_faculty: "工程学院，马利库萨莱大学", footer_social: "Website Prodi：teknik-kimia.unimal.ac.id | Instagram、TikTok 与 YouTube：@ipdcec2026"
+        cta_title: "准备报名 IPDCEC 2026 吗？", cta_desc: "填写报名表前，请准备团队资料、学生证、原创性声明以及所需社交媒体证明。", footer_competition: "国际化工厂设计化学工程竞赛", footer_org: "由化学工程系主办", footer_faculty: "工程学院，马利库萨莱大学", footer_social: "Website Prodi：teknik-kimia.unimal.ac.id | Instagram、TikTok 与 YouTube：@ipdcec2026", sponsor_eyebrow: "媒体合作伙伴与赞助方", sponsor_title: "我们的国际合作伙伴", sponsor_desc: "IPDCEC 2026 得到学术、机构和媒体合作伙伴的支持。", sponsor_note: "将鼠标悬停在滑块上可暂停动画。"
 
       },
       ar: {
         pageTitle: "IPDCEC 2026 | المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", metaDesc: "الموقع الرسمي لـ IPDCEC 2026 - المسابقة الدولية لتصميم مصانع الهندسة الكيميائية.",
         topbar_title: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", topbar_location: "جامعة مالك الصالح، آتشيه، إندونيسيا", brand_subtitle: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", hosted_badge: "Hosted by Universitas Malikussaleh",
-        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_location: "الموقع", nav_coffee: "قهوة جايو", nav_culinary: "نودلز آتشيه", nav_transport: "النقل", nav_hotels: "الفنادق", nav_payment: "تسجيل مجاني", nav_contact: "اتصل بنا",
+        nav_home: "الرئيسية", nav_about: "حول", nav_theme: "الموضوع", nav_timeline: "الجدول", nav_guidebook: "الدليل", nav_location: "الموقع", nav_partners: "الشركاء", nav_coffee: "قهوة جايو", nav_culinary: "نودلز آتشيه", nav_transport: "النقل", nav_hotels: "الفنادق", nav_payment: "تسجيل مجاني", nav_contact: "اتصل بنا",
         btn_register: "سجّل الآن →", btn_register_plain: "سجّل الآن", btn_guidebook: "تحميل الدليل", btn_guidebook_official: "📘 تحميل الدليل الرسمي", btn_contact: "التواصل مع اللجنة", floating_register: "🚀 سجّل الآن",
         countdown_title: "ينتهي التسجيل خلال", cd_days: "أيام", cd_hours: "ساعات", cd_minutes: "دقائق", cd_seconds: "ثوانٍ",
         hero_kicker: "دولي", hero_title: "تصميم مصانع الهندسة الكيميائية <span>مسابقة 2026</span>", hero_desc: "تصميم مصانع كيميائية مستدامة من أجل مستقبل عالمي أفضل.",
@@ -1473,7 +1621,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         payment_eyebrow: "تسجيل مجاني", payment_title: "التسجيل مجاني", payment_desc: "هذه المسابقة مجانية ولا تُفرض أي رسوم. لا يحتاج المشاركون إلى دفع أي رسوم تسجيل في أي مرحلة.", account_number: "غير مطلوب", paypal_account: "غير مطلوب", fee_title: "لا توجد رسوم تسجيل", fee_desc: "IPDCEC 2026 مجاني ولا تُفرض أي رسوم.<br>لا يلزم الدفع للتسجيل أو تقديم الملخص الموسع أو تقديم التصميم الكامل أو المشاركة في المرحلة النهائية.", qris_desc: "لا يلزم رمز دفع لأن التسجيل مجاني.",
         contact_eyebrow: "جهة الاتصال", contact_title: "هل تحتاج مساعدة في التسجيل؟", contact_desc: "للاستفسارات المتعلقة بالتسجيل والمسابقة، يرجى التواصل مع ممثلي اللجنة الرسميين أدناه.", contact_person: "جهة الاتصال",
         social_eyebrow: "تابعونا", social_title: "وسائل التواصل الاجتماعي الرسمية لـ IPDCEC", open_youtube: "فتح YouTube", open_instagram: "فتح Instagram", open_tiktok: "فتح TikTok", website_title: "موقع القسم", website_desc: "قسم الهندسة الكيميائية، جامعة مالك الصالح", open_website: "فتح الموقع",
-        cta_title: "هل أنت مستعد للتسجيل في IPDCEC 2026؟", cta_desc: "جهّز بيانات الفريق وبطاقة الطالب وبيان الأصالة وإثباتات وسائل التواصل الاجتماعي المطلوبة قبل إكمال نموذج التسجيل.", footer_competition: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", footer_org: "تنظمها قسم الهندسة الكيميائية", footer_faculty: "كلية الهندسة، جامعة مالك الصالح", footer_social: "Website Prodi: teknik-kimia.unimal.ac.id | Instagram و TikTok و YouTube: @ipdcec2026"
+        cta_title: "هل أنت مستعد للتسجيل في IPDCEC 2026؟", cta_desc: "جهّز بيانات الفريق وبطاقة الطالب وبيان الأصالة وإثباتات وسائل التواصل الاجتماعي المطلوبة قبل إكمال نموذج التسجيل.", footer_competition: "المسابقة الدولية لتصميم مصانع الهندسة الكيميائية", footer_org: "تنظمها قسم الهندسة الكيميائية", footer_faculty: "كلية الهندسة، جامعة مالك الصالح", footer_social: "Website Prodi: teknik-kimia.unimal.ac.id | Instagram و TikTok و YouTube: @ipdcec2026", sponsor_eyebrow: "الشركاء الإعلاميون والرعاة", sponsor_title: "شركاؤنا الدوليون", sponsor_desc: "يحظى IPDCEC 2026 بدعم شركاء أكاديميين ومؤسسيين وإعلاميين.", sponsor_note: "مرر المؤشر فوق الشريط لإيقاف الحركة مؤقتًا."
 
       }
     };
