@@ -1,24 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official website for IPDCEC 2026 - International Plant Design Chemical Engineering Competition." />
-  <meta name="keywords" content="IPDCEC, chemical engineering competition, plant design competition, international competition" />
-  <meta name="author" content="IPDCEC 2026" />
-  <meta property="og:title" content="IPDCEC 2026" />
-  <meta property="og:description" content="Join the International Plant Design Chemical Engineering Competition 2026." />
-  <meta property="og:image" content="ipdcec-logo.png" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#031b34" />
-  <link rel="icon" href="ipdcec-logo.png" />
-  <link rel="alternate" hreflang="en" href="https://ipdcec.online/?lang=en" />
-  <link rel="alternate" hreflang="id" href="https://ipdcec.online/?lang=id" />
-  <link rel="alternate" hreflang="zh" href="https://ipdcec.online/?lang=zh" />
-  <link rel="alternate" hreflang="ar" href="https://ipdcec.online/?lang=ar" />
-  <title>IPDCEC 2026 | International Plant Design Chemical Engineering Competition</title>
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Official website for IPDCEC 2026 - International Plant Design Chemical Engineering Competition." name="description"/>
+<meta content="IPDCEC, chemical engineering competition, plant design competition, international competition" name="keywords"/>
+<meta content="IPDCEC 2026" name="author"/>
+<meta content="IPDCEC 2026" property="og:title"/>
+<meta content="Join the International Plant Design Chemical Engineering Competition 2026." property="og:description"/>
+<meta content="ipdcec-logo.png" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="#031b34" name="theme-color"/>
+<link href="ipdcec-logo.png" rel="icon"/>
+<link href="https://ipdcec.online/?lang=en" hreflang="en" rel="alternate"/>
+<link href="https://ipdcec.online/?lang=id" hreflang="id" rel="alternate"/>
+<link href="https://ipdcec.online/?lang=zh" hreflang="zh" rel="alternate"/>
+<link href="https://ipdcec.online/?lang=ar" hreflang="ar" rel="alternate"/>
+<title>IPDCEC 2026 | International Plant Design Chemical Engineering Competition</title>
+<style>
     :root {
       --navy: #031b34;
       --navy-2: #062b4f;
@@ -1029,588 +1029,808 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 @media (max-width:760px) { .twibbon-box{padding:28px;} }
 
 
-  </style>
-</head>
 
+/* =========================================================
+   MEDIA PARTNER PREMIUM REDESIGN - IPDCEC 2026
+   Tambahan untuk membuat section partner lebih rapi, modern,
+   dan siap menampilkan media partner baru UGM.
+   ========================================================= */
+.sponsor-premium {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(102,187,53,.14), transparent 30%),
+    radial-gradient(circle at 88% 10%, rgba(12,79,145,.13), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%) !important;
+}
+
+.sponsor-premium::before {
+  content: "";
+  position: absolute;
+  right: -140px;
+  top: 80px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 34px solid rgba(102,187,53,.10);
+  pointer-events: none;
+}
+
+.sponsor-premium .container {
+  position: relative;
+  z-index: 1;
+}
+
+.partner-showcase {
+  display: grid;
+  gap: 30px;
+  margin-top: 34px;
+}
+
+.partner-tier {
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(3,27,52,.10);
+  border-radius: 30px;
+  padding: 28px;
+  box-shadow: 0 18px 50px rgba(3,27,52,.08);
+  backdrop-filter: blur(14px);
+}
+
+.partner-tier-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(3,27,52,.10);
+}
+
+.partner-tier-label {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(102,187,53,.12);
+  color: var(--green-dark);
+  border: 1px solid rgba(102,187,53,.24);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+.partner-tier-head h3 {
+  color: var(--navy);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -.8px;
+  margin: 0;
+}
+
+.partner-tier-head p {
+  color: var(--muted);
+  max-width: 560px;
+  margin: 8px 0 0;
+}
+
+.partner-tier-count {
+  flex: 0 0 auto;
+  min-width: 86px;
+  min-height: 86px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+  box-shadow: 0 16px 34px rgba(3,27,52,.18);
+}
+
+.partner-grid {
+  display: grid;
+  gap: 22px;
+  justify-content: center;
+}
+
+.partner-grid.featured {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 390px));
+}
+
+.partner-grid.supporting,
+.partner-grid.media-partners {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
+}
+
+.partner-card {
+  position: relative;
+  min-height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  border-radius: 26px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(248,251,255,.92));
+  border: 1px solid rgba(3,27,52,.10);
+  box-shadow: 0 14px 34px rgba(3,27,52,.08);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.partner-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 7px;
+  background: linear-gradient(90deg, var(--green), var(--green-dark));
+}
+
+.partner-card::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: -88px;
+  bottom: -98px;
+  border-radius: 50%;
+  background: rgba(102,187,53,.12);
+}
+
+.partner-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(102,187,53,.34);
+  box-shadow: 0 26px 70px rgba(3,27,52,.14);
+}
+
+.partner-logo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 82px;
+  object-fit: contain;
+  filter: grayscale(100%) contrast(1.03);
+  opacity: .82;
+  transition: transform .28s ease, filter .28s ease, opacity .28s ease;
+}
+
+.partner-card:hover .partner-logo img,
+.partner-card.is-priority .partner-logo img {
+  filter: grayscale(0%) contrast(1.04);
+  opacity: 1;
+  transform: scale(1.045);
+}
+
+.partner-card.is-priority {
+  min-height: 170px;
+  border-color: rgba(102,187,53,.28);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(102,187,53,.14), transparent 30%),
+    linear-gradient(145deg, #ffffff, #f6fbff);
+}
+
+.partner-card.is-priority::before {
+  background: linear-gradient(90deg, #0c4f91, var(--green));
+}
+
+.partner-card.is-priority .partner-logo {
+  height: 104px;
+}
+
+.partner-card.is-priority .partner-logo img {
+  max-height: 102px;
+}
+
+.partner-meta {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 2;
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(3,27,52,.08);
+  color: var(--navy);
+  border: 1px solid rgba(3,27,52,.10);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.partner-note {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(102,187,53,.10);
+  border: 1px solid rgba(102,187,53,.22);
+  color: #31506f;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .partner-tier {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .partner-tier-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .partner-tier-count {
+    min-width: 68px;
+    min-height: 68px;
+    font-size: 24px;
+    border-radius: 20px;
+  }
+
+  .partner-grid.featured,
+  .partner-grid.supporting,
+  .partner-grid.media-partners {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card,
+  .partner-card.is-priority {
+    min-height: 140px;
+  }
+}
+
+
+  
+    
+    .partner-campus {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    </style>
+</head>
 <body>
-  <a class="floating-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform"
-     target="_blank" rel="noopener noreferrer" data-i18n="floating_register" aria-label="Register Now">
+<a aria-label="Register Now" class="floating-register" data-i18n="floating_register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" rel="noopener noreferrer" target="_blank">
      🚀 Register Now
   </a>
-  <div class="register-popup" id="registerPopup" aria-hidden="true">Register Now</div>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div data-i18n="topbar_title">International Plant Design Chemical Engineering Competition</div>
-      <div data-i18n="topbar_location">Universitas Malikussaleh, Aceh, Indonesia</div>
-      <div class="social-icons">
-        <a class="icon-link website" href="https://teknik-kimia.unimal.ac.id" target="_blank" rel="noopener noreferrer" aria-label="Website Prodi Teknik Kimia">🌐</a>
-        <a class="icon-link youtube" href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
-        <a class="icon-link instagram" href="https://www.instagram.com/ipdcec2026" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
-        <a class="icon-link tiktok" href="https://www.tiktok.com/@ipdcec2026?_r=1&_t=ZS-95pw8U9oQQU" target="_blank" rel="noopener noreferrer" aria-label="TikTok">♪</a>
-      </div>
-      <div class="lang-switch">
-        <button id="lang-en" class="active" onclick="setLanguage('en')">EN</button>
-        <button id="lang-id" onclick="setLanguage('id')">ID</button>
-        <button id="lang-zh" onclick="setLanguage('zh')">中文</button>
-        <button id="lang-ar" onclick="setLanguage('ar')">العربية</button>
-      </div>
-    </div>
-  </div>
-
-  <nav>
-    <div class="container nav-inner">
-      <div class="brand">
-        <div class="brand-logos" aria-label="IPDCEC 2026 hosted by Universitas Malikussaleh">
-          <img class="brand-logo" src="ipdcec-logo.png" alt="IPDCEC Logo" />
-          <span class="brand-divider" aria-hidden="true"></span>
-          <span class="unimal-logo-wrap">
-            <img class="unimal-logo" src="logo-unimal.png" alt="Universitas Malikussaleh Logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-missing');" />
-          </span>
-        </div>
-        <div class="brand-title"><strong>IPDCEC 2026</strong><span data-i18n="brand_subtitle">International Plant Design Chemical Engineering Competition</span><span class="hosted-badge" data-i18n="hosted_badge">Hosted by Universitas Malikussaleh</span></div>
-      </div>
-      <div class="nav-links" id="siteNav" aria-label="Main navigation">
-        <a href="#about" data-i18n="nav_home">Home</a>
-        <a href="#about" data-i18n="nav_about">About</a>
-        <a href="#theme" data-i18n="nav_theme">Theme</a>
-        <a href="#timeline" data-i18n="nav_timeline">Timeline</a>
-        <a href="#guidebook" data-i18n="nav_guidebook">Guidebook</a>
-        <a href="#location" data-i18n="nav_location">Location</a>
-        <a href="#sponsors" data-i18n="nav_partners">Partners</a>
-
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" onclick="toggleExploreMenu(event)">
+<div aria-hidden="true" class="register-popup" id="registerPopup">Register Now</div>
+<div class="topbar">
+<div class="container topbar-inner">
+<div data-i18n="topbar_title">International Plant Design Chemical Engineering Competition</div>
+<div data-i18n="topbar_location">Universitas Malikussaleh, Aceh, Indonesia</div>
+<div class="social-icons">
+<a aria-label="Website Prodi Teknik Kimia" class="icon-link website" href="https://teknik-kimia.unimal.ac.id" rel="noopener noreferrer" target="_blank">🌐</a>
+<a aria-label="YouTube" class="icon-link youtube" href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" rel="noopener noreferrer" target="_blank">▶</a>
+<a aria-label="Instagram" class="icon-link instagram" href="https://www.instagram.com/ipdcec2026" rel="noopener noreferrer" target="_blank">◎</a>
+<a aria-label="TikTok" class="icon-link tiktok" href="https://www.tiktok.com/@ipdcec2026?_r=1&amp;_t=ZS-95pw8U9oQQU" rel="noopener noreferrer" target="_blank">♪</a>
+</div>
+<div class="lang-switch">
+<button class="active" id="lang-en" onclick="setLanguage('en')">EN</button>
+<button id="lang-id" onclick="setLanguage('id')">ID</button>
+<button id="lang-zh" onclick="setLanguage('zh')">中文</button>
+<button id="lang-ar" onclick="setLanguage('ar')">العربية</button>
+</div>
+</div>
+</div>
+<nav>
+<div class="container nav-inner">
+<div class="brand">
+<div aria-label="IPDCEC 2026 hosted by Universitas Malikussaleh" class="brand-logos">
+<img alt="IPDCEC Logo" class="brand-logo" src="ipdcec-logo.png"/>
+<span aria-hidden="true" class="brand-divider"></span>
+<span class="unimal-logo-wrap">
+<img alt="Universitas Malikussaleh Logo" class="unimal-logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-missing');" src="logo-unimal.png"/>
+</span>
+</div>
+<div class="brand-title"><strong>IPDCEC 2026</strong><span data-i18n="brand_subtitle">International Plant Design Chemical Engineering Competition</span><span class="hosted-badge" data-i18n="hosted_badge">Hosted by Universitas Malikussaleh</span></div>
+</div>
+<div aria-label="Main navigation" class="nav-links" id="siteNav">
+<a data-i18n="nav_home" href="#about">Home</a>
+<a data-i18n="nav_about" href="#about">About</a>
+<a data-i18n="nav_theme" href="#theme">Theme</a>
+<a data-i18n="nav_timeline" href="#timeline">Timeline</a>
+<a data-i18n="nav_guidebook" href="#guidebook">Guidebook</a>
+<a data-i18n="nav_location" href="#location">Location</a>
+<a data-i18n="nav_partners" href="#sponsors">Partners</a>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-toggle" onclick="toggleExploreMenu(event)" type="button">
             Explore <span aria-hidden="true">⌄</span>
-          </button>
-          <div class="nav-dropdown-menu" aria-label="Explore Lhokseumawe">
-            <a href="#coffee" data-i18n="nav_coffee">Gayo Coffee</a>
-            <a href="#culinary" data-i18n="nav_culinary">Mie Aceh</a>
-            <a href="#transport" data-i18n="nav_transport">Transport</a>
-            <a href="#hotels" data-i18n="nav_hotels">Hotels</a>
-            <a href="#souvenir">Souvenir</a>
-            <a href="#participant-guide">Participant Guide</a>
-            <a href="#twibbon">Twibbon</a>
-            <a href="#payment" data-i18n="nav_payment">Free Registration</a>
-            <a href="#contact" data-i18n="nav_contact">Contact</a>
-          </div>
-        </div>
-
-        <a class="btn btn-green btn-register nav-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" rel="noopener noreferrer" data-i18n="btn_register">Register Now →</a>
-      </div>
-      <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" onclick="toggleMobileNav()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container hero-inner">
-      <div>
-        <div class="hero-kicker" data-i18n="hero_kicker">International</div>
-        <h1 data-i18n-html="hero_title">Plant Design Chemical Engineering <span>Competition 2026</span></h1>
-        <p data-i18n="hero_desc">Designing sustainable chemical plants for a better global future.</p>
-        <div class="hero-actions">
-          <a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" rel="noopener noreferrer" data-i18n="btn_register">Register Now →</a>
-          <a class="btn btn-green premium-guidebook-btn"
-   href="#" data-guidebook-link
-   target="_blank" rel="noopener noreferrer" data-i18n="btn_guidebook_official">
+</button>
+<div aria-label="Explore Lhokseumawe" class="nav-dropdown-menu">
+<a data-i18n="nav_coffee" href="#coffee">Gayo Coffee</a>
+<a data-i18n="nav_culinary" href="#culinary">Mie Aceh</a>
+<a data-i18n="nav_transport" href="#transport">Transport</a>
+<a data-i18n="nav_hotels" href="#hotels">Hotels</a>
+<a href="#souvenir">Souvenir</a>
+<a href="#participant-guide">Participant Guide</a>
+<a href="#twibbon">Twibbon</a>
+<a data-i18n="nav_payment" href="#payment">Free Registration</a>
+<a data-i18n="nav_contact" href="#contact">Contact</a>
+</div>
+</div>
+<a class="btn btn-green btn-register nav-register" data-i18n="btn_register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" rel="noopener noreferrer" target="_blank">Register Now →</a>
+</div>
+<button aria-label="Open navigation menu" class="nav-menu-toggle" onclick="toggleMobileNav()" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="hero">
+<div class="container hero-inner">
+<div>
+<div class="hero-kicker" data-i18n="hero_kicker">International</div>
+<h1 data-i18n-html="hero_title">Plant Design Chemical Engineering <span>Competition 2026</span></h1>
+<p data-i18n="hero_desc">Designing sustainable chemical plants for a better global future.</p>
+<div class="hero-actions">
+<a class="btn btn-green btn-register" data-i18n="btn_register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" rel="noopener noreferrer" target="_blank">Register Now →</a>
+<a class="btn btn-green premium-guidebook-btn" data-guidebook-link="" data-i18n="btn_guidebook_official" href="#" rel="noopener noreferrer" target="_blank">
    📘 Download Official Guidebook
 </a>
-          <a class="btn btn-twibbon" href="https://twb.nz/ipdcec2026" target="_blank" rel="noopener noreferrer">🎉 Use IPDCEC Twibbon</a>
-        </div>
-        <div class="conference-ribbon" aria-label="International event highlights">
-          <span class="conference-pill">🌍 International Participants</span>
-          <span class="conference-pill">🎓 Hosted by Universitas Malikussaleh</span>
-          <span class="conference-pill">📍 Lhokseumawe, Aceh</span>
-          <span class="conference-pill">✅ Free Registration</span>
-        </div>
-        <div class="countdown-box">
-          <div class="countdown-title" data-i18n="countdown_title">Registration closes in</div>
-          <div class="countdown-grid">
-            <div class="countdown-item"><strong id="cd-days">0</strong><span data-i18n="cd_days">Days</span></div>
-            <div class="countdown-item"><strong id="cd-hours">0</strong><span data-i18n="cd_hours">Hours</span></div>
-            <div class="countdown-item"><strong id="cd-minutes">0</strong><span data-i18n="cd_minutes">Minutes</span></div>
-            <div class="countdown-item"><strong id="cd-seconds">0</strong><span data-i18n="cd_seconds">Seconds</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="mascot-wrap"><img src="mascot-ipdcec.png" alt="IPDCEC 2026 Mascot" /></div>
-    </div>
-  </header>
-
-  <div class="container info-bar"><div class="info-grid">
-    <div class="info-item"><div class="info-icon">⌂</div><h3 data-i18n="info1_title">Offline Competition</h3><p data-i18n="info1_desc">Universitas Malikussaleh, Aceh, Indonesia</p></div>
-    <div class="info-item"><div class="info-icon">◎</div><h3 data-i18n="info2_title">International Event</h3><p data-i18n="info2_desc">Open to students from Chemical Engineering and other majors, as long as they can follow the guidebook requirements and report format</p></div>
-    <div class="info-item"><div class="info-icon">👥</div><h3 data-i18n="info3_title">Team up to 3 Members</h3><p data-i18n="info3_desc">+ 1 lecturer supervisor from the same institution</p></div>
-    <div class="info-item"><div class="info-icon">▣</div><h3 data-i18n="info4_title">Simulation</h3><p data-i18n="info4_desc">Process simulation software required</p></div>
-  </div></div>
-
-  <section id="about"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="about_eyebrow">About IPDCEC</div><h2 class="section-title" data-i18n="about_title">A global platform for future chemical engineers</h2><p data-i18n="about_desc">IPDCEC is an international chemical plant design competition organized by the Chemical Engineering Department, Faculty of Engineering, Universitas Malikussaleh. This competition challenges students to design comprehensive, safe, efficient, and sustainable chemical plants.</p></div><div class="grid"><div class="card"><h3 data-i18n="about_card1_title">Global Participation</h3><p data-i18n="about_card1_desc">Open to active students from Chemical Engineering and other majors from universities around the world, as long as they can follow the official guidebook requirements and required report format.</p></div><div class="card"><h3 data-i18n="about_card_eligibility_title">Open Across Majors</h3><p data-i18n="about_card_eligibility_desc">Participants from non-Chemical Engineering departments are welcome, provided they are able to prepare the plant design report according to the scope, structure, and standards requested in the official guidebook.</p></div><div class="card"><h3 data-i18n="about_card2_title">Innovative Solutions</h3><p data-i18n="about_card2_desc">Encouraging process innovation, engineering creativity, and practical industrial design.</p></div><div class="card"><h3 data-i18n="about_card3_title">Sustainable Future</h3><p data-i18n="about_card3_desc">Focused on efficient process design, energy optimization, safety, economics, and environmental responsibility.</p></div></div></div></section>
-
-  <section id="theme" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="theme_eyebrow">Theme & Subtheme</div><h2 class="section-title" data-i18n="theme_title">Competition Theme</h2></div><div class="theme-quote"><h3 data-i18n="theme_quote">“Perancangan Pabrik Kimia Berbasis Industri untuk Masa Depan Global yang Berkelanjutan”</h3></div><div class="grid"><div class="card theme-card"><h3 data-i18n="sub1_title">01. Cleaner Energy from Natural Gas</h3><p data-i18n="sub1_desc">Utilization of natural gas as a cleaner energy source through process optimization and emission reduction.</p><ul><li>Hydrogen (H2)</li><li>DME</li><li>Methanol</li><li>SNG</li><li>GTL fuels</li></ul></div><div class="card theme-card"><h3 data-i18n="sub2_title">02. Value-Added Chemical Products</h3><p data-i18n="sub2_desc">Downstream processing of natural gas into value-added chemical products for sustainable and eco-friendly industry.</p><ul><li>Ammonia and Urea</li><li>Olefin and Polymers</li><li>Formaldehyde</li><li>Acetic Acid</li><li>Petrochemical derivatives</li></ul></div></div></div></section>
-
-  <section id="timeline"><div class="container"><div class="section-header"><div class="eyebrow">Timeline</div><h2 class="section-title">Competition Schedule</h2><p>Please submit all documents before the official deadline and regularly check official announcements.</p></div><div class="timeline">
-
-<div class="timeline-item"><div class="date">1 – 14 May 2026</div><div><h3>Registration & Abstract Submission</h3><p>Team registration and abstract submission period.</p></div></div>
-
+<a class="btn btn-twibbon" href="https://twb.nz/ipdcec2026" rel="noopener noreferrer" target="_blank">🎉 Use IPDCEC Twibbon</a>
+</div>
+<div aria-label="International event highlights" class="conference-ribbon">
+<span class="conference-pill">🌍 International Participants</span>
+<span class="conference-pill">🎓 Hosted by Universitas Malikussaleh</span>
+<span class="conference-pill">📍 Lhokseumawe, Aceh</span>
+<span class="conference-pill">✅ Free Registration</span>
+</div>
+<div class="countdown-box">
+<div class="countdown-title" data-i18n="countdown_title">Registration closes in</div>
+<div class="countdown-grid">
+<div class="countdown-item"><strong id="cd-days">0</strong><span data-i18n="cd_days">Days</span></div>
+<div class="countdown-item"><strong id="cd-hours">0</strong><span data-i18n="cd_hours">Hours</span></div>
+<div class="countdown-item"><strong id="cd-minutes">0</strong><span data-i18n="cd_minutes">Minutes</span></div>
+<div class="countdown-item"><strong id="cd-seconds">0</strong><span data-i18n="cd_seconds">Seconds</span></div>
+</div>
+</div>
+</div>
+<div class="mascot-wrap"><img alt="IPDCEC 2026 Mascot" src="mascot-ipdcec.png"/></div>
+</div>
+</header>
+<div class="container info-bar"><div class="info-grid">
+<div class="info-item"><div class="info-icon">⌂</div><h3 data-i18n="info1_title">Offline Competition</h3><p data-i18n="info1_desc">Universitas Malikussaleh, Aceh, Indonesia</p></div>
+<div class="info-item"><div class="info-icon">◎</div><h3 data-i18n="info2_title">International Event</h3><p data-i18n="info2_desc">Open to students from Chemical Engineering and other majors, as long as they can follow the guidebook requirements and report format</p></div>
+<div class="info-item"><div class="info-icon">👥</div><h3 data-i18n="info3_title">Team up to 3 Members</h3><p data-i18n="info3_desc">+ 1 lecturer supervisor from the same institution</p></div>
+<div class="info-item"><div class="info-icon">▣</div><h3 data-i18n="info4_title">Simulation</h3><p data-i18n="info4_desc">Process simulation software required</p></div>
+</div></div>
+<section id="about"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="about_eyebrow">About IPDCEC</div><h2 class="section-title" data-i18n="about_title">A global platform for future chemical engineers</h2><p data-i18n="about_desc">IPDCEC is an international chemical plant design competition organized by the Chemical Engineering Department, Faculty of Engineering, Universitas Malikussaleh. This competition challenges students to design comprehensive, safe, efficient, and sustainable chemical plants.</p></div><div class="grid"><div class="card"><h3 data-i18n="about_card1_title">Global Participation</h3><p data-i18n="about_card1_desc">Open to active students from Chemical Engineering and other majors from universities around the world, as long as they can follow the official guidebook requirements and required report format.</p></div><div class="card"><h3 data-i18n="about_card_eligibility_title">Open Across Majors</h3><p data-i18n="about_card_eligibility_desc">Participants from non-Chemical Engineering departments are welcome, provided they are able to prepare the plant design report according to the scope, structure, and standards requested in the official guidebook.</p></div><div class="card"><h3 data-i18n="about_card2_title">Innovative Solutions</h3><p data-i18n="about_card2_desc">Encouraging process innovation, engineering creativity, and practical industrial design.</p></div><div class="card"><h3 data-i18n="about_card3_title">Sustainable Future</h3><p data-i18n="about_card3_desc">Focused on efficient process design, energy optimization, safety, economics, and environmental responsibility.</p></div></div></div></section>
+<section class="highlight" id="theme"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="theme_eyebrow">Theme &amp; Subtheme</div><h2 class="section-title" data-i18n="theme_title">Competition Theme</h2></div><div class="theme-quote"><h3 data-i18n="theme_quote">“Perancangan Pabrik Kimia Berbasis Industri untuk Masa Depan Global yang Berkelanjutan”</h3></div><div class="grid"><div class="card theme-card"><h3 data-i18n="sub1_title">01. Cleaner Energy from Natural Gas</h3><p data-i18n="sub1_desc">Utilization of natural gas as a cleaner energy source through process optimization and emission reduction.</p><ul><li>Hydrogen (H2)</li><li>DME</li><li>Methanol</li><li>SNG</li><li>GTL fuels</li></ul></div><div class="card theme-card"><h3 data-i18n="sub2_title">02. Value-Added Chemical Products</h3><p data-i18n="sub2_desc">Downstream processing of natural gas into value-added chemical products for sustainable and eco-friendly industry.</p><ul><li>Ammonia and Urea</li><li>Olefin and Polymers</li><li>Formaldehyde</li><li>Acetic Acid</li><li>Petrochemical derivatives</li></ul></div></div></div></section>
+<section id="timeline"><div class="container"><div class="section-header"><div class="eyebrow">Timeline</div><h2 class="section-title">Competition Schedule</h2><p>Please submit all documents before the official deadline and regularly check official announcements.</p></div><div class="timeline">
+<div class="timeline-item"><div class="date">1 – 14 May 2026</div><div><h3>Registration &amp; Abstract Submission</h3><p>Team registration and abstract submission period.</p></div></div>
 <div class="timeline-item"><div class="date">21 May 2026</div><div><h3>Abstract Announcement</h3><p>Announcement of teams that pass the abstract stage.</p></div></div>
-
 <div class="timeline-item"><div class="date">21 June – 4 July 2026</div><div><h3>Full Design Submission</h3><p>Participants submit complete plant design report.</p></div></div>
-
 <div class="timeline-item"><div class="date">11 July 2026</div><div><h3>Finalist Announcement</h3><p>Top teams advancing to final stage announced.</p></div></div>
-
 <div class="timeline-item"><div class="date">30 July – 1 August 2026</div><div><h3>Final Presentation</h3><p>Final presentation conducted offline.</p></div></div>
-
 </div></div></section>
-
-  <section id="guidebook" class="highlight"><div class="container"><div class="guidebook-box"><div><h2 data-i18n="guide_title">Download the Official Guidebook</h2><p data-i18n="guide_desc">Read the complete guidebook before registering. It contains the official rules, timeline, registration requirements, free registration information, and competition stages.</p><div class="hero-actions"><a class="btn btn-green btn-register" href="#" data-guidebook-link target="_blank" rel="noopener noreferrer" data-i18n="btn_guidebook">Download Guidebook</a><a class="btn btn-guide" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" rel="noopener noreferrer" data-i18n="btn_register_plain">Register Now</a></div></div><div class="guide-card"><h3 data-i18n="guide_card_title">Guidebook File</h3><p data-i18n="guide_card_desc">The official guidebook is available through Google Drive. Please read all requirements carefully before registration.</p></div></div></div></section>
-
-  <section id="location" class="location-premium">
-    <div class="container">
-      <div class="location-hero">
-        <div class="location-hero-content">
-          <div class="eyebrow" data-i18n="location_eyebrow">Competition Venue</div>
-          <h2 data-i18n="location_title">Discover the Host Location</h2>
-          <p data-i18n="location_desc">IPDCEC 2026 will be held at the Department of Chemical Engineering, Universitas Malikussaleh, Kampus Bukit Indah, Lhokseumawe, Aceh, Indonesia.</p>
-          <p data-i18n="location_desc2">This section helps international participants and participants from outside Aceh understand the academic atmosphere, city environment, and venue location before arriving.</p>
-          <div class="location-pills">
-            <span class="location-pill" data-i18n="location_pill1">Chemical Engineering Venue</span>
-            <span class="location-pill" data-i18n="location_pill2">Lhokseumawe, Aceh</span>
-            <span class="location-pill" data-i18n="location_pill3">Offline Final Stage</span>
-          </div>
-          <div class="location-actions">
-            <a class="btn btn-green" href="https://teknik-kimia.unimal.ac.id" target="_blank" rel="noopener noreferrer" data-i18n="location_btn_department">Visit Department Website</a>
-            <a class="btn btn-guide" href="https://www.google.com/maps/search/?api=1&query=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Jalan+Batam+Blang+Pulo+Lhokseumawe" target="_blank" rel="noopener noreferrer" data-i18n="location_btn_maps">Open in Google Maps</a>
-          </div>
-        </div>
-        <div class="location-map-card" aria-label="Google Maps location for Chemical Engineering Universitas Malikussaleh">
-          <iframe
-            src="https://www.google.com/maps?q=Program%20Studi%20Teknik%20Kimia%20Universitas%20Malikussaleh%20Jalan%20Batam%20Blang%20Pulo%20Lhokseumawe&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
-      <div class="location-gallery">
-        <div class="card location-photo-card">
-          <img src="https://teknik-kimia.unimal.ac.id/images/2025/09/09/gedungtekim21.png" alt="Chemical Engineering building at Universitas Malikussaleh" />
-          <div class="location-photo-content">
-            <h3 data-i18n="location_campus_title">Chemical Engineering, Universitas Malikussaleh</h3>
-            <p data-i18n="location_campus_desc">The Department of Chemical Engineering is located at Kampus Unimal Bukit Indah, Jalan Batam No. 2, Blang Pulo, Muara Satu, Lhokseumawe. It supports learning and competition activities related to process design, simulation, and sustainable chemical engineering.</p>
-            <a class="social-link" href="https://teknik-kimia.unimal.ac.id/profil-prodi/gedung-teknik-kimia" target="_blank" rel="noopener noreferrer" data-i18n="location_campus_link">See campus building</a>
-          </div>
-        </div>
-
-        <div class="card location-photo-card">
-          <img src="https://jdih.lhokseumawekota.go.id/uploads/2s8h/2021/01/islamic_centre.jpg" alt="Islamic Center Mosque and city view of Lhokseumawe" />
-          <div class="location-photo-content">
-            <h3 data-i18n="location_city_title">Lhokseumawe City, Aceh</h3>
-            <p data-i18n="location_city_desc">Lhokseumawe is a coastal city in Aceh known for its industrial character, local culture, and urban landmarks such as the Islamic Center. Its location gives visitors a clear view of Aceh's academic, industrial, and cultural environment.</p>
-            <a class="social-link" href="https://www.lhokseumawekota.go.id" target="_blank" rel="noopener noreferrer" data-i18n="location_city_link">Visit city website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="coffee" class="coffee-premium">
-    <div class="container">
-      <div class="coffee-hero">
-        <div class="coffee-hero-content">
-          <div class="eyebrow" data-i18n="coffee_eyebrow">Aceh Coffee Experience</div>
-          <h2 data-i18n="coffee_title">Taste Authentic Gayo Coffee Near the Venue</h2>
-          <p data-i18n="coffee_desc">Aceh is home to Gayo Arabica coffee, one of Indonesia's best-known specialty coffees from the Gayo Highlands. During IPDCEC 2026, participants can explore local coffee culture and find ground coffee options around Lhokseumawe and Bukit Salak, Aceh.</p>
-          <p data-i18n="coffee_desc2">This mini guide is designed for international participants and visitors from outside Aceh who want to enjoy Acehnese coffee after the competition agenda.</p>
-          <div class="location-pills">
-            <span class="location-pill" data-i18n="coffee_pill1">Gayo Arabica</span>
-            <span class="location-pill" data-i18n="coffee_pill2">Ground Coffee</span>
-            <span class="location-pill" data-i18n="coffee_pill3">Bukit Salak & Lhokseumawe</span>
-          </div>
-          <div class="location-actions">
-            <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Ground+Coffee+Bukit+Salak+Aceh" target="_blank" rel="noopener noreferrer" data-i18n="coffee_btn_ground">Find Ground Coffee Bukit Salak</a>
-            <a class="btn btn-guide" href="https://www.google.com/maps/search/?api=1&query=Gayo+Coffee+Lhokseumawe" target="_blank" rel="noopener noreferrer" data-i18n="coffee_btn_lhokseumawe">Find Gayo Coffee in Lhokseumawe</a>
-          </div>
-        </div>
-        <div class="coffee-map-card" aria-label="Google Maps search for Gayo Coffee and Ground Coffee Bukit Salak Aceh">
-          <iframe
-            src="https://www.google.com/maps?q=Ground%20Coffee%20Bukit%20Salak%20Aceh&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
-      <div class="coffee-gallery">
-        <div class="card coffee-card">
-          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80" alt="Roasted coffee beans representing Aceh Gayo coffee" />
-          <div class="coffee-card-content">
-            <h3 data-i18n="coffee_card1_title">Gayo Arabica Coffee</h3>
-            <p data-i18n="coffee_card1_desc">Gayo coffee is grown in the highland districts of Aceh such as Aceh Tengah, Bener Meriah, and Gayo Lues, making it a meaningful local taste for visitors.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Gayo+Coffee+Lhokseumawe" target="_blank" rel="noopener noreferrer" data-i18n="coffee_card_link_maps">Open coffee map</a>
-          </div>
-        </div>
-
-        <div class="card coffee-card">
-          <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=80" alt="Coffee cup in a cafe" />
-          <div class="coffee-card-content">
-            <h3 data-i18n="coffee_card2_title">Cafe Stops Near the Event</h3>
-            <p data-i18n="coffee_card2_desc">Participants can search nearby cafes in Lhokseumawe for Aceh-style coffee, Gayo beans, and local coffee souvenirs after official sessions.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Cafe+Kopi+Gayo+Lhokseumawe" target="_blank" rel="noopener noreferrer" data-i18n="coffee_card_link_cafe">Search nearby cafes</a>
-          </div>
-        </div>
-
-        <div class="card coffee-card">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Green highland landscape representing the Gayo coffee highlands" />
-          <div class="coffee-card-content">
-            <h3 data-i18n="coffee_card3_title">Bukit Salak Coffee Route</h3>
-            <p data-i18n="coffee_card3_desc">For visitors interested in ground coffee from Bukit Salak, use the map link to check the latest operating hours, route, and available coffee products.</p>
-            <a class="social-link" href="https://www.google.com/maps/dir/?api=1&origin=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe&destination=Ground+Coffee+Bukit+Salak+Aceh" target="_blank" rel="noopener noreferrer" data-i18n="coffee_card_link_route">Get route from venue</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card coffee-note">
-        <h3 data-i18n="coffee_note_title">Visitor Note</h3>
-        <p data-i18n="coffee_note_desc">Cafe availability and opening hours may change. Please confirm locations through Google Maps before visiting, especially for trips outside the main competition venue area.</p>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section id="culinary" class="culinary-premium highlight">
-    <div class="container">
-      <div class="culinary-hero">
-        <div class="culinary-hero-content">
-          <div class="eyebrow">Aceh Culinary Experience</div>
-          <h2>Try Mie Aceh, the Iconic Spiced Noodle of Aceh</h2>
-          <p>Mie Aceh is one of Aceh's signature dishes, made with thick yellow noodles, bold spices, and toppings such as beef, goat meat, shrimp, crab, or other seafood. It is commonly served fried, stir-fried with a little sauce, or as a rich soupy noodle dish.</p>
-          <p>This guide helps international participants and visitors from outside Aceh enjoy local food around Lhokseumawe after the IPDCEC 2026 activities.</p>
-          <div class="location-pills">
-            <span class="location-pill">Signature Aceh Dish</span>
-            <span class="location-pill">Spicy & Aromatic</span>
-            <span class="location-pill">Lhokseumawe Food Stops</span>
-          </div>
-          <div class="location-actions">
-            <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Mie+Aceh+Lhokseumawe" target="_blank" rel="noopener noreferrer">Find Mie Aceh in Lhokseumawe</a>
-            <a class="btn btn-guide" href="https://www.google.com/maps/dir/?api=1&origin=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe&destination=Mie+Aceh+Lhokseumawe" target="_blank" rel="noopener noreferrer">Get Route from Venue</a>
-          </div>
-        </div>
-        <div class="culinary-map-card" aria-label="Google Maps search for Mie Aceh in Lhokseumawe">
-          <iframe src="https://www.google.com/maps?q=Mie%20Aceh%20Lhokseumawe&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="culinary-gallery">
-        <div class="card culinary-card">
-          <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=1200&q=80" alt="Spicy noodle dish representing Mie Aceh" />
-          <div class="culinary-card-content">
-            <h3>What Makes Mie Aceh Special?</h3>
-            <p>The dish is known for its strong spice aroma, savory taste, and thick noodles served with emping crackers, pickled shallots, and lime for a fresh finish.</p>
-            <a class="social-link" href="https://www.indonesia.travel/us/en/travel-ideas/gastronomy/mie-aceh" target="_blank" rel="noopener noreferrer">Read about Mie Aceh</a>
-          </div>
-        </div>
-
-        <div class="card culinary-card">
-          <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80" alt="Warm noodle bowl representing Acehnese noodle cuisine" />
-          <div class="culinary-card-content">
-            <h3>Choose Your Style</h3>
-            <p>Visitors can try Mie Aceh goreng, tumis, or kuah. Seafood versions are popular in coastal Aceh, while beef and goat meat versions are also widely available.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Mie+Aceh+seafood+Lhokseumawe" target="_blank" rel="noopener noreferrer">Search seafood Mie Aceh</a>
-          </div>
-        </div>
-
-        <div class="card culinary-card">
-          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80" alt="Restaurant dining area for culinary visitors" />
-          <div class="culinary-card-content">
-            <h3>Food Stops Near the Venue</h3>
-            <p>Use the map link to check nearby Mie Aceh restaurants, current opening hours, photos, ratings, and routes from the competition venue.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Restoran+Mie+Aceh+dekat+Universitas+Malikussaleh+Lhokseumawe" target="_blank" rel="noopener noreferrer">Find nearby restaurants</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card culinary-note">
-        <h3>Visitor Note</h3>
-        <p>Mie Aceh can be spicy. International participants may ask for a milder spice level when ordering. Restaurant availability and opening hours may change, so please confirm through Google Maps before visiting.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="transport" class="transport-premium">
-    <div class="container">
-      <div class="transport-hero">
-        <div class="transport-hero-content">
-          <div class="eyebrow">Travel & Transportation</div>
-          <h2>How to Get to Lhokseumawe, Aceh</h2>
-          <p>IPDCEC 2026 will be held in Lhokseumawe, Aceh. Participants can reach the city by air through Malikus Saleh Airport (LSW), or by land from Medan and Banda Aceh using intercity buses, travel cars, or private transport.</p>
-          <p>For international participants, the easiest route is usually to fly to Jakarta, Kuala Lumpur, Medan, or Banda Aceh first, then continue to Lhokseumawe by domestic flight or land transportation.</p>
-          <div class="location-pills">
-            <span class="location-pill">Nearest Airport: LSW</span>
-            <span class="location-pill">Via Medan Kualanamu</span>
-            <span class="location-pill">Bus / Travel Car Available</span>
-          </div>
-          <div class="location-actions">
-            <a class="btn btn-green" href="https://www.google.com/maps/dir/?api=1&destination=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe" target="_blank" rel="noopener noreferrer">Route to Competition Venue</a>
-            <a class="btn btn-guide" href="https://www.google.com/maps/search/?api=1&query=Malikus+Saleh+Airport+Lhokseumawe" target="_blank" rel="noopener noreferrer">Open Malikus Saleh Airport Map</a>
-          </div>
-        </div>
-        <div class="transport-map-card" aria-label="Google Maps route to Lhokseumawe and Universitas Malikussaleh">
-          <iframe src="https://www.google.com/maps?q=Program%20Studi%20Teknik%20Kimia%20Universitas%20Malikussaleh%20Lhokseumawe&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="transport-gallery">
-        <div class="card transport-card">
-          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80" alt="Airplane wing representing air travel to Aceh" />
-          <div class="transport-card-content">
-            <h3>By Air: Fly to Lhokseumawe</h3>
-            <p>Malikus Saleh Airport (LSW) serves the Lhokseumawe area. Flight availability may change, so participants should check the latest schedule from airline or ticketing platforms before departure.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Malikus+Saleh+Airport+Lhokseumawe" target="_blank" rel="noopener noreferrer">View LSW Airport</a>
-          </div>
-        </div>
-
-        <div class="card transport-card">
-          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80" alt="Intercity bus representing land transportation to Lhokseumawe" />
-          <div class="transport-card-content">
-            <h3>By Land from Medan</h3>
-            <p>Participants arriving at Kualanamu International Airport (Medan) can continue to Lhokseumawe by bus, travel car, or private car. This route is commonly used by visitors entering Aceh from North Sumatra.</p>
-            <a class="social-link" href="https://www.google.com/maps/dir/?api=1&origin=Kualanamu+International+Airport&destination=Lhokseumawe+Aceh" target="_blank" rel="noopener noreferrer">Route from Kualanamu</a>
-          </div>
-        </div>
-
-        <div class="card transport-card">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Road landscape representing overland travel in Aceh" />
-          <div class="transport-card-content">
-            <h3>By Land from Banda Aceh</h3>
-            <p>Visitors who land at Sultan Iskandar Muda International Airport in Banda Aceh can travel east to Lhokseumawe by bus, shuttle, travel car, taxi, or private transport.</p>
-            <a class="social-link" href="https://www.google.com/maps/dir/?api=1&origin=Sultan+Iskandar+Muda+International+Airport&destination=Lhokseumawe+Aceh" target="_blank" rel="noopener noreferrer">Route from Banda Aceh Airport</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card transport-note">
-        <h3>Travel Tips for Participants</h3>
-        <p>Please book flights and land transportation early, especially near the final presentation dates. For comfort and safety, international participants are encouraged to share their arrival plan with the committee so local guidance can be provided when needed. Always confirm current ticket availability, route, and travel duration before departure.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="hotels" class="hotels-premium">
-    <div class="container">
-      <div class="hotels-hero">
-        <div class="hotels-hero-content">
-          <div class="eyebrow">Accommodation</div>
-          <h2>Hotels & Stays in Lhokseumawe</h2>
-          <p>For IPDCEC 2026 participants, Lhokseumawe offers several hotel, guesthouse, and homestay options around the city center and near Universitas Malikussaleh areas.</p>
-          <p>This guide helps international participants and visitors from outside Aceh quickly explore accommodation options before booking.</p>
-          <div class="location-pills">
-            <span class="location-pill">City Center Hotels</span>
-            <span class="location-pill">Guesthouses</span>
-            <span class="location-pill">Near Lhokseumawe Venue</span>
-          </div>
-          <div class="hero-actions">
-            <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Hotels+in+Lhokseumawe+Aceh" target="_blank" rel="noopener noreferrer">Find Hotels on Google Maps</a>
-            <a class="btn btn-guide" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Lhokseumawe&destination=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe" target="_blank" rel="noopener noreferrer">Route to Competition Venue</a>
-          </div>
-        </div>
-        <div class="hotels-map-card" aria-label="Google Maps search for hotels in Lhokseumawe Aceh">
-          <iframe src="https://www.google.com/maps?q=Hotels%20in%20Lhokseumawe%20Aceh&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="hotels-gallery">
-        <div class="card hotels-card">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" alt="Hotel lobby representing accommodation in Lhokseumawe" />
-          <div class="hotels-card-content">
-            <h3>City Center Hotels</h3>
-            <p>Recommended for participants who want easy access to restaurants, coffee shops, minimarkets, and local transportation in central Lhokseumawe.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Hotel+Rajawali+Lhokseumawe+Hotel+Diana+Lhokseumawe+Lido+Graha+Lhokseumawe" target="_blank" rel="noopener noreferrer">Explore central hotels</a>
-          </div>
-        </div>
-
-        <div class="card hotels-card">
-          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Comfortable hotel room for event participants" />
-          <div class="hotels-card-content">
-            <h3>Guesthouses & Homestays</h3>
-            <p>Budget-friendly stays such as guesthouses and homestays are available around Lhokseumawe. These can be suitable for student teams traveling together.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Homestay+Lhokseumawe+Aceh" target="_blank" rel="noopener noreferrer">Find guesthouses</a>
-          </div>
-        </div>
-
-        <div class="card hotels-card">
-          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80" alt="Hotel exterior representing recommended stays for visitors" />
-          <div class="hotels-card-content">
-            <h3>Booking Platforms</h3>
-            <p>Participants are encouraged to compare prices, facilities, cancellation policy, and distance to the venue before confirming accommodation.</p>
-            <a class="social-link" href="https://www.google.com/search?q=hotels+in+Lhokseumawe+Aceh+booking" target="_blank" rel="noopener noreferrer">Compare hotel options</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card hotels-note">
-        <h3>Accommodation Tips for International Participants</h3>
-        <p>Please book accommodation early before the final presentation dates. Check whether the hotel provides Wi-Fi, breakfast, airport/station pickup, and easy access to online transportation. If needed, participants may contact the committee for local guidance before arrival.</p>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section id="souvenir" class="souvenir-premium">
-    <div class="container">
-      <div class="section-header">
-        <div class="eyebrow">Souvenir & Local Gifts</div>
-        <h2 class="section-title">Bring Home Authentic Aceh Souvenirs</h2>
-        <p>Participants can explore local gifts from Lhokseumawe and Aceh, including premium Gayo coffee, traditional snacks, and Acehnese specialties. This guide helps visitors find meaningful souvenirs after the competition.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card souvenir-card">
-          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" alt="Premium coffee beans and ground coffee as Aceh souvenirs" />
-          <div class="souvenir-card-content">
-            <span class="souvenir-meta">Recommended Gift</span>
-            <h3>Gayo Coffee: Ground & Beans</h3>
-            <p>Gayo coffee is one of Aceh’s most recognized products. Visitors can buy ground coffee or whole beans as premium souvenirs for family, lecturers, and colleagues.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=kopi+gayo+lhokseumawe" target="_blank" rel="noopener noreferrer">Find Gayo coffee stores</a>
-          </div>
-        </div>
-
-        <div class="card souvenir-card">
-          <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=1200&q=80" alt="Traditional snacks and local culinary gifts" />
-          <div class="souvenir-card-content">
-            <span class="souvenir-meta">Local Taste</span>
-            <h3>Traditional Aceh Snacks</h3>
-            <p>Look for local delicacies such as timphan, dodol Aceh, and other packaged snacks. These are easy to carry and suitable for visitors traveling back home.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=oleh+oleh+khas+Aceh+Lhokseumawe" target="_blank" rel="noopener noreferrer">Find local gift shops</a>
-          </div>
-        </div>
-
-        <div class="card souvenir-card">
-          <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=1200&q=80" alt="Souvenir shop shelves with local products" />
-          <div class="souvenir-card-content">
-            <span class="souvenir-meta">Easy Search</span>
-            <h3>Oleh-Oleh Shops in Lhokseumawe</h3>
-            <p>Participants may visit local souvenir stores around Lhokseumawe for coffee, snacks, and Acehnese products before returning to their city or country.</p>
-            <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=toko+oleh+oleh+Lhokseumawe+Aceh" target="_blank" rel="noopener noreferrer">View shops on Maps</a>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:30px; border-radius:20px; overflow:hidden; box-shadow:var(--shadow);">
-        <iframe src="https://www.google.com/maps?q=oleh+oleh+Lhokseumawe+Aceh&output=embed" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <section id="participant-guide" class="world-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="eyebrow">International Participant Guide</div>
-        <h2 class="section-title">A Complete Visitor Experience for IPDCEC 2026</h2>
-        <p>This section summarizes what participants need after registration: arrival planning, accommodation, local mobility, food, coffee, souvenirs, and committee support.</p>
-      </div>
-
-      <div class="world-grid">
-        <div class="world-panel">
-          <h3>Designed for participants from outside Aceh and overseas</h3>
-          <p>IPDCEC 2026 is more than a competition. The website now guides participants through the host university, Lhokseumawe city, transport options, hotel planning, Acehnese culinary experience, Gayo coffee, and local souvenirs.</p>
-          <div class="conference-footer-strip">Tip: Save the registration link, venue route, hotel search, and committee WhatsApp contacts before traveling.</div>
-        </div>
-        <div class="world-checklist">
-          <div class="world-check"><strong>Before Arrival</strong><span>Read the guidebook, complete registration, check transport routes, and book accommodation early.</span></div>
-          <div class="world-check"><strong>During the Event</strong><span>Use the venue map, contact committee representatives, and explore recommended local food and coffee spots.</span></div>
-          <div class="world-check"><strong>Before Going Home</strong><span>Buy Gayo coffee, local snacks, and souvenirs from Lhokseumawe as memories from Aceh.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="payment"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="payment_eyebrow">Free Registration</div><h2 class="section-title" data-i18n="payment_title">Registration is Free</h2><p data-i18n="payment_desc">This competition is free of charge. Participants do not need to pay any registration fee at any stage.</p></div><div class="grid"><div class="card"><h3 data-i18n="fee_title">No Registration Fee</h3><p data-i18n-html="fee_desc">IPDCEC 2026 is free of charge.<br>No payment is required for registration, extended abstract submission, full design submission, or final stage participation.</p></div></div></div></section>
-
-  <section id="contact" class="highlight"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6283168532383'); return false;">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6282274680923'); return false;">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6281267055711'); return false;">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
-
-
-  <section id="sponsors" class="sponsor-premium">
-    <div class="container">
-      <div class="section-header">
-        <div class="eyebrow" data-i18n="sponsor_eyebrow">Sponsors & Media Partners</div>
-        <h2 class="section-title" data-i18n="sponsor_title">Our International Partners</h2>
-        <p data-i18n="sponsor_desc">IPDCEC 2026 is supported by academic, institutional, sponsor, and media partners.</p>
-      </div>
-
-      <div class="sponsor-tier">
-        <div class="sponsor-tier-title">
-          <h3>Gold Sponsor</h3>
-          <p>Main supporting partners of IPDCEC 2026.</p>
-        </div>
-
-        <div class="sponsor-grid-tier gold">
-          <div class="sponsor-card gold-card">
-            <img src="logo-unimal.png" alt="Universitas Malikussaleh" loading="lazy" />
-          </div>
-        </div>
-      </div>
-
-      <div class="sponsor-tier">
-        <div class="sponsor-tier-title">
-          <h3>Silver Sponsor</h3>
-          <p>Supporting partners and institutional collaborators.</p>
-        </div>
-
-        <div class="sponsor-grid-tier silver">
-          <div class="sponsor-card silver-card">
-            <img src="ipdcec-logo.png" alt="IPDCEC 2026" loading="lazy" />
-          </div>
-        </div>
-      </div>
-
-      <div class="sponsor-tier">
-        <div class="sponsor-tier-title">
-          <h3>Media Partner</h3>
-          <p>Media partners helping IPDCEC 2026 reach a wider international audience.</p>
-        </div>
-
-        <div class="sponsor-grid-tier media">
-          <div class="sponsor-card media-card">
-            <img src="xianmen-university.png" alt="Xiamen University Malaysia" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="twibbon" class="twibbon-premium">
-    <div class="container">
-      <div class="twibbon-box">
-        <div class="twibbon-content">
-          <div class="eyebrow">Official Twibbon</div>
-          <h2>Show Your Support for IPDCEC 2026</h2>
-          <p>Use the official IPDCEC 2026 Twibbon to share your participation, support the competition campaign, and invite more students to join this international plant design event.</p>
-          <div class="hero-actions">
-            <a class="btn btn-twibbon" href="https://twb.nz/ipdcec2026" target="_blank" rel="noopener noreferrer">🎉 Open Twibbon</a>
-            <a class="btn btn-guide" href="https://www.instagram.com/ipdcec2026" target="_blank" rel="noopener noreferrer">Follow Instagram</a>
-          </div>
-        </div>
-        <div class="twibbon-preview">
-          <img src="twibbon-ipdcec2026.png" alt="IPDCEC 2026 Twibbon preview" onerror="this.style.display='none'; this.parentElement.innerHTML='<h3>IPDCEC 2026 Twibbon</h3><p>Click the button to open the official Twibbon page.</p>';" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="social"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="social_eyebrow">Follow Us</div><h2 class="section-title" data-i18n="social_title">Official IPDCEC Social Media</h2></div><div class="social-grid"><div class="social-card"><div class="icon-link website">🌐</div><h3 data-i18n="website_title">Website Prodi</h3><p data-i18n="website_desc">Teknik Kimia Universitas Malikussaleh</p><a class="social-link" href="https://teknik-kimia.unimal.ac.id" target="_blank" rel="noopener noreferrer" data-i18n="open_website">Open Website</a></div><div class="social-card"><div class="icon-link youtube">▶</div><h3>YouTube</h3><p>@ipdcec2026</p><a class="social-link" href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" target="_blank" rel="noopener noreferrer" data-i18n="open_youtube">Open YouTube</a></div><div class="social-card"><div class="icon-link instagram">◎</div><h3>Instagram</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.instagram.com/ipdcec2026" target="_blank" rel="noopener noreferrer" data-i18n="open_instagram">Open Instagram</a></div><div class="social-card"><div class="icon-link tiktok">♪</div><h3>TikTok</h3><p>@ipdcec2026</p><a class="social-link" href="https://www.tiktok.com/@ipdcec2026?_r=1&_t=ZS-95pw8U9oQQU" target="_blank" rel="noopener noreferrer" data-i18n="open_tiktok">Open TikTok</a></div></div></div></section>
-
-  <div class="container"><div class="cta"><h2 data-i18n="cta_title">Ready to Register for IPDCEC 2026?</h2><p data-i18n="cta_desc">Prepare your team data, student ID, originality statement, and required social media proof before completing the registration form.</p><div class="hero-actions" style="justify-content:center;margin-bottom:0;"><a class="btn btn-green btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" target="_blank" rel="noopener noreferrer" data-i18n="btn_register">Register Now →</a><a class="btn btn-guide" href="#contact" data-i18n="btn_contact">Contact Committee</a><a class="btn btn-twibbon" href="https://twb.nz/ipdcec2026" target="_blank" rel="noopener noreferrer">Open Twibbon</a></div></div></div>
-
-  <footer><div class="container footer-inner"><div><img src="logo-unimal.png" alt="Universitas Malikussaleh Logo" style="width:54px;height:54px;object-fit:contain;margin-bottom:8px;display:block;"><strong>IPDCEC 2026</strong><br /><span data-i18n="footer_competition">International Plant Design Chemical Engineering Competition</span></div><div><span data-i18n="footer_org">Organized by Chemical Engineering Department</span><br /><span data-i18n="footer_faculty">Faculty of Engineering, Universitas Malikussaleh</span></div><div>Website: ipdcec.online<br />Department: <a href="https://teknik-kimia.unimal.ac.id" target="_blank" rel="noopener noreferrer" style="color:#d7e9f8;">teknik-kimia.unimal.ac.id</a><br />Email: <a href="mailto:teknik-kimia@unimal.ac.id" style="color:#d7e9f8;">teknik-kimia@unimal.ac.id</a><br /><span data-i18n="footer_social">Website Prodi: teknik-kimia.unimal.ac.id | Instagram, TikTok & YouTube: @ipdcec2026</span></div></div></footer>
-
-  <script>
+<section class="highlight" id="guidebook"><div class="container"><div class="guidebook-box"><div><h2 data-i18n="guide_title">Download the Official Guidebook</h2><p data-i18n="guide_desc">Read the complete guidebook before registering. It contains the official rules, timeline, registration requirements, free registration information, and competition stages.</p><div class="hero-actions"><a class="btn btn-green btn-register" data-guidebook-link="" data-i18n="btn_guidebook" href="#" rel="noopener noreferrer" target="_blank">Download Guidebook</a><a class="btn btn-guide" data-i18n="btn_register_plain" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" rel="noopener noreferrer" target="_blank">Register Now</a></div></div><div class="guide-card"><h3 data-i18n="guide_card_title">Guidebook File</h3><p data-i18n="guide_card_desc">The official guidebook is available through Google Drive. Please read all requirements carefully before registration.</p></div></div></div></section>
+<section class="location-premium" id="location">
+<div class="container">
+<div class="location-hero">
+<div class="location-hero-content">
+<div class="eyebrow" data-i18n="location_eyebrow">Competition Venue</div>
+<h2 data-i18n="location_title">Discover the Host Location</h2>
+<p data-i18n="location_desc">IPDCEC 2026 will be held at the Department of Chemical Engineering, Universitas Malikussaleh, Kampus Bukit Indah, Lhokseumawe, Aceh, Indonesia.</p>
+<p data-i18n="location_desc2">This section helps international participants and participants from outside Aceh understand the academic atmosphere, city environment, and venue location before arriving.</p>
+<div class="location-pills">
+<span class="location-pill" data-i18n="location_pill1">Chemical Engineering Venue</span>
+<span class="location-pill" data-i18n="location_pill2">Lhokseumawe, Aceh</span>
+<span class="location-pill" data-i18n="location_pill3">Offline Final Stage</span>
+</div>
+<div class="location-actions">
+<a class="btn btn-green" data-i18n="location_btn_department" href="https://teknik-kimia.unimal.ac.id" rel="noopener noreferrer" target="_blank">Visit Department Website</a>
+<a class="btn btn-guide" data-i18n="location_btn_maps" href="https://www.google.com/maps/search/?api=1&amp;query=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Jalan+Batam+Blang+Pulo+Lhokseumawe" rel="noopener noreferrer" target="_blank">Open in Google Maps</a>
+</div>
+</div>
+<div aria-label="Google Maps location for Chemical Engineering Universitas Malikussaleh" class="location-map-card">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Program%20Studi%20Teknik%20Kimia%20Universitas%20Malikussaleh%20Jalan%20Batam%20Blang%20Pulo%20Lhokseumawe&amp;output=embed">
+</iframe>
+</div>
+</div>
+<div class="location-gallery">
+<div class="card location-photo-card">
+<img alt="Chemical Engineering building at Universitas Malikussaleh" src="https://teknik-kimia.unimal.ac.id/images/2025/09/09/gedungtekim21.png"/>
+<div class="location-photo-content">
+<h3 data-i18n="location_campus_title">Chemical Engineering, Universitas Malikussaleh</h3>
+<p data-i18n="location_campus_desc">The Department of Chemical Engineering is located at Kampus Unimal Bukit Indah, Jalan Batam No. 2, Blang Pulo, Muara Satu, Lhokseumawe. It supports learning and competition activities related to process design, simulation, and sustainable chemical engineering.</p>
+<a class="social-link" data-i18n="location_campus_link" href="https://teknik-kimia.unimal.ac.id/profil-prodi/gedung-teknik-kimia" rel="noopener noreferrer" target="_blank">See campus building</a>
+</div>
+</div>
+<div class="card location-photo-card">
+<img alt="Islamic Center Mosque and city view of Lhokseumawe" src="https://jdih.lhokseumawekota.go.id/uploads/2s8h/2021/01/islamic_centre.jpg"/>
+<div class="location-photo-content">
+<h3 data-i18n="location_city_title">Lhokseumawe City, Aceh</h3>
+<p data-i18n="location_city_desc">Lhokseumawe is a coastal city in Aceh known for its industrial character, local culture, and urban landmarks such as the Islamic Center. Its location gives visitors a clear view of Aceh's academic, industrial, and cultural environment.</p>
+<a class="social-link" data-i18n="location_city_link" href="https://www.lhokseumawekota.go.id" rel="noopener noreferrer" target="_blank">Visit city website</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="coffee-premium" id="coffee">
+<div class="container">
+<div class="coffee-hero">
+<div class="coffee-hero-content">
+<div class="eyebrow" data-i18n="coffee_eyebrow">Aceh Coffee Experience</div>
+<h2 data-i18n="coffee_title">Taste Authentic Gayo Coffee Near the Venue</h2>
+<p data-i18n="coffee_desc">Aceh is home to Gayo Arabica coffee, one of Indonesia's best-known specialty coffees from the Gayo Highlands. During IPDCEC 2026, participants can explore local coffee culture and find ground coffee options around Lhokseumawe and Bukit Salak, Aceh.</p>
+<p data-i18n="coffee_desc2">This mini guide is designed for international participants and visitors from outside Aceh who want to enjoy Acehnese coffee after the competition agenda.</p>
+<div class="location-pills">
+<span class="location-pill" data-i18n="coffee_pill1">Gayo Arabica</span>
+<span class="location-pill" data-i18n="coffee_pill2">Ground Coffee</span>
+<span class="location-pill" data-i18n="coffee_pill3">Bukit Salak &amp; Lhokseumawe</span>
+</div>
+<div class="location-actions">
+<a class="btn btn-green" data-i18n="coffee_btn_ground" href="https://www.google.com/maps/search/?api=1&amp;query=Ground+Coffee+Bukit+Salak+Aceh" rel="noopener noreferrer" target="_blank">Find Ground Coffee Bukit Salak</a>
+<a class="btn btn-guide" data-i18n="coffee_btn_lhokseumawe" href="https://www.google.com/maps/search/?api=1&amp;query=Gayo+Coffee+Lhokseumawe" rel="noopener noreferrer" target="_blank">Find Gayo Coffee in Lhokseumawe</a>
+</div>
+</div>
+<div aria-label="Google Maps search for Gayo Coffee and Ground Coffee Bukit Salak Aceh" class="coffee-map-card">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Ground%20Coffee%20Bukit%20Salak%20Aceh&amp;output=embed">
+</iframe>
+</div>
+</div>
+<div class="coffee-gallery">
+<div class="card coffee-card">
+<img alt="Roasted coffee beans representing Aceh Gayo coffee" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="coffee-card-content">
+<h3 data-i18n="coffee_card1_title">Gayo Arabica Coffee</h3>
+<p data-i18n="coffee_card1_desc">Gayo coffee is grown in the highland districts of Aceh such as Aceh Tengah, Bener Meriah, and Gayo Lues, making it a meaningful local taste for visitors.</p>
+<a class="social-link" data-i18n="coffee_card_link_maps" href="https://www.google.com/maps/search/?api=1&amp;query=Gayo+Coffee+Lhokseumawe" rel="noopener noreferrer" target="_blank">Open coffee map</a>
+</div>
+</div>
+<div class="card coffee-card">
+<img alt="Coffee cup in a cafe" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="coffee-card-content">
+<h3 data-i18n="coffee_card2_title">Cafe Stops Near the Event</h3>
+<p data-i18n="coffee_card2_desc">Participants can search nearby cafes in Lhokseumawe for Aceh-style coffee, Gayo beans, and local coffee souvenirs after official sessions.</p>
+<a class="social-link" data-i18n="coffee_card_link_cafe" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Kopi+Gayo+Lhokseumawe" rel="noopener noreferrer" target="_blank">Search nearby cafes</a>
+</div>
+</div>
+<div class="card coffee-card">
+<img alt="Green highland landscape representing the Gayo coffee highlands" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="coffee-card-content">
+<h3 data-i18n="coffee_card3_title">Bukit Salak Coffee Route</h3>
+<p data-i18n="coffee_card3_desc">For visitors interested in ground coffee from Bukit Salak, use the map link to check the latest operating hours, route, and available coffee products.</p>
+<a class="social-link" data-i18n="coffee_card_link_route" href="https://www.google.com/maps/dir/?api=1&amp;origin=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe&amp;destination=Ground+Coffee+Bukit+Salak+Aceh" rel="noopener noreferrer" target="_blank">Get route from venue</a>
+</div>
+</div>
+</div>
+<div class="card coffee-note">
+<h3 data-i18n="coffee_note_title">Visitor Note</h3>
+<p data-i18n="coffee_note_desc">Cafe availability and opening hours may change. Please confirm locations through Google Maps before visiting, especially for trips outside the main competition venue area.</p>
+</div>
+</div>
+</section>
+<section class="culinary-premium highlight" id="culinary">
+<div class="container">
+<div class="culinary-hero">
+<div class="culinary-hero-content">
+<div class="eyebrow">Aceh Culinary Experience</div>
+<h2>Try Mie Aceh, the Iconic Spiced Noodle of Aceh</h2>
+<p>Mie Aceh is one of Aceh's signature dishes, made with thick yellow noodles, bold spices, and toppings such as beef, goat meat, shrimp, crab, or other seafood. It is commonly served fried, stir-fried with a little sauce, or as a rich soupy noodle dish.</p>
+<p>This guide helps international participants and visitors from outside Aceh enjoy local food around Lhokseumawe after the IPDCEC 2026 activities.</p>
+<div class="location-pills">
+<span class="location-pill">Signature Aceh Dish</span>
+<span class="location-pill">Spicy &amp; Aromatic</span>
+<span class="location-pill">Lhokseumawe Food Stops</span>
+</div>
+<div class="location-actions">
+<a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=Mie+Aceh+Lhokseumawe" rel="noopener noreferrer" target="_blank">Find Mie Aceh in Lhokseumawe</a>
+<a class="btn btn-guide" href="https://www.google.com/maps/dir/?api=1&amp;origin=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe&amp;destination=Mie+Aceh+Lhokseumawe" rel="noopener noreferrer" target="_blank">Get Route from Venue</a>
+</div>
+</div>
+<div aria-label="Google Maps search for Mie Aceh in Lhokseumawe" class="culinary-map-card">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Mie%20Aceh%20Lhokseumawe&amp;output=embed"></iframe>
+</div>
+</div>
+<div class="culinary-gallery">
+<div class="card culinary-card">
+<img alt="Spicy noodle dish representing Mie Aceh" src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="culinary-card-content">
+<h3>What Makes Mie Aceh Special?</h3>
+<p>The dish is known for its strong spice aroma, savory taste, and thick noodles served with emping crackers, pickled shallots, and lime for a fresh finish.</p>
+<a class="social-link" href="https://www.indonesia.travel/us/en/travel-ideas/gastronomy/mie-aceh" rel="noopener noreferrer" target="_blank">Read about Mie Aceh</a>
+</div>
+</div>
+<div class="card culinary-card">
+<img alt="Warm noodle bowl representing Acehnese noodle cuisine" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="culinary-card-content">
+<h3>Choose Your Style</h3>
+<p>Visitors can try Mie Aceh goreng, tumis, or kuah. Seafood versions are popular in coastal Aceh, while beef and goat meat versions are also widely available.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=Mie+Aceh+seafood+Lhokseumawe" rel="noopener noreferrer" target="_blank">Search seafood Mie Aceh</a>
+</div>
+</div>
+<div class="card culinary-card">
+<img alt="Restaurant dining area for culinary visitors" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="culinary-card-content">
+<h3>Food Stops Near the Venue</h3>
+<p>Use the map link to check nearby Mie Aceh restaurants, current opening hours, photos, ratings, and routes from the competition venue.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=Restoran+Mie+Aceh+dekat+Universitas+Malikussaleh+Lhokseumawe" rel="noopener noreferrer" target="_blank">Find nearby restaurants</a>
+</div>
+</div>
+</div>
+<div class="card culinary-note">
+<h3>Visitor Note</h3>
+<p>Mie Aceh can be spicy. International participants may ask for a milder spice level when ordering. Restaurant availability and opening hours may change, so please confirm through Google Maps before visiting.</p>
+</div>
+</div>
+</section>
+<section class="transport-premium" id="transport">
+<div class="container">
+<div class="transport-hero">
+<div class="transport-hero-content">
+<div class="eyebrow">Travel &amp; Transportation</div>
+<h2>How to Get to Lhokseumawe, Aceh</h2>
+<p>IPDCEC 2026 will be held in Lhokseumawe, Aceh. Participants can reach the city by air through Malikus Saleh Airport (LSW), or by land from Medan and Banda Aceh using intercity buses, travel cars, or private transport.</p>
+<p>For international participants, the easiest route is usually to fly to Jakarta, Kuala Lumpur, Medan, or Banda Aceh first, then continue to Lhokseumawe by domestic flight or land transportation.</p>
+<div class="location-pills">
+<span class="location-pill">Nearest Airport: LSW</span>
+<span class="location-pill">Via Medan Kualanamu</span>
+<span class="location-pill">Bus / Travel Car Available</span>
+</div>
+<div class="location-actions">
+<a class="btn btn-green" href="https://www.google.com/maps/dir/?api=1&amp;destination=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe" rel="noopener noreferrer" target="_blank">Route to Competition Venue</a>
+<a class="btn btn-guide" href="https://www.google.com/maps/search/?api=1&amp;query=Malikus+Saleh+Airport+Lhokseumawe" rel="noopener noreferrer" target="_blank">Open Malikus Saleh Airport Map</a>
+</div>
+</div>
+<div aria-label="Google Maps route to Lhokseumawe and Universitas Malikussaleh" class="transport-map-card">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Program%20Studi%20Teknik%20Kimia%20Universitas%20Malikussaleh%20Lhokseumawe&amp;output=embed"></iframe>
+</div>
+</div>
+<div class="transport-gallery">
+<div class="card transport-card">
+<img alt="Airplane wing representing air travel to Aceh" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="transport-card-content">
+<h3>By Air: Fly to Lhokseumawe</h3>
+<p>Malikus Saleh Airport (LSW) serves the Lhokseumawe area. Flight availability may change, so participants should check the latest schedule from airline or ticketing platforms before departure.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=Malikus+Saleh+Airport+Lhokseumawe" rel="noopener noreferrer" target="_blank">View LSW Airport</a>
+</div>
+</div>
+<div class="card transport-card">
+<img alt="Intercity bus representing land transportation to Lhokseumawe" src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="transport-card-content">
+<h3>By Land from Medan</h3>
+<p>Participants arriving at Kualanamu International Airport (Medan) can continue to Lhokseumawe by bus, travel car, or private car. This route is commonly used by visitors entering Aceh from North Sumatra.</p>
+<a class="social-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Kualanamu+International+Airport&amp;destination=Lhokseumawe+Aceh" rel="noopener noreferrer" target="_blank">Route from Kualanamu</a>
+</div>
+</div>
+<div class="card transport-card">
+<img alt="Road landscape representing overland travel in Aceh" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="transport-card-content">
+<h3>By Land from Banda Aceh</h3>
+<p>Visitors who land at Sultan Iskandar Muda International Airport in Banda Aceh can travel east to Lhokseumawe by bus, shuttle, travel car, taxi, or private transport.</p>
+<a class="social-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Sultan+Iskandar+Muda+International+Airport&amp;destination=Lhokseumawe+Aceh" rel="noopener noreferrer" target="_blank">Route from Banda Aceh Airport</a>
+</div>
+</div>
+</div>
+<div class="card transport-note">
+<h3>Travel Tips for Participants</h3>
+<p>Please book flights and land transportation early, especially near the final presentation dates. For comfort and safety, international participants are encouraged to share their arrival plan with the committee so local guidance can be provided when needed. Always confirm current ticket availability, route, and travel duration before departure.</p>
+</div>
+</div>
+</section>
+<section class="hotels-premium" id="hotels">
+<div class="container">
+<div class="hotels-hero">
+<div class="hotels-hero-content">
+<div class="eyebrow">Accommodation</div>
+<h2>Hotels &amp; Stays in Lhokseumawe</h2>
+<p>For IPDCEC 2026 participants, Lhokseumawe offers several hotel, guesthouse, and homestay options around the city center and near Universitas Malikussaleh areas.</p>
+<p>This guide helps international participants and visitors from outside Aceh quickly explore accommodation options before booking.</p>
+<div class="location-pills">
+<span class="location-pill">City Center Hotels</span>
+<span class="location-pill">Guesthouses</span>
+<span class="location-pill">Near Lhokseumawe Venue</span>
+</div>
+<div class="hero-actions">
+<a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=Hotels+in+Lhokseumawe+Aceh" rel="noopener noreferrer" target="_blank">Find Hotels on Google Maps</a>
+<a class="btn btn-guide" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Lhokseumawe&amp;destination=Program+Studi+Teknik+Kimia+Universitas+Malikussaleh+Lhokseumawe" rel="noopener noreferrer" target="_blank">Route to Competition Venue</a>
+</div>
+</div>
+<div aria-label="Google Maps search for hotels in Lhokseumawe Aceh" class="hotels-map-card">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hotels%20in%20Lhokseumawe%20Aceh&amp;output=embed"></iframe>
+</div>
+</div>
+<div class="hotels-gallery">
+<div class="card hotels-card">
+<img alt="Hotel lobby representing accommodation in Lhokseumawe" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="hotels-card-content">
+<h3>City Center Hotels</h3>
+<p>Recommended for participants who want easy access to restaurants, coffee shops, minimarkets, and local transportation in central Lhokseumawe.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Rajawali+Lhokseumawe+Hotel+Diana+Lhokseumawe+Lido+Graha+Lhokseumawe" rel="noopener noreferrer" target="_blank">Explore central hotels</a>
+</div>
+</div>
+<div class="card hotels-card">
+<img alt="Comfortable hotel room for event participants" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="hotels-card-content">
+<h3>Guesthouses &amp; Homestays</h3>
+<p>Budget-friendly stays such as guesthouses and homestays are available around Lhokseumawe. These can be suitable for student teams traveling together.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=Guesthouse+Homestay+Lhokseumawe+Aceh" rel="noopener noreferrer" target="_blank">Find guesthouses</a>
+</div>
+</div>
+<div class="card hotels-card">
+<img alt="Hotel exterior representing recommended stays for visitors" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="hotels-card-content">
+<h3>Booking Platforms</h3>
+<p>Participants are encouraged to compare prices, facilities, cancellation policy, and distance to the venue before confirming accommodation.</p>
+<a class="social-link" href="https://www.google.com/search?q=hotels+in+Lhokseumawe+Aceh+booking" rel="noopener noreferrer" target="_blank">Compare hotel options</a>
+</div>
+</div>
+</div>
+<div class="card hotels-note">
+<h3>Accommodation Tips for International Participants</h3>
+<p>Please book accommodation early before the final presentation dates. Check whether the hotel provides Wi-Fi, breakfast, airport/station pickup, and easy access to online transportation. If needed, participants may contact the committee for local guidance before arrival.</p>
+</div>
+</div>
+</section>
+<section class="souvenir-premium" id="souvenir">
+<div class="container">
+<div class="section-header">
+<div class="eyebrow">Souvenir &amp; Local Gifts</div>
+<h2 class="section-title">Bring Home Authentic Aceh Souvenirs</h2>
+<p>Participants can explore local gifts from Lhokseumawe and Aceh, including premium Gayo coffee, traditional snacks, and Acehnese specialties. This guide helps visitors find meaningful souvenirs after the competition.</p>
+</div>
+<div class="grid">
+<div class="card souvenir-card">
+<img alt="Premium coffee beans and ground coffee as Aceh souvenirs" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="souvenir-card-content">
+<span class="souvenir-meta">Recommended Gift</span>
+<h3>Gayo Coffee: Ground &amp; Beans</h3>
+<p>Gayo coffee is one of Aceh’s most recognized products. Visitors can buy ground coffee or whole beans as premium souvenirs for family, lecturers, and colleagues.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=kopi+gayo+lhokseumawe" rel="noopener noreferrer" target="_blank">Find Gayo coffee stores</a>
+</div>
+</div>
+<div class="card souvenir-card">
+<img alt="Traditional snacks and local culinary gifts" src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="souvenir-card-content">
+<span class="souvenir-meta">Local Taste</span>
+<h3>Traditional Aceh Snacks</h3>
+<p>Look for local delicacies such as timphan, dodol Aceh, and other packaged snacks. These are easy to carry and suitable for visitors traveling back home.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=oleh+oleh+khas+Aceh+Lhokseumawe" rel="noopener noreferrer" target="_blank">Find local gift shops</a>
+</div>
+</div>
+<div class="card souvenir-card">
+<img alt="Souvenir shop shelves with local products" src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="souvenir-card-content">
+<span class="souvenir-meta">Easy Search</span>
+<h3>Oleh-Oleh Shops in Lhokseumawe</h3>
+<p>Participants may visit local souvenir stores around Lhokseumawe for coffee, snacks, and Acehnese products before returning to their city or country.</p>
+<a class="social-link" href="https://www.google.com/maps/search/?api=1&amp;query=toko+oleh+oleh+Lhokseumawe+Aceh" rel="noopener noreferrer" target="_blank">View shops on Maps</a>
+</div>
+</div>
+</div>
+<div style="margin-top:30px; border-radius:20px; overflow:hidden; box-shadow:var(--shadow);">
+<iframe allowfullscreen="" height="360" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=oleh+oleh+Lhokseumawe+Aceh&amp;output=embed" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</section>
+<section class="world-section" id="participant-guide">
+<div class="container">
+<div class="section-header">
+<div class="eyebrow">International Participant Guide</div>
+<h2 class="section-title">A Complete Visitor Experience for IPDCEC 2026</h2>
+<p>This section summarizes what participants need after registration: arrival planning, accommodation, local mobility, food, coffee, souvenirs, and committee support.</p>
+</div>
+<div class="world-grid">
+<div class="world-panel">
+<h3>Designed for participants from outside Aceh and overseas</h3>
+<p>IPDCEC 2026 is more than a competition. The website now guides participants through the host university, Lhokseumawe city, transport options, hotel planning, Acehnese culinary experience, Gayo coffee, and local souvenirs.</p>
+<div class="conference-footer-strip">Tip: Save the registration link, venue route, hotel search, and committee WhatsApp contacts before traveling.</div>
+</div>
+<div class="world-checklist">
+<div class="world-check"><strong>Before Arrival</strong><span>Read the guidebook, complete registration, check transport routes, and book accommodation early.</span></div>
+<div class="world-check"><strong>During the Event</strong><span>Use the venue map, contact committee representatives, and explore recommended local food and coffee spots.</span></div>
+<div class="world-check"><strong>Before Going Home</strong><span>Buy Gayo coffee, local snacks, and souvenirs from Lhokseumawe as memories from Aceh.</span></div>
+</div>
+</div>
+</div>
+</section>
+<section id="payment"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="payment_eyebrow">Free Registration</div><h2 class="section-title" data-i18n="payment_title">Registration is Free</h2><p data-i18n="payment_desc">This competition is free of charge. Participants do not need to pay any registration fee at any stage.</p></div><div class="grid"><div class="card"><h3 data-i18n="fee_title">No Registration Fee</h3><p data-i18n-html="fee_desc">IPDCEC 2026 is free of charge.<br/>No payment is required for registration, extended abstract submission, full design submission, or final stage participation.</p></div></div></div></section>
+<section class="highlight" id="contact"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="contact_eyebrow">Contact Person</div><h2 class="section-title" data-i18n="contact_title">Need Help with Registration?</h2><p data-i18n="contact_desc">For registration and competition inquiries, please contact the official committee representatives below.</p></div><div class="contact-grid"><div class="contact-card"><h3>Novitasari</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6283168532383'); return false;">WhatsApp: +62 831-6853-2383</a></div><div class="contact-card"><h3>Ayu Adinda P. Ginting</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6282274680923'); return false;">WhatsApp: +62 822-7468-0923</a></div><div class="contact-card"><h3>Syaida</h3><p data-i18n="contact_person">Contact Person</p><a class="btn btn-contact" href="#" onclick="openWhatsApp('6281267055711'); return false;">WhatsApp: +62 812-6705-5711</a></div></div></div></section>
+<section class="sponsor-premium" id="sponsors">
+<div class="container">
+<div class="section-header">
+<div class="eyebrow" data-i18n="sponsor_eyebrow">Sponsors &amp; Media Partners</div>
+<h2 class="section-title" data-i18n="sponsor_title">Our International Partners</h2>
+<p data-i18n="sponsor_desc">IPDCEC 2026 is supported by academic, institutional, sponsor, and media partners.</p>
+</div>
+<div class="partner-showcase">
+<div class="partner-tier">
+<div class="partner-tier-head">
+<div>
+<span class="partner-tier-label">Main Partner</span>
+<h3>Gold Sponsor</h3>
+<p>Main supporting partner and host institution of IPDCEC 2026.</p>
+</div>
+<div class="partner-tier-count">01</div>
+</div>
+<div class="partner-grid featured">
+<div class="partner-card is-priority">
+<span class="partner-meta">Host Institution</span>
+<div class="partner-logo">
+<img alt="Universitas Malikussaleh" loading="lazy" src="logo-unimal.png"/>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-tier">
+<div class="partner-tier-head">
+<div>
+<span class="partner-tier-label">Supporting Partner</span>
+<h3>Silver Sponsor</h3>
+<p>Supporting partners and institutional collaborators.</p>
+</div>
+<div class="partner-tier-count">01</div>
+</div>
+<div class="partner-grid supporting">
+<div class="partner-card">
+<span class="partner-meta">Official Event</span>
+<div class="partner-logo">
+<img alt="IPDCEC 2026" loading="lazy" src="ipdcec-logo.png"/>
+</div>
+</div>
+</div>
+</div>
+<div class="partner-tier">
+<div class="partner-tier-head">
+<div>
+<span class="partner-tier-label">Media Network</span>
+<h3>Media Partner</h3>
+<p>Media partners helping IPDCEC 2026 reach a wider international audience.</p>
+</div>
+<div class="partner-tier-count">02</div>
+</div>
+<div class="partner-grid media-partners">
+<div class="partner-card is-priority">
+<span class="partner-meta">New Media Partner</span>
+<div class="partner-logo">
+<img alt="Media Partner UGM" loading="lazy" src="logo-ugm.png"/>
+</div>
+<p class="partner-campus">Universitas Gadjah Mada</p></div>
+<div class="partner-card">
+<span class="partner-meta">Media Partner</span>
+<div class="partner-logo">
+<img alt="Xiamen University Malaysia" loading="lazy" src="xianmen-university.png"/>
+</div>
+<p class="partner-campus">Xiamen University Malaysia</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="twibbon-premium" id="twibbon">
+<div class="container">
+<div class="twibbon-box">
+<div class="twibbon-content">
+<div class="eyebrow">Official Twibbon</div>
+<h2>Show Your Support for IPDCEC 2026</h2>
+<p>Use the official IPDCEC 2026 Twibbon to share your participation, support the competition campaign, and invite more students to join this international plant design event.</p>
+<div class="hero-actions">
+<a class="btn btn-twibbon" href="https://twb.nz/ipdcec2026" rel="noopener noreferrer" target="_blank">🎉 Open Twibbon</a>
+<a class="btn btn-guide" href="https://www.instagram.com/ipdcec2026" rel="noopener noreferrer" target="_blank">Follow Instagram</a>
+</div>
+</div>
+<div class="twibbon-preview">
+<img alt="IPDCEC 2026 Twibbon preview" onerror="this.style.display='none'; this.parentElement.innerHTML='&lt;h3&gt;IPDCEC 2026 Twibbon&lt;/h3&gt;&lt;p&gt;Click the button to open the official Twibbon page.&lt;/p&gt;';" src="twibbon-ipdcec2026.png"/>
+</div>
+</div>
+</div>
+</section>
+<section id="social"><div class="container"><div class="section-header"><div class="eyebrow" data-i18n="social_eyebrow">Follow Us</div><h2 class="section-title" data-i18n="social_title">Official IPDCEC Social Media</h2></div><div class="social-grid"><div class="social-card"><div class="icon-link website">🌐</div><h3 data-i18n="website_title">Website Prodi</h3><p data-i18n="website_desc">Teknik Kimia Universitas Malikussaleh</p><a class="social-link" data-i18n="open_website" href="https://teknik-kimia.unimal.ac.id" rel="noopener noreferrer" target="_blank">Open Website</a></div><div class="social-card"><div class="icon-link youtube">▶</div><h3>YouTube</h3><p>@ipdcec2026</p><a class="social-link" data-i18n="open_youtube" href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" rel="noopener noreferrer" target="_blank">Open YouTube</a></div><div class="social-card"><div class="icon-link instagram">◎</div><h3>Instagram</h3><p>@ipdcec2026</p><a class="social-link" data-i18n="open_instagram" href="https://www.instagram.com/ipdcec2026" rel="noopener noreferrer" target="_blank">Open Instagram</a></div><div class="social-card"><div class="icon-link tiktok">♪</div><h3>TikTok</h3><p>@ipdcec2026</p><a class="social-link" data-i18n="open_tiktok" href="https://www.tiktok.com/@ipdcec2026?_r=1&amp;_t=ZS-95pw8U9oQQU" rel="noopener noreferrer" target="_blank">Open TikTok</a></div></div></div></section>
+<div class="container"><div class="cta"><h2 data-i18n="cta_title">Ready to Register for IPDCEC 2026?</h2><p data-i18n="cta_desc">Prepare your team data, student ID, originality statement, and required social media proof before completing the registration form.</p><div class="hero-actions" style="justify-content:center;margin-bottom:0;"><a class="btn btn-green btn-register" data-i18n="btn_register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" rel="noopener noreferrer" target="_blank">Register Now →</a><a class="btn btn-guide" data-i18n="btn_contact" href="#contact">Contact Committee</a><a class="btn btn-twibbon" href="https://twb.nz/ipdcec2026" rel="noopener noreferrer" target="_blank">Open Twibbon</a></div></div></div>
+<footer><div class="container footer-inner"><div><img alt="Universitas Malikussaleh Logo" src="logo-unimal.png" style="width:54px;height:54px;object-fit:contain;margin-bottom:8px;display:block;"/><strong>IPDCEC 2026</strong><br><span data-i18n="footer_competition">International Plant Design Chemical Engineering Competition</span></br></div><div><span data-i18n="footer_org">Organized by Chemical Engineering Department</span><br/><span data-i18n="footer_faculty">Faculty of Engineering, Universitas Malikussaleh</span></div><div>Website: ipdcec.online<br/>Department: <a href="https://teknik-kimia.unimal.ac.id" rel="noopener noreferrer" style="color:#d7e9f8;" target="_blank">teknik-kimia.unimal.ac.id</a><br/>Email: <a href="mailto:teknik-kimia@unimal.ac.id" style="color:#d7e9f8;">teknik-kimia@unimal.ac.id</a><br/><span data-i18n="footer_social">Website Prodi: teknik-kimia.unimal.ac.id | Instagram, TikTok &amp; YouTube: @ipdcec2026</span></div></div></footer>
+<script>
 
     const GUIDEBOOK_URL = "https://drive.google.com/file/d/1Hwudm08iLzP6a-HafUCcP0QOI5ktatFL/view?usp=sharing";
 
