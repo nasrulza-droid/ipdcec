@@ -1661,6 +1661,31 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 @media(max-width:980px){
   .winner-grid{grid-template-columns:1fr;}
 }
+
+/* OFFICIAL PROMOTIONAL VIDEOS SECTION */
+.video-premium{position:relative;overflow:hidden;background:radial-gradient(circle at 14% 18%,rgba(102,187,53,.14),transparent 30%),radial-gradient(circle at 88% 12%,rgba(12,79,145,.14),transparent 32%),linear-gradient(180deg,#ffffff 0%,#f4f8fc 100%);}
+.video-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch;}
+.video-hero-card{background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:34px;padding:24px;box-shadow:var(--shadow);color:white;overflow:hidden;position:relative;}
+.video-hero-card::after{content:"";position:absolute;width:280px;height:280px;right:-120px;bottom:-130px;border-radius:50%;background:rgba(102,187,53,.20);}
+.video-frame{position:relative;z-index:1;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);}
+.video-frame iframe{width:100%;height:100%;border:0;display:block;}
+.video-hero-caption{position:relative;z-index:1;padding:22px 4px 4px;}
+.video-hero-caption h3{font-size:clamp(24px,3vw,36px);line-height:1.12;margin-bottom:10px;}
+.video-hero-caption p{color:#e7f4ff;}
+.video-side{display:grid;gap:18px;}
+.video-note-card{background:white;border:1px solid rgba(3,27,52,.10);border-radius:28px;padding:28px;box-shadow:0 14px 40px rgba(3,27,52,.08);}
+.video-note-card h3{color:var(--navy);font-size:24px;margin-bottom:10px;}
+.video-note-card p{color:var(--muted);}
+.video-platforms{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.video-platforms a{display:inline-flex;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:900;color:white;background:linear-gradient(135deg,var(--green),var(--green-dark));}
+.video-grid{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+.video-card{background:white;border:1px solid rgba(3,27,52,.10);border-radius:24px;padding:18px;box-shadow:0 12px 32px rgba(3,27,52,.08);transition:.25s ease;}
+.video-card:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(3,27,52,.12);}
+.video-thumb{aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 80% 20%,rgba(102,187,53,.34),transparent 30%),linear-gradient(135deg,var(--navy),var(--navy-2));display:grid;place-items:center;color:white;font-size:34px;margin-bottom:14px;}
+.video-card h3{color:var(--navy);font-size:18px;margin-bottom:6px;}
+.video-card p{color:var(--muted);font-size:14px;margin-bottom:12px;}
+.video-card a{color:var(--green-dark);font-weight:900;font-size:14px;}
+@media(max-width:980px){.video-layout{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -1705,7 +1730,7 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 <a data-i18n="timeline_eyebrow" href="#timeline">Timeline</a>
 <a data-i18n="nav_guidebook" href="#guidebook">Guidebook</a>
 <a data-i18n="nav_location" href="#location">Location</a><a data-i18n="nav_atmosphere" href="#competition-atmosphere">Atmosphere</a>
-<a data-i18n="nav_partners" href="#sponsors">Partners</a>
+<a data-i18n="nav_videos" href="#official-videos">Videos</a><a data-i18n="nav_partners" href="#sponsors">Partners</a>
 <div class="nav-dropdown">
 <button aria-expanded="false" class="nav-dropdown-toggle" onclick="toggleExploreMenu(event)" type="button"><span data-i18n="nav_explore">Explore</span><span aria-hidden="true">⌄</span>
 </button>
@@ -1852,6 +1877,91 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 </div>
 </div>
 </section>
+<section class="video-premium" id="official-videos">
+<div class="container">
+<div class="section-header">
+<div class="eyebrow" data-i18n="videos_eyebrow">Official Promotional Videos</div>
+<h2 class="section-title" data-i18n="videos_title">Watch the Global Campaign of IPDCEC 2026</h2>
+<p data-i18n="videos_desc">Explore the official promotional videos of IPDCEC 2026 in multiple languages. These videos introduce the competition, international atmosphere, and the spirit of sustainable chemical engineering innovation.</p>
+</div>
+
+<div class="video-layout">
+<div class="video-hero-card">
+<div class="video-frame">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" src="https://www.youtube.com/embed/ivxnUJHawoU" title="IPDCEC 2026 Official Trailer"></iframe>
+</div>
+<div class="video-hero-caption">
+<h3 data-i18n="videos_main_title">Official Opening Trailer</h3>
+<p data-i18n="videos_main_desc">A cinematic introduction to IPDCEC 2026, featuring the competition vision, host institution, engineering innovation, and international collaboration.</p>
+</div>
+</div>
+
+<div class="video-side">
+<div class="video-note-card">
+<h3 data-i18n="videos_strategy_title">Global Promotion Strategy</h3>
+<p data-i18n="videos_strategy_desc">The full video campaign remains available on YouTube Shorts, Instagram Reels, and TikTok for global reach, while this website presents the videos in a curated and professional format.</p>
+<div class="video-platforms">
+<a href="https://youtube.com/@ipdcec2026?si=FHp4n-Rl6VyOKPO9" rel="noopener noreferrer" target="_blank">YouTube</a>
+<a href="https://www.instagram.com/ipdcec2026" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@ipdcec2026?_r=1&amp;_t=ZS-95pw8U9oQQU" rel="noopener noreferrer" target="_blank">TikTok</a>
+</div>
+</div>
+
+<div class="video-note-card">
+<h3 data-i18n="videos_note_title">Multilingual Communication</h3>
+<p data-i18n="videos_note_desc">The multilingual videos help international participants understand the competition more easily and strengthen the global identity of IPDCEC 2026.</p>
+</div>
+</div>
+</div>
+
+<div class="video-grid">
+
+<div class="video-card">
+<div class="video-thumb">▶</div>
+<h3 data-i18n="video_card_en_title">English Version</h3>
+<p data-i18n="video_card_en_desc">Official promotional video for international audiences.</p>
+<a data-i18n="video_watch" href="https://youtube.com/shorts/_iQyEeOG_Hw?si=Lwn08fXdk15Q7RNj" rel="noopener noreferrer" target="_blank">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-thumb">▶</div>
+<h3 data-i18n="video_card_zh_title">Chinese Version</h3>
+<p data-i18n="video_card_zh_desc">Promotional video for Chinese-speaking audiences.</p>
+<a data-i18n="video_watch" href="https://youtube.com/shorts/vsUI3XyHG98?si=pVhFz_o7Jvs3TeYe" rel="noopener noreferrer" target="_blank">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-thumb">▶</div>
+<h3>Thai Version</h3>
+<p>Official promotional video for Thai-speaking audiences.</p>
+<a data-i18n="video_watch" href="https://youtube.com/shorts/1ynaENdLHoc?si=jXlpHkYcJEX4bj08" rel="noopener noreferrer" target="_blank">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-thumb">▶</div>
+<h3>Tagalog Version</h3>
+<p>Official promotional video for Tagalog-speaking audiences.</p>
+<a data-i18n="video_watch" href="https://youtube.com/shorts/PjV8A1Eh5c4?si=vgBnTNVG3CMpyq0q" rel="noopener noreferrer" target="_blank">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-thumb">▶</div>
+<h3>Hindi Version</h3>
+<p>Official promotional video for Hindi-speaking audiences.</p>
+<a data-i18n="video_watch" href="https://youtube.com/shorts/7H0C2wgIb2Q?si=O-yhqFOxQVP5S3Z_" rel="noopener noreferrer" target="_blank">Watch Video</a>
+</div>
+
+<div class="video-card">
+<div class="video-thumb">▶</div>
+<h3>English Version 2</h3>
+<p>Additional English promotional campaign video.</p>
+<a data-i18n="video_watch" href="https://youtube.com/shorts/uyS7XHCiDsU?si=D6GzOoLhkwLmY2dx" rel="noopener noreferrer" target="_blank">Watch Video</a>
+</div>
+
+</div>
+</div>
+</section>
+
 <section class="achievement-premium" id="achievement">
 <div class="container">
 <div class="section-header">
@@ -1912,7 +2022,6 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
 </div>
 </div>
 </section>
-
 <section class="location-premium" id="location">
 <div class="container">
 <div class="location-hero">
@@ -2536,7 +2645,30 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         winner_point2_title: "Professional Recognition",
         winner_point2_desc: "Participants gain valuable presentation, teamwork, and engineering competition experience.",
         winner_point3_title: "International Competition Atmosphere",
-        winner_point3_desc: "The ceremony is designed with a modern international academic competition concept."
+        winner_point3_desc: "The ceremony is designed with a modern international academic competition concept.",
+        nav_videos: "Videos",
+        videos_eyebrow: "Official Promotional Videos",
+        videos_title: "Watch the Global Campaign of IPDCEC 2026",
+        videos_desc: "Explore the official promotional videos of IPDCEC 2026 in multiple languages. These videos introduce the competition, international atmosphere, and the spirit of sustainable chemical engineering innovation.",
+        videos_main_title: "Official Opening Trailer",
+        videos_main_desc: "A cinematic introduction to IPDCEC 2026, featuring the competition vision, host institution, engineering innovation, and international collaboration.",
+        videos_strategy_title: "Global Promotion Strategy",
+        videos_strategy_desc: "The full video campaign remains available on YouTube Shorts, Instagram Reels, and TikTok for global reach, while this website presents the videos in a curated and professional format.",
+        videos_note_title: "Multilingual Communication",
+        videos_note_desc: "The multilingual videos help international participants understand the competition more easily and strengthen the global identity of IPDCEC 2026.",
+        video_card_en_title: "English Version",
+        video_card_en_desc: "Official promotional video for international audiences.",
+        video_card_id_title: "Indonesian Version",
+        video_card_id_desc: "Official video for Indonesian participants and local promotion.",
+        video_card_ar_title: "Arabic Version",
+        video_card_ar_desc: "Promotional video for Arabic-speaking audiences.",
+        video_card_zh_title: "Chinese Version",
+        video_card_zh_desc: "Promotional video for Chinese-speaking audiences.",
+        video_card_global1_title: "Global Version 1",
+        video_card_global1_desc: "Additional international campaign video.",
+        video_card_global2_title: "Global Version 2",
+        video_card_global2_desc: "Additional multilingual campaign video.",
+        video_watch: "Watch Video"
       },
       id: {
         pageTitle: "IPDCEC 2026 | Kompetisi Perancangan Pabrik Kimia Internasional", metaDesc: "Website resmi IPDCEC 2026 - Kompetisi Perancangan Pabrik Kimia Internasional.",
@@ -2733,7 +2865,30 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         winner_point2_title: "Pengakuan Profesional",
         winner_point2_desc: "Peserta memperoleh pengalaman berharga dalam presentasi, kerja tim, dan kompetisi teknik.",
         winner_point3_title: "Suasana Kompetisi Internasional",
-        winner_point3_desc: "Seremoni dirancang dengan konsep kompetisi akademik internasional modern."
+        winner_point3_desc: "Seremoni dirancang dengan konsep kompetisi akademik internasional modern.",
+        nav_videos: "Video",
+        videos_eyebrow: "Video Promosi Resmi",
+        videos_title: "Saksikan Kampanye Global IPDCEC 2026",
+        videos_desc: "Jelajahi video promosi resmi IPDCEC 2026 dalam berbagai bahasa. Video ini memperkenalkan kompetisi, suasana internasional, dan semangat inovasi teknik kimia berkelanjutan.",
+        videos_main_title: "Trailer Pembukaan Resmi",
+        videos_main_desc: "Pengantar sinematik IPDCEC 2026 yang menampilkan visi kompetisi, institusi penyelenggara, inovasi engineering, dan kolaborasi internasional.",
+        videos_strategy_title: "Strategi Promosi Global",
+        videos_strategy_desc: "Kampanye video lengkap tetap tersedia di YouTube Shorts, Instagram Reels, dan TikTok untuk jangkauan global, sementara website ini menampilkan video secara terkurasi dan profesional.",
+        videos_note_title: "Komunikasi Multibahasa",
+        videos_note_desc: "Video multibahasa membantu peserta internasional memahami kompetisi dengan lebih mudah dan memperkuat identitas global IPDCEC 2026.",
+        video_card_en_title: "Versi Bahasa Inggris",
+        video_card_en_desc: "Video promosi resmi untuk audiens internasional.",
+        video_card_id_title: "Versi Bahasa Indonesia",
+        video_card_id_desc: "Video resmi untuk peserta Indonesia dan promosi lokal.",
+        video_card_ar_title: "Versi Bahasa Arab",
+        video_card_ar_desc: "Video promosi untuk audiens berbahasa Arab.",
+        video_card_zh_title: "Versi Bahasa Mandarin",
+        video_card_zh_desc: "Video promosi untuk audiens berbahasa Mandarin.",
+        video_card_global1_title: "Versi Global 1",
+        video_card_global1_desc: "Video tambahan untuk kampanye internasional.",
+        video_card_global2_title: "Versi Global 2",
+        video_card_global2_desc: "Video tambahan untuk kampanye multibahasa.",
+        video_watch: "Tonton Video"
 
       },
       zh: {
@@ -2929,7 +3084,30 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         winner_point2_title: "专业认可",
         winner_point2_desc: "参赛者将获得宝贵的展示、团队合作和工程竞赛经验。",
         winner_point3_title: "国际竞赛氛围",
-        winner_point3_desc: "典礼采用现代国际学术竞赛概念设计。"
+        winner_point3_desc: "典礼采用现代国际学术竞赛概念设计。",
+        nav_videos: "视频",
+        videos_eyebrow: "官方宣传视频",
+        videos_title: "观看 IPDCEC 2026 全球宣传活动",
+        videos_desc: "观看 IPDCEC 2026 多语言官方宣传视频。这些视频介绍竞赛、国际氛围以及可持续化学工程创新精神。",
+        videos_main_title: "官方开幕预告片",
+        videos_main_desc: "IPDCEC 2026 的电影化介绍，展示竞赛愿景、主办机构、工程创新和国际合作。",
+        videos_strategy_title: "全球推广策略",
+        videos_strategy_desc: "完整视频宣传活动继续在 YouTube Shorts、Instagram Reels 和 TikTok 上传播，以扩大国际影响力；本网站则以精选和专业的形式展示视频。",
+        videos_note_title: "多语言传播",
+        videos_note_desc: "多语言视频帮助国际参赛者更容易了解竞赛，并强化 IPDCEC 2026 的全球形象。",
+        video_card_en_title: "英文版",
+        video_card_en_desc: "面向国际观众的官方宣传视频。",
+        video_card_id_title: "印尼语版",
+        video_card_id_desc: "面向印尼参赛者和本地推广的官方视频。",
+        video_card_ar_title: "阿拉伯语版",
+        video_card_ar_desc: "面向阿拉伯语观众的宣传视频。",
+        video_card_zh_title: "中文版",
+        video_card_zh_desc: "面向中文观众的宣传视频。",
+        video_card_global1_title: "全球版 1",
+        video_card_global1_desc: "额外的国际宣传视频。",
+        video_card_global2_title: "全球版 2",
+        video_card_global2_desc: "额外的多语言宣传视频。",
+        video_watch: "观看视频"
 
       },
       ar: {
@@ -3125,7 +3303,30 @@ html[dir="rtl"] .hotels-note { border-left: none; border-right: 6px solid #147c9
         winner_point2_title: "اعتراف مهني",
         winner_point2_desc: "يكتسب المشاركون خبرة قيّمة في العروض والعمل الجماعي والمنافسات الهندسية.",
         winner_point3_title: "أجواء منافسة دولية",
-        winner_point3_desc: "تم تصميم الحفل بمفهوم أكاديمي دولي حديث."
+        winner_point3_desc: "تم تصميم الحفل بمفهوم أكاديمي دولي حديث.",
+        nav_videos: "الفيديوهات",
+        videos_eyebrow: "الفيديوهات الترويجية الرسمية",
+        videos_title: "شاهد الحملة العالمية لـ IPDCEC 2026",
+        videos_desc: "استكشف الفيديوهات الترويجية الرسمية لـ IPDCEC 2026 بلغات متعددة. تقدم هذه الفيديوهات المسابقة والأجواء الدولية وروح الابتكار المستدام في الهندسة الكيميائية.",
+        videos_main_title: "الإعلان الافتتاحي الرسمي",
+        videos_main_desc: "مقدمة سينمائية لـ IPDCEC 2026 تعرض رؤية المسابقة والمؤسسة المضيفة والابتكار الهندسي والتعاون الدولي.",
+        videos_strategy_title: "استراتيجية الترويج العالمية",
+        videos_strategy_desc: "تبقى الحملة الكاملة للفيديوهات متاحة على YouTube Shorts وInstagram Reels وTikTok للوصول العالمي، بينما يعرض هذا الموقع الفيديوهات بصيغة مختارة واحترافية.",
+        videos_note_title: "تواصل متعدد اللغات",
+        videos_note_desc: "تساعد الفيديوهات متعددة اللغات المشاركين الدوليين على فهم المسابقة بسهولة أكبر وتعزز الهوية العالمية لـ IPDCEC 2026.",
+        video_card_en_title: "النسخة الإنجليزية",
+        video_card_en_desc: "الفيديو الترويجي الرسمي للجمهور الدولي.",
+        video_card_id_title: "النسخة الإندونيسية",
+        video_card_id_desc: "الفيديو الرسمي للمشاركين الإندونيسيين والترويج المحلي.",
+        video_card_ar_title: "النسخة العربية",
+        video_card_ar_desc: "فيديو ترويجي للجمهور الناطق بالعربية.",
+        video_card_zh_title: "النسخة الصينية",
+        video_card_zh_desc: "فيديو ترويجي للجمهور الناطق بالصينية.",
+        video_card_global1_title: "النسخة العالمية 1",
+        video_card_global1_desc: "فيديو إضافي للحملة الدولية.",
+        video_card_global2_title: "النسخة العالمية 2",
+        video_card_global2_desc: "فيديو إضافي للحملة متعددة اللغات.",
+        video_watch: "شاهد الفيديو"
 
       }
     };
