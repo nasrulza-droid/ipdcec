@@ -1460,7 +1460,7 @@
           <p data-i18n="hero_desc">Designing sustainable chemical plants for a better global future.</p>
           <div class="hero-actions">
             <a class="btn btn-green btn-register" data-i18n="btn_register" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" rel="noopener noreferrer" target="_blank">Register Now →</a>
-            <a class="btn btn-green premium-guidebook-btn" data-guidebook-link="" data-i18n="btn_guidebook_official" href="#" rel="noopener noreferrer" target="_blank">📘 Download Official Guidebook</a>
+            <a class="btn btn-green premium-guidebook-btn" data-guidebook-link="GUIDEBOOK%20IPDCEC.pdf" data-i18n="btn_guidebook_official" href="GUIDEBOOK%20IPDCEC.pdf" download rel="noopener noreferrer" target="_blank">📘 Download Official Guidebook</a>
             <a class="btn btn-twibbon" data-i18n="btn_use_twibbon" href="https://twb.nz/ipdcec2026" rel="noopener noreferrer" target="_blank">🎉 Use IPDCEC Twibbon</a>
           </div>
           <div aria-label="International event highlights" class="conference-ribbon">
@@ -1550,7 +1550,7 @@
             <h2 data-i18n="guide_title">Download the Official Guidebook</h2>
             <p data-i18n="guide_desc">Read the complete guidebook before registering. It contains the official rules, timeline, registration requirements, free registration information, and competition stages.</p>
             <div class="hero-actions">
-              <a class="btn btn-green btn-register" data-guidebook-link="" data-i18n="btn_guidebook" href="#" rel="noopener noreferrer" target="_blank">Download Guidebook</a>
+              <a class="btn btn-green btn-register" data-guidebook-link="GUIDEBOOK%20IPDCEC.pdf" data-i18n="btn_guidebook" href="GUIDEBOOK%20IPDCEC.pdf" download rel="noopener noreferrer" target="_blank">Download Guidebook</a>
               <a class="btn btn-guide" data-i18n="ui_register_popup" href="https://docs.google.com/forms/d/e/1FAIpQLSfUYEMS-28M-9XcN0zA7j4W05MKoiFdyN7_Uy1xzEUrM7i6Rg/viewform" rel="noopener noreferrer" target="_blank">Register Now</a>
             </div>
           </div>
@@ -1844,6 +1844,12 @@
         setTimeout(() => this.classList.remove("clicked"), 650);
       });
 
+
+      const guidebookUrl = "GUIDEBOOK%20IPDCEC.pdf";
+      document.querySelectorAll("[data-guidebook-link]").forEach((link) => {
+        link.href = guidebookUrl;
+        link.setAttribute("download", "GUIDEBOOK IPDCEC.pdf");
+      });
       setLanguage(currentLang);
       updateCountdown();
       updateScrollProgress();
