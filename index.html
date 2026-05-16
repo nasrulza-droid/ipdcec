@@ -3530,6 +3530,704 @@
         background: linear-gradient(180deg, #fffdf5, #ffffff);
       }
     
+
+      /* NEWS / EVENT UPDATES SECTION */
+      .news-premium {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 12% 14%, rgba(102, 187, 53, 0.12), transparent 30%),
+          radial-gradient(circle at 88% 12%, rgba(12, 79, 145, 0.12), transparent 32%),
+          linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%);
+      }
+      .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+      }
+      .news-card {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 255, 0.95));
+        border: 1px solid rgba(3, 27, 52, 0.1);
+        border-radius: 26px;
+        padding: 24px;
+        box-shadow: 0 14px 34px rgba(3, 27, 52, 0.08);
+        transition: all 0.3s ease;
+      }
+      .news-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 60px rgba(3, 27, 52, 0.12);
+      }
+      .news-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--green), #0c4f91);
+      }
+      .news-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+      }
+      .news-date {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .news-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(102, 187, 53, 0.13);
+        color: var(--green-dark);
+        border: 1px solid rgba(102, 187, 53, 0.24);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .news-card h3 {
+        color: var(--navy);
+        font-size: 21px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+      }
+      .news-card p {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .news-highlight {
+        margin-top: 24px;
+        border-radius: 28px;
+        padding: 28px;
+        color: white;
+        background:
+          radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.18), transparent 30%),
+          linear-gradient(135deg, var(--navy), var(--navy-2));
+        box-shadow: var(--shadow);
+      }
+      .news-highlight h3 {
+        font-size: clamp(24px, 3vw, 34px);
+        line-height: 1.15;
+        margin-bottom: 10px;
+      }
+      .news-highlight p {
+        color: #e7f4ff;
+        max-width: 860px;
+      }
+
+
+      /* ORGANIZING COMMITTEE PLACEHOLDER SECTION */
+      .committee-premium {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 12% 16%, rgba(102, 187, 53, 0.12), transparent 30%),
+          radial-gradient(circle at 88% 12%, rgba(12, 79, 145, 0.12), transparent 32%),
+          linear-gradient(180deg, #f4f8fc 0%, #ffffff 100%);
+      }
+
+      .committee-intro {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 24px;
+        align-items: stretch;
+        margin-bottom: 28px;
+      }
+
+      .committee-hero-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        padding: 32px;
+        color: white;
+        background:
+          radial-gradient(circle at 88% 12%, rgba(102, 187, 53, 0.22), transparent 32%),
+          linear-gradient(135deg, var(--navy), var(--navy-2));
+        box-shadow: var(--shadow);
+      }
+
+      .committee-hero-card::after {
+        content: "";
+        position: absolute;
+        right: -90px;
+        bottom: -120px;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: rgba(102, 187, 53, 0.18);
+      }
+
+      .committee-hero-card h3,
+      .committee-hero-card p,
+      .committee-pills {
+        position: relative;
+        z-index: 1;
+      }
+
+      .committee-hero-card h3 {
+        font-size: clamp(26px, 3vw, 38px);
+        line-height: 1.15;
+        margin-bottom: 12px;
+      }
+
+      .committee-hero-card p {
+        color: #e7f4ff;
+      }
+
+      .committee-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .committee-pill {
+        display: inline-flex;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: white;
+        background: rgba(255, 255, 255, 0.13);
+        border: 1px solid rgba(255, 255, 255, 0.23);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .committee-note-card {
+        background: white;
+        border: 1px solid rgba(3, 27, 52, 0.1);
+        border-radius: 30px;
+        padding: 30px;
+        box-shadow: 0 14px 40px rgba(3, 27, 52, 0.08);
+      }
+
+      .committee-note-card h3 {
+        color: var(--navy);
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .committee-note-card p {
+        color: var(--muted);
+      }
+
+      .committee-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 22px;
+      }
+
+      .committee-card {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 255, 0.95));
+        border: 1px solid rgba(3, 27, 52, 0.1);
+        border-radius: 26px;
+        padding: 24px;
+        text-align: center;
+        box-shadow: 0 14px 34px rgba(3, 27, 52, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .committee-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 60px rgba(3, 27, 52, 0.12);
+      }
+
+      .committee-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--green), #0c4f91);
+      }
+
+      .committee-photo-placeholder {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        margin: 0 auto 16px;
+        display: grid;
+        place-items: center;
+        color: white;
+        background:
+          radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.22), transparent 30%),
+          linear-gradient(135deg, var(--navy), var(--green-dark));
+        border: 4px solid rgba(102, 187, 53, 0.16);
+        font-size: 34px;
+        font-weight: 900;
+      }
+
+      .committee-card h3 {
+        color: var(--navy);
+        font-size: 20px;
+        margin-bottom: 6px;
+      }
+
+      .committee-role {
+        display: inline-flex;
+        padding: 6px 10px;
+        border-radius: 999px;
+        color: var(--green-dark);
+        background: rgba(102, 187, 53, 0.12);
+        border: 1px solid rgba(102, 187, 53, 0.22);
+        font-size: 12px;
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+
+      .committee-card p {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .committee-footer-note {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border-radius: 20px;
+        color: #31506f;
+        background: rgba(102, 187, 53, 0.1);
+        border: 1px solid rgba(102, 187, 53, 0.22);
+        font-weight: 700;
+      }
+
+      @media (max-width: 980px) {
+        .committee-intro {
+          grid-template-columns: 1fr;
+        }
+      }
+
+
+      /* FINAL STAGE & FIELD TRIP INFORMATION */
+      .final-info-premium {
+        background:
+          radial-gradient(circle at 14% 18%, rgba(102, 187, 53, 0.14), transparent 30%),
+          radial-gradient(circle at 88% 12%, rgba(12, 79, 145, 0.12), transparent 32%),
+          linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%);
+      }
+
+      .final-info-box {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .final-info-main {
+        position: relative;
+        overflow: hidden;
+        border-radius: 32px;
+        padding: 36px;
+        color: white;
+        background:
+          radial-gradient(circle at 88% 14%, rgba(102, 187, 53, 0.28), transparent 34%),
+          linear-gradient(135deg, var(--navy), var(--navy-2));
+        box-shadow: var(--shadow);
+      }
+
+      .final-info-main::after {
+        content: "";
+        position: absolute;
+        right: -90px;
+        bottom: -110px;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: rgba(102, 187, 53, 0.2);
+      }
+
+      .final-info-main > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .final-info-main h3 {
+        font-size: clamp(26px, 3.4vw, 40px);
+        line-height: 1.12;
+        margin-bottom: 14px;
+      }
+
+      .final-info-main p {
+        color: #e7f4ff;
+        font-size: 17px;
+        margin-bottom: 16px;
+      }
+
+      .final-agenda {
+        display: grid;
+        gap: 14px;
+      }
+
+      .final-agenda-item {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 18px;
+        align-items: center;
+        background: white;
+        border: 1px solid rgba(3, 27, 52, 0.1);
+        border-radius: 22px;
+        padding: 20px;
+        box-shadow: 0 12px 32px rgba(3, 27, 52, 0.08);
+      }
+
+      .final-agenda-date {
+        color: var(--green-dark);
+        font-weight: 900;
+      }
+
+      .final-agenda-item h3 {
+        color: var(--navy);
+        margin-bottom: 4px;
+        font-size: 20px;
+      }
+
+      .final-agenda-item p {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .final-note {
+        margin-top: 22px;
+        padding: 18px 20px;
+        border-radius: 20px;
+        color: #31506f;
+        background: rgba(102, 187, 53, 0.1);
+        border: 1px solid rgba(102, 187, 53, 0.22);
+        font-weight: 700;
+      }
+
+      @media (max-width: 980px) {
+        .final-info-box {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .final-info-main {
+          padding: 28px;
+        }
+        .final-agenda-item {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+      }
+
+
+      /* MANAGEMENT COMMITTEE NAME LIST */
+      .committee-people {
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .committee-person {
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: rgba(3, 27, 52, 0.04);
+        border: 1px solid rgba(3, 27, 52, 0.08);
+        text-align: left;
+      }
+
+      .committee-person strong {
+        display: block;
+        color: var(--navy);
+        font-size: 15px;
+        line-height: 1.35;
+      }
+
+      .committee-person span {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 3px;
+        line-height: 1.4;
+      }
+
+      .committee-card.is-featured {
+        border-top: 7px solid var(--green);
+        background:
+          radial-gradient(circle at 90% 12%, rgba(102, 187, 53, 0.12), transparent 32%),
+          linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 255, 0.95));
+      }
+
+
+
+
+      /* PROFESSIONAL ORGANIZATION STRUCTURE - IPDCEC 2026 */
+      .org-committee-premium {
+        background:
+          radial-gradient(circle at 12% 10%, rgba(102, 187, 53, 0.14), transparent 30%),
+          radial-gradient(circle at 88% 8%, rgba(12, 79, 145, 0.14), transparent 32%),
+          linear-gradient(180deg, #f4f8fc 0%, #ffffff 100%);
+      }
+
+      .org-committee-header {
+        max-width: 930px;
+      }
+
+      .org-hero-panel {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 26px;
+        align-items: center;
+        border-radius: 34px;
+        padding: 36px;
+        color: white;
+        background:
+          radial-gradient(circle at 92% 12%, rgba(102, 187, 53, 0.26), transparent 34%),
+          linear-gradient(135deg, var(--navy), var(--navy-2));
+        box-shadow: var(--shadow);
+        margin-bottom: 28px;
+      }
+
+      .org-hero-panel::after {
+        content: "";
+        position: absolute;
+        right: -110px;
+        bottom: -130px;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(102, 187, 53, 0.18);
+      }
+
+      .org-hero-panel > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .org-kicker {
+        display: inline-flex;
+        margin-bottom: 12px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+      }
+
+      .org-hero-panel h3 {
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.12;
+        margin-bottom: 12px;
+      }
+
+      .org-hero-panel p {
+        color: #e7f4ff;
+        max-width: 760px;
+        font-size: 17px;
+      }
+
+      .org-badges {
+        display: grid;
+        gap: 10px;
+        min-width: 250px;
+      }
+
+      .org-badges span {
+        padding: 10px 13px;
+        border-radius: 999px;
+        color: white;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        font-size: 13px;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .org-chart {
+        display: grid;
+        gap: 24px;
+      }
+
+      .org-tier {
+        position: relative;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(3, 27, 52, 0.1);
+        border-radius: 30px;
+        padding: 28px;
+        box-shadow: 0 16px 46px rgba(3, 27, 52, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
+      .org-tier::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 7px;
+        background: linear-gradient(90deg, var(--green), #0c4f91);
+      }
+
+      .org-tier-head {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 22px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(3, 27, 52, 0.1);
+      }
+
+      .org-tier-number {
+        width: 64px;
+        height: 64px;
+        flex: 0 0 auto;
+        border-radius: 20px;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 22px;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--navy), var(--green-dark));
+        box-shadow: 0 12px 28px rgba(3, 27, 52, 0.18);
+      }
+
+      .org-tier-head h3 {
+        color: var(--navy);
+        font-size: clamp(22px, 3vw, 32px);
+        line-height: 1.15;
+        margin-bottom: 4px;
+      }
+
+      .org-tier-head p {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .org-role-grid,
+      .org-division-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+      }
+
+      .org-role-card,
+      .org-division-card {
+        background: linear-gradient(160deg, #ffffff, #f8fbff);
+        border: 1px solid rgba(3, 27, 52, 0.1);
+        border-radius: 22px;
+        padding: 20px;
+        box-shadow: 0 10px 28px rgba(3, 27, 52, 0.06);
+      }
+
+      .org-role-card span {
+        display: inline-flex;
+        margin-bottom: 10px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(102, 187, 53, 0.12);
+        color: var(--green-dark);
+        border: 1px solid rgba(102, 187, 53, 0.22);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .org-role-card strong {
+        display: block;
+        color: var(--navy);
+        font-size: 16px;
+        line-height: 1.38;
+      }
+
+      .org-division-card h4 {
+        color: var(--navy);
+        font-size: 18px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+      }
+
+      .org-division-card h4:not(:first-child) {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(3, 27, 52, 0.1);
+      }
+
+      .org-division-card ul {
+        display: grid;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .org-division-card li,
+      .org-jury-list span {
+        color: var(--text);
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(3, 27, 52, 0.04);
+        border: 1px solid rgba(3, 27, 52, 0.07);
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      .org-division-wide {
+        grid-column: 1 / -1;
+      }
+
+      .org-jury-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+      }
+
+      .org-tier-leadership,
+      .org-tier-jury {
+        background:
+          radial-gradient(circle at 92% 10%, rgba(102, 187, 53, 0.12), transparent 30%),
+          rgba(255, 255, 255, 0.9);
+      }
+
+      html[dir="rtl"] .org-tier-head {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+
+      html[dir="rtl"] .org-role-card,
+      html[dir="rtl"] .org-division-card {
+        text-align: right;
+      }
+
+      @media (max-width: 980px) {
+        .org-hero-panel {
+          grid-template-columns: 1fr;
+        }
+        .org-badges {
+          min-width: 0;
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .org-hero-panel,
+        .org-tier {
+          padding: 24px;
+          border-radius: 24px;
+        }
+        .org-tier-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .org-tier-number {
+          width: 56px;
+          height: 56px;
+          border-radius: 18px;
+          font-size: 19px;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -3639,6 +4337,7 @@
           <a data-i18n="nav_about" href="#about">About</a>
           <a data-i18n="nav_theme" href="#theme">Theme</a>
           <a data-i18n="timeline_eyebrow" href="#timeline">Timeline</a>
+          <a href="#final-info">Final Info</a>
           <a data-i18n="nav_guidebook" href="#guidebook">Guidebook</a>
           <a data-i18n="nav_location" href="#location">Location</a
           ><a data-i18n="nav_atmosphere" href="#competition-atmosphere"
@@ -3646,6 +4345,8 @@
           >
           <a data-i18n="nav_videos" href="#official-videos">Videos</a
           ><a data-i18n="nav_partners" href="#sponsors">Partners</a>
+          <a href="#news">News</a>
+          <a href="#committee">Committee</a>
           <div class="nav-dropdown">
             <button
               aria-expanded="false"
@@ -4098,6 +4799,86 @@
         </div>
       </div>
     </section>
+
+    <section class="final-info-premium" id="final-info">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Final Stage Information</div>
+          <h2 class="section-title">Ketentuan Pelaksanaan Final dan Field Trip</h2>
+          <p>
+            Rangkaian Final Competition IPDCEC 2026 akan dilaksanakan pada tanggal
+            30 Juli – 1 Agustus 2026. Informasi berikut disampaikan agar seluruh
+            tim finalis dapat mempersiapkan kehadiran, agenda, dan kebutuhan
+            masing-masing dengan baik.
+          </p>
+        </div>
+
+        <div class="final-info-box">
+          <div class="final-info-main">
+            <h3>Final Competition IPDCEC 2026</h3>
+            <p>
+              Kegiatan final dilaksanakan secara offline dengan agenda presentasi
+              final, field trip opsional, serta pengumuman pemenang dan penyerahan
+              hadiah.
+            </p>
+            <p>
+              Kegiatan field trip bersifat opsional bagi peserta finalis. Peserta
+              dapat memilih untuk mengikuti maupun tidak mengikuti kegiatan
+              tersebut.
+            </p>
+            <p>
+              Panitia juga membuka kesempatan bagi peserta untuk mendiskusikan atau
+              menyepakati destinasi field trip yang ingin dikunjungi, dengan
+              mempertimbangkan ketersediaan waktu, lokasi, dan koordinasi bersama
+              panitia.
+            </p>
+            <div class="conference-ribbon">
+              <span class="conference-pill">📅 30 Juli – 1 Agustus 2026</span>
+              <span class="conference-pill">📍 Universitas Malikussaleh</span>
+              <span class="conference-pill">🚌 Field Trip Opsional</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="final-agenda">
+              <div class="final-agenda-item">
+                <div class="final-agenda-date">30 Juli 2026</div>
+                <div>
+                  <h3>Presentasi Final</h3>
+                  <p>Tim finalis mengikuti presentasi final secara offline.</p>
+                </div>
+              </div>
+              <div class="final-agenda-item">
+                <div class="final-agenda-date">31 Juli 2026</div>
+                <div>
+                  <h3>Field Trip</h3>
+                  <p>
+                    Kegiatan field trip bersifat opsional dan destinasi dapat
+                    dikoordinasikan bersama panitia.
+                  </p>
+                </div>
+              </div>
+              <div class="final-agenda-item">
+                <div class="final-agenda-date">1 Agustus 2026</div>
+                <div>
+                  <h3>Pengumuman Pemenang dan Penyerahan Hadiah</h3>
+                  <p>
+                    Pengumuman hasil final competition serta penyerahan hadiah
+                    kepada para pemenang.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="final-note">
+              Seluruh biaya transportasi, akomodasi/penginapan, dan kegiatan
+              field trip ditanggung secara mandiri oleh masing-masing tim finalis.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="highlight" id="guidebook">
       <div class="container">
         <div class="guidebook-box">
@@ -5607,7 +6388,249 @@
         </div>
       </div>
     </section>
-    <section class="twibbon-premium" id="twibbon">
+    
+    <section class="news-premium" id="news">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Latest News</div>
+          <h2 class="section-title">Activity Updates from Committee and Participants</h2>
+          <p>
+            Follow the latest progress of IPDCEC 2026, including committee activities, participant enthusiasm, sponsor updates, and campaign highlights.
+          </p>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-meta">
+              <span class="news-date">May 2026</span>
+              <span class="news-badge">Updated</span>
+            </div>
+            <h3>Registration Deadline Extended</h3>
+            <p>The registration and abstract submission period has officially been extended from 1–14 May 2026 to 1–18 May 2026.</p>
+          </article>
+
+          <article class="news-card">
+            <div class="news-meta">
+              <span class="news-date">Campaign Update</span>
+              <span class="news-badge">Hot</span>
+            </div>
+            <h3>Participant Twibbon Campaign Keeps Growing</h3>
+            <p>Participants from various universities continue to support IPDCEC 2026 by sharing their official twibbons and joining the Future Innovators campaign.</p>
+          </article>
+
+          <article class="news-card">
+            <div class="news-meta">
+              <span class="news-date">Partner Update</span>
+              <span class="news-badge">Gold Sponsor</span>
+            </div>
+            <h3>BKS PTN Barat Joins as Gold Sponsor</h3>
+            <p>BKS PTN Barat has been added as a Gold Sponsor, strengthening the support network for the international plant design competition.</p>
+          </article>
+
+          <article class="news-card">
+            <div class="news-meta">
+              <span class="news-date">Committee Update</span>
+              <span class="news-badge">Progress</span>
+            </div>
+            <h3>Committee Preparation Continues</h3>
+            <p>The organizing committee continues preparing publication materials, participant information, sponsor visibility, and event readiness for IPDCEC 2026.</p>
+          </article>
+        </div>
+
+        <div class="news-highlight">
+          <h3>Stay Connected with IPDCEC 2026</h3>
+          <p>This section can be updated regularly with important announcements, participant highlights, committee progress, and official campaign milestones.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="committee-premium org-committee-premium" id="committee">
+      <div class="container">
+        <div class="section-header org-committee-header">
+          <div class="eyebrow" data-i18n="committee_eyebrow">Organizing Committee</div>
+          <h2 class="section-title" data-i18n="committee_title">IPDCEC 2026 Committee Structure</h2>
+          <p data-i18n="committee_desc">
+            Official committee structure of the International Plant Design Chemical Engineering Competition (IPDCEC), Department of Chemical Engineering, Faculty of Engineering, Universitas Malikussaleh, 2026.
+          </p>
+        </div>
+
+        <div class="org-hero-panel">
+          <div>
+            <span class="org-kicker" data-i18n="committee_kicker">Official Structure</span>
+            <h3 data-i18n="committee_hero_title">International Plant Design Chemical Engineering Competition</h3>
+            <p data-i18n="committee_hero_desc">
+              The committee is arranged in a clear organizational structure, covering institutional responsibility, academic direction, core coordination, division supervisors, and the judging team.
+            </p>
+          </div>
+          <div class="org-badges">
+            <span data-i18n="committee_badge_unimal">Universitas Malikussaleh</span>
+            <span data-i18n="committee_badge_faculty">Faculty of Engineering</span>
+            <span data-i18n="committee_badge_department">Department of Chemical Engineering</span>
+            <span>IPDCEC 2026</span>
+          </div>
+        </div>
+
+        <div class="org-chart">
+          <article class="org-tier org-tier-leadership">
+            <div class="org-tier-head">
+              <span class="org-tier-number">01</span>
+              <div>
+                <h3 data-i18n="committee_responsible_title">Person in Charge</h3>
+                <p data-i18n="committee_responsible_desc">University and faculty leadership responsible for institutional support.</p>
+              </div>
+            </div>
+            <div class="org-role-grid">
+              <div class="org-role-card"><span data-i18n="role_rector">Rector</span><strong>Prof. Dr. Ir. Herman Fithra, S.T., M.T., IPM</strong></div>
+              <div class="org-role-card"><span data-i18n="role_dean">Dean</span><strong>Dr. Muhammad Daud, S.T., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_vd1">Vice Dean I</span><strong>Dr. Ing. Sofyan, S.T., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_vd2">Vice Dean II</span><strong>Mukhlis, S.T., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_vd3">Vice Dean III</span><strong>Ahmad Nayan, S.T., M.T.</strong></div>
+            </div>
+          </article>
+
+          <article class="org-tier">
+            <div class="org-tier-head">
+              <span class="org-tier-number">02</span>
+              <div>
+                <h3 data-i18n="committee_advisor_title">Advisors / Directors</h3>
+                <p data-i18n="committee_advisor_desc">Department and study program leadership providing academic direction.</p>
+              </div>
+            </div>
+            <div class="org-role-grid">
+              <div class="org-role-card"><span data-i18n="role_head_dept">Head of Chemical Engineering Department</span><strong>Dr. Zulnazri, S.Si., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_sec_dept">Secretary of Chemical Engineering Department</span><strong>Dr. Novi Sylvia, S.T., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_coord_chem">Coordinator of Chemical Engineering Study Program</span><strong>Dr. Leni Maulinda, S.T., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_coord_material">Coordinator of Materials Study Program</span><strong>Agam Muarif, S.Si., M.Si.</strong></div>
+            </div>
+          </article>
+
+          <article class="org-tier org-tier-core">
+            <div class="org-tier-head">
+              <span class="org-tier-number">03</span>
+              <div>
+                <h3 data-i18n="committee_core_title">Core Committee</h3>
+                <p data-i18n="committee_core_desc">General coordination, secretariat, and finance.</p>
+              </div>
+            </div>
+            <div class="org-role-grid">
+              <div class="org-role-card"><span data-i18n="role_general_supervisor">General Competition Supervisor</span><strong>Nasrul ZA, S.T., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_secretary">Secretary</span><strong>Meriatna, S.T., M.T.</strong></div>
+              <div class="org-role-card"><span data-i18n="role_treasurer">Treasurer</span><strong>Dr. Wusnah, S.T., M.T.</strong></div>
+            </div>
+          </article>
+
+          <article class="org-tier org-tier-divisions">
+            <div class="org-tier-head">
+              <span class="org-tier-number">04</span>
+              <div>
+                <h3 data-i18n="committee_divisions_title">Division Supervisors</h3>
+                <p data-i18n="committee_divisions_desc">Each position is written once, followed by the names assigned to that division.</p>
+              </div>
+            </div>
+
+            <div class="org-division-grid">
+              <div class="org-division-card">
+                <h4 data-i18n="division_event">Event Division Supervisors</h4>
+                <ul>
+                  <li>Faisal, S.T., M.T.</li>
+                  <li>Ir. Zainuddin Ginting, M.T.</li>
+                  <li>Dr. Firda Tirta Yani, S.T., M.T.</li>
+                  <li>Ahmad Fikri, S.Pd., M.T.</li>
+                </ul>
+              </div>
+
+              <div class="org-division-card">
+                <h4 data-i18n="division_publication">Publication Supervisor</h4>
+                <ul><li>Iqbal Kamar, S.T., M.T.</li></ul>
+                <h4 data-i18n="division_documentation">Documentation Team</h4>
+                <ul>
+                  <li>Wiza Ulfa Fibarzi, S.T., M.T.</li>
+                  <li>Ir. Ishak, M.T.</li>
+                  <li>Rizka Nurlaila, S.Si., M.Si.</li>
+                </ul>
+              </div>
+
+              <div class="org-division-card">
+                <h4 data-i18n="division_program_promotion">Program and Promotion Division Supervisors</h4>
+                <ul>
+                  <li>Dr. Lukman Hakim, S.T., M.Eng.</li>
+                  <li>Raudhatul Ulfa, S.T., M.T.</li>
+                  <li>Dr. Fikri Hasfita, S.T., M.T.</li>
+                  <li>Andre Yosi, S.T., M.T.</li>
+                  <li>Safira Fitri, S.T., M.T.</li>
+                </ul>
+              </div>
+
+              <div class="org-division-card">
+                <h4 data-i18n="division_accommodation">Accommodation Division Supervisors</h4>
+                <ul>
+                  <li>Rizka Mulyawan, B.S., M.Adv.Eng.</li>
+                  <li>Eddy Kurniawan, S.T., M.Eng.</li>
+                  <li>Ir. Syamsul Bahri, M.Sc.</li>
+                  <li>Ir. Jalaluddin, M.T.</li>
+                </ul>
+              </div>
+
+              <div class="org-division-card">
+                <h4 data-i18n="division_consumption">Consumption Division Supervisors</h4>
+                <ul>
+                  <li>Dr. Suryati, S.T., M.T.</li>
+                  <li>Cut Gusti Ambar, S.T.</li>
+                  <li>Sufiana, S.H.</li>
+                  <li>Dr. Sulhatun, S.T., M.T.</li>
+                  <li>Dr. Nurmalita, S.Si., M.Si.</li>
+                </ul>
+              </div>
+
+              <div class="org-division-card">
+                <h4 data-i18n="division_security">Security Division Supervisors</h4>
+                <ul>
+                  <li>Fadhli, S.T., M.T.</li>
+                  <li>Ir. Jalaluddin, M.T.</li>
+                  <li>Tahyuddin, S.E.</li>
+                  <li>Muhammad Yahya, M.Pd.</li>
+                </ul>
+              </div>
+
+              <div class="org-division-card org-division-wide">
+                <h4 data-i18n="division_pr">Public Relations Division Supervisors</h4>
+                <ul>
+                  <li>Dr. Rozanna Dewi, S.T., M.Sc., IPM</li>
+                  <li>Dr. Muhammad, S.T., M.Sc., IPM</li>
+                  <li>Dr. Ir. Azhari, M.Sc., IPM., ASEAN.Eng.</li>
+                  <li>Dr. Sulhatun, S.T., M.T.</li>
+                  <li>Tahyuddin, S.E.</li>
+                  <li>Muhammad Yahya, M.Pd.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="org-tier org-tier-jury">
+            <div class="org-tier-head">
+              <span class="org-tier-number">05</span>
+              <div>
+                <h3 data-i18n="committee_jury_title">Judging Team</h3>
+                <p data-i18n="committee_jury_desc">Assessment team for IPDCEC 2026.</p>
+              </div>
+            </div>
+            <div class="org-jury-list">
+              <span>Safwat Ardy</span>
+              <span>Fahirul Muhar</span>
+              <span>Suryadi</span>
+              <span>Brian Marshal</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="committee-footer-note" data-i18n="committee_footer_note">
+          This structure replaces the previous committee section and presents the updated IPDCEC 2026 committee in a more organized format.
+        </div>
+      </div>
+    </section>
+
+<section class="twibbon-premium" id="twibbon">
       <div class="container">
         <div class="twibbon-box">
           <div class="twibbon-content">
@@ -6747,6 +7770,46 @@
           video_card_global2_desc: "Additional multilingual campaign video.",
           video_watch: "Watch Video",
         },
+          committee_eyebrow: 'Organizing Committee',
+          committee_title: 'IPDCEC 2026 Committee Structure',
+          committee_desc: 'Official committee structure of the International Plant Design Chemical Engineering Competition (IPDCEC), Department of Chemical Engineering, Faculty of Engineering, Universitas Malikussaleh, 2026.',
+          committee_kicker: 'Official Structure',
+          committee_hero_title: 'International Plant Design Chemical Engineering Competition',
+          committee_hero_desc: 'The committee is arranged in a clear organizational structure, covering institutional responsibility, academic direction, core coordination, division supervisors, and the judging team.',
+          committee_badge_unimal: 'Universitas Malikussaleh',
+          committee_badge_faculty: 'Faculty of Engineering',
+          committee_badge_department: 'Department of Chemical Engineering',
+          committee_responsible_title: 'Person in Charge',
+          committee_responsible_desc: 'University and faculty leadership responsible for institutional support.',
+          committee_advisor_title: 'Advisors / Directors',
+          committee_advisor_desc: 'Department and study program leadership providing academic direction.',
+          committee_core_title: 'Core Committee',
+          committee_core_desc: 'General coordination, secretariat, and finance.',
+          committee_divisions_title: 'Division Supervisors',
+          committee_divisions_desc: 'Each position is written once, followed by the names assigned to that division.',
+          committee_jury_title: 'Judging Team',
+          committee_jury_desc: 'Assessment team for IPDCEC 2026.',
+          committee_footer_note: 'This structure replaces the previous committee section and presents the updated IPDCEC 2026 committee in a more organized format.',
+          role_rector: 'Rector',
+          role_dean: 'Dean',
+          role_vd1: 'Vice Dean I',
+          role_vd2: 'Vice Dean II',
+          role_vd3: 'Vice Dean III',
+          role_head_dept: 'Head of Chemical Engineering Department',
+          role_sec_dept: 'Secretary of Chemical Engineering Department',
+          role_coord_chem: 'Coordinator of Chemical Engineering Study Program',
+          role_coord_material: 'Coordinator of Materials Study Program',
+          role_general_supervisor: 'General Competition Supervisor',
+          role_secretary: 'Secretary',
+          role_treasurer: 'Treasurer',
+          division_event: 'Event Division Supervisors',
+          division_publication: 'Publication Supervisor',
+          division_documentation: 'Documentation Team',
+          division_program_promotion: 'Program and Promotion Division Supervisors',
+          division_accommodation: 'Accommodation Division Supervisors',
+          division_consumption: 'Consumption Division Supervisors',
+          division_security: 'Security Division Supervisors',
+          division_pr: 'Public Relations Division Supervisors',
         id: {
           pageTitle:
             "IPDCEC 2026 | Kompetisi Perancangan Pabrik Kimia Internasional",
@@ -7165,6 +8228,46 @@
           video_card_global2_desc: "Video tambahan untuk kampanye multibahasa.",
           video_watch: "Tonton Video",
         },
+          committee_eyebrow: 'Susunan Panitia',
+          committee_title: 'Struktur Panitia IPDCEC 2026',
+          committee_desc: 'Susunan resmi Panitia International Plant Design Chemical Engineering Competition (IPDCEC), Jurusan Teknik Kimia, Fakultas Teknik, Universitas Malikussaleh Tahun 2026.',
+          committee_kicker: 'Struktur Resmi',
+          committee_hero_title: 'International Plant Design Chemical Engineering Competition',
+          committee_hero_desc: 'Struktur panitia disusun secara jelas, meliputi penanggung jawab institusi, pembina/pengarah akademik, koordinator inti, pembimbing divisi, dan tim juri.',
+          committee_badge_unimal: 'Universitas Malikussaleh',
+          committee_badge_faculty: 'Fakultas Teknik',
+          committee_badge_department: 'Jurusan Teknik Kimia',
+          committee_responsible_title: 'Penanggung Jawab',
+          committee_responsible_desc: 'Pimpinan universitas dan fakultas yang bertanggung jawab terhadap dukungan kelembagaan.',
+          committee_advisor_title: 'Pembina / Pengarah',
+          committee_advisor_desc: 'Pimpinan jurusan dan program studi yang memberikan arahan akademik.',
+          committee_core_title: 'Panitia Inti',
+          committee_core_desc: 'Koordinasi umum, sekretariat, dan keuangan.',
+          committee_divisions_title: 'Pembimbing Divisi',
+          committee_divisions_desc: 'Setiap jabatan ditulis satu kali, kemudian diikuti nama-nama yang berada pada divisi tersebut.',
+          committee_jury_title: 'Team Juri',
+          committee_jury_desc: 'Tim penilai IPDCEC 2026.',
+          committee_footer_note: 'Struktur ini menggantikan section panitia sebelumnya dan menampilkan susunan terbaru IPDCEC 2026 dalam format yang lebih rapi.',
+          role_rector: 'Rektor',
+          role_dean: 'Dekan',
+          role_vd1: 'Wakil Dekan I',
+          role_vd2: 'Wakil Dekan II',
+          role_vd3: 'Wakil Dekan III',
+          role_head_dept: 'Ketua Jurusan Teknik Kimia',
+          role_sec_dept: 'Sekretaris Jurusan Teknik Kimia',
+          role_coord_chem: 'Koordinator Program Studi Teknik Kimia',
+          role_coord_material: 'Koordinator Program Studi Material',
+          role_general_supervisor: 'Pembimbing Umum Kompetisi',
+          role_secretary: 'Sekretaris',
+          role_treasurer: 'Bendahara',
+          division_event: 'Pembimbing Divisi Acara',
+          division_publication: 'Pembimbing Divisi Publikasi',
+          division_documentation: 'Dokumentasi',
+          division_program_promotion: 'Pembimbing Divisi Program dan Promosi',
+          division_accommodation: 'Pembimbing Divisi Akomodasi',
+          division_consumption: 'Pembimbing Divisi Konsumsi',
+          division_security: 'Pembimbing Divisi Keamanan',
+          division_pr: 'Pembimbing Divisi Humas',
         zh: {
           pageTitle: "IPDCEC 2026 | 国际化工厂设计化学工程竞赛",
           metaDesc: "IPDCEC 2026 官方网站——国际化工厂设计化学工程竞赛。",
@@ -7557,6 +8660,46 @@
           video_card_global2_desc: "额外的多语言宣传视频。",
           video_watch: "观看视频",
         },
+          committee_eyebrow: '组委会',
+          committee_title: 'IPDCEC 2026 组委会架构',
+          committee_desc: '马利库萨莱大学工程学院化学工程系 2026 年国际化工厂设计化学工程竞赛（IPDCEC）官方组委会架构。',
+          committee_kicker: '官方架构',
+          committee_hero_title: '国际化工厂设计化学工程竞赛',
+          committee_hero_desc: '组委会以清晰的组织架构呈现，包括机构负责人、学术指导、核心协调、各部门指导老师以及评审团队。',
+          committee_badge_unimal: '马利库萨莱大学',
+          committee_badge_faculty: '工程学院',
+          committee_badge_department: '化学工程系',
+          committee_responsible_title: '负责人',
+          committee_responsible_desc: '负责机构支持的大学与学院领导。',
+          committee_advisor_title: '顾问 / 指导',
+          committee_advisor_desc: '提供学术方向的系部与专业负责人。',
+          committee_core_title: '核心委员会',
+          committee_core_desc: '总体协调、秘书处与财务。',
+          committee_divisions_title: '各部门指导老师',
+          committee_divisions_desc: '每个职位只写一次，后面列出该部门对应人员姓名。',
+          committee_jury_title: '评审团队',
+          committee_jury_desc: 'IPDCEC 2026 评审团队。',
+          committee_footer_note: '本架构替换此前的组委会内容，并以更有序的格式展示 IPDCEC 2026 最新组委会名单。',
+          role_rector: '校长',
+          role_dean: '院长',
+          role_vd1: '副院长 I',
+          role_vd2: '副院长 II',
+          role_vd3: '副院长 III',
+          role_head_dept: '化学工程系主任',
+          role_sec_dept: '化学工程系秘书',
+          role_coord_chem: '化学工程专业协调员',
+          role_coord_material: '材料专业协调员',
+          role_general_supervisor: '竞赛总指导',
+          role_secretary: '秘书',
+          role_treasurer: '财务',
+          division_event: '活动部门指导老师',
+          division_publication: '宣传部门指导老师',
+          division_documentation: '文档记录团队',
+          division_program_promotion: '项目与推广部门指导老师',
+          division_accommodation: '住宿部门指导老师',
+          division_consumption: '餐饮部门指导老师',
+          division_security: '安全部门指导老师',
+          division_pr: '公共关系部门指导老师',
         ar: {
           pageTitle:
             "IPDCEC 2026 | المسابقة الدولية لتصميم مصانع الهندسة الكيميائية",
@@ -7963,6 +9106,46 @@
           video_card_global2_title: "النسخة العالمية 2",
           video_card_global2_desc: "فيديو إضافي للحملة متعددة اللغات.",
           video_watch: "شاهد الفيديو",
+          committee_eyebrow: 'اللجنة المنظمة',
+          committee_title: 'هيكل لجنة IPDCEC 2026',
+          committee_desc: 'الهيكل الرسمي للجنة المسابقة الدولية لتصميم مصانع الهندسة الكيميائية (IPDCEC)، قسم الهندسة الكيميائية، كلية الهندسة، جامعة مالك الصالح لعام 2026.',
+          committee_kicker: 'الهيكل الرسمي',
+          committee_hero_title: 'المسابقة الدولية لتصميم مصانع الهندسة الكيميائية',
+          committee_hero_desc: 'تم تنظيم اللجنة في هيكل واضح يشمل المسؤولية المؤسسية، والتوجيه الأكاديمي، والتنسيق الأساسي، ومشرفي الأقسام، وفريق التحكيم.',
+          committee_badge_unimal: 'جامعة مالك الصالح',
+          committee_badge_faculty: 'كلية الهندسة',
+          committee_badge_department: 'قسم الهندسة الكيميائية',
+          committee_responsible_title: 'المسؤولون',
+          committee_responsible_desc: 'قيادة الجامعة والكلية المسؤولة عن الدعم المؤسسي.',
+          committee_advisor_title: 'المشرفون / الموجهون',
+          committee_advisor_desc: 'قيادة القسم والبرامج الدراسية التي تقدم التوجيه الأكاديمي.',
+          committee_core_title: 'اللجنة الأساسية',
+          committee_core_desc: 'التنسيق العام، والسكرتارية، والشؤون المالية.',
+          committee_divisions_title: 'مشرفو الأقسام',
+          committee_divisions_desc: 'يكتب كل منصب مرة واحدة، ثم تدرج أسماء الأعضاء التابعين لذلك القسم.',
+          committee_jury_title: 'فريق التحكيم',
+          committee_jury_desc: 'فريق تقييم IPDCEC 2026.',
+          committee_footer_note: 'يستبدل هذا الهيكل قسم اللجنة السابق ويعرض التشكيل المحدث لـ IPDCEC 2026 بتنسيق أكثر تنظيما.',
+          role_rector: 'رئيس الجامعة',
+          role_dean: 'عميد الكلية',
+          role_vd1: 'نائب العميد الأول',
+          role_vd2: 'نائب العميد الثاني',
+          role_vd3: 'نائب العميد الثالث',
+          role_head_dept: 'رئيس قسم الهندسة الكيميائية',
+          role_sec_dept: 'سكرتير قسم الهندسة الكيميائية',
+          role_coord_chem: 'منسق برنامج الهندسة الكيميائية',
+          role_coord_material: 'منسق برنامج المواد',
+          role_general_supervisor: 'المشرف العام على المسابقة',
+          role_secretary: 'السكرتير',
+          role_treasurer: 'أمين الصندوق',
+          division_event: 'مشرفو قسم الفعاليات',
+          division_publication: 'مشرف النشر',
+          division_documentation: 'فريق التوثيق',
+          division_program_promotion: 'مشرفو قسم البرامج والترويج',
+          division_accommodation: 'مشرفو قسم الإقامة',
+          division_consumption: 'مشرفو قسم الضيافة',
+          division_security: 'مشرفو قسم الأمن',
+          division_pr: 'مشرفو العلاقات العامة',
         },
       };
 
