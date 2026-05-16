@@ -205,6 +205,38 @@
         position: relative;
         z-index: 1;
       }
+      .bks-logo-wrap {
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #ffffff, #f4f8fc);
+        border: 1px solid rgba(3, 27, 52, 0.1);
+        box-shadow: 0 10px 22px rgba(3, 27, 52, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+      .bks-logo-wrap::after {
+        content: "";
+        position: absolute;
+        inset: -40%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(12, 79, 145, 0.14),
+          transparent
+        );
+        transform: rotate(18deg);
+      }
+      .bks-logo {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        position: relative;
+        z-index: 1;
+      }
       .hosted-badge {
         display: inline-flex;
         align-items: center;
@@ -747,6 +779,15 @@
           width: 32px;
           height: 32px;
         }
+        .bks-logo-wrap {
+          width: 44px;
+          height: 44px;
+          border-radius: 13px;
+        }
+        .bks-logo {
+          width: 32px;
+          height: 32px;
+        }
         .hosted-badge {
           font-size: 10px;
           padding: 4px 8px;
@@ -1209,6 +1250,15 @@
         font-size: 9px;
         font-weight: 900;
         color: var(--green-dark);
+        letter-spacing: 0.2px;
+      }
+      .bks-logo-wrap.logo-missing::before {
+        content: "BKS PTN";
+        position: relative;
+        z-index: 2;
+        font-size: 9px;
+        font-weight: 900;
+        color: #0c4f91;
         letter-spacing: 0.2px;
       }
 
@@ -4305,7 +4355,7 @@
       <div class="container nav-inner">
         <div class="brand">
           <div
-            aria-label="IPDCEC 2026 hosted by Universitas Malikussaleh"
+            aria-label="IPDCEC 2026 hosted by Universitas Malikussaleh and BKS-PTN Wilayah Barat"
             class="brand-logos"
           >
             <img alt="IPDCEC Logo" class="brand-logo" src="ipdcec-logo.png" />
@@ -4319,6 +4369,18 @@
                   this.parentElement.classList.add('logo-missing');
                 "
                 src="logo-unimal.png"
+              />
+            </span>
+            <span aria-hidden="true" class="brand-divider"></span>
+            <span class="bks-logo-wrap">
+              <img
+                alt="BKS PTN Wilayah Barat Logo"
+                class="bks-logo"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.classList.add('logo-missing');
+                "
+                src="bksptn-logo.png"
               />
             </span>
           </div>
